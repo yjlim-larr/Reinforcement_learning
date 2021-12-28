@@ -70,5 +70,6 @@ Therefore, recall advantage function's property, we can get f_w's mean is zero.
 ## Convergence of Policy iteration with function approximation
 In this chapter prove that As we use approximated function f, policy is convergent to specific policy.
 
-## Monte Carlo estimate of gradient
-
+## Using Monte Carlo simulation for estimating gradient
+We can estimate gradient by using Monte Carlo simulation. 
+<p align="center"> <img src="./img/monte.png" alt="MLE" width="80%" height="80%"/> </p>
