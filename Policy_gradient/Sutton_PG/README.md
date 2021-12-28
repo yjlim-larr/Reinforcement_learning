@@ -3,7 +3,7 @@ Make evaluating policy function and use its gradient for update policy. Assume p
 optimal policy function.
 
 * Each term means
-<p align="center"> <img src="./img/terms2.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/terms.png" alt="MLE" width="80%" height="80%"/> </p>
 
 * Using policy gradient, update policy function's parameter theta. Policy function is defined as:
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="30%" height="30%"/> </p> 
