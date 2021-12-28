@@ -47,9 +47,10 @@ And approximated Q is unbiaed estimator of Q, expected value of approximated Q i
 
 And if 
 <p align="center"> <img src="./img/condition.png" alt="MLE" width="30%" height="30%"/> </p>
-this condition is satisfy We can get theorem 2's result: 
+this condition is satisfy, we can get theorem 2's result: 
 <p align="center"> <img src="./img/result.png" alt="MLE" width="30%" height="30%"/> </p>
 
+**NOTE**: if "f derivative with respect of w" is zero, policy is on local or global optimal. So this case is not considered
 
 ## Theorem 3.
 
