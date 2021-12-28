@@ -1,5 +1,5 @@
 # What is inverse RL
 
-# Actor-critic
+# Actor-critic-algorithm
 
 # Paper
