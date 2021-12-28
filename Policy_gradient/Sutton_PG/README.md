@@ -10,6 +10,6 @@ So we need to define the function that evaluate poliy. And it is defined as
 <p align="center"> <img src="./img/eval.png" alt="MLE" width="20%" height="20%"/> </p>
 
 Each term means
-<p align="center"> <img src="./img/mean.png" alt="MLE" width="20%" height="20%"/> </p>
+<p align="center"> <img src="./img/terms2.png" alt="MLE" width="20%" height="20%"/> </p>
 
 # 
