@@ -30,6 +30,8 @@ It means we can estimate Q by sampling.
 
 
 ## Theorem 2.
+In this chapter, we can replace Q function to approximate function f with some condition. To get exact Q is difficult, so we use approximate function for getting gradient.
+
 Q function is approximated 'f' which is parameterized 'w'.  In this case, Q is replaced by f. 'w' is trained by loss defined as (Q_pi - f_w)^2, w's gradient is 
 <p align="center"> <img src="./img/gradient.png" alt="MLE" width="80%" height="80%"/> </p>
 
@@ -65,6 +67,8 @@ If we use nonlinear f_w function, we can derive variety. Anyway above f's form i
 Therefore, recall advantage function's property, we can get f_w's mean is zero.
 <p align="center"> <img src="./img/inference.png" alt="MLE" width="80%" height="80%"/> </p>
 
-## Theorem 3.
+## Convergence of Policy iteration with function approximation
+In this chapter prove that As we use approximated function f, policy is convergent to specific policy.
 
-# 
+## Monte Carlo estimate of gradient
+
