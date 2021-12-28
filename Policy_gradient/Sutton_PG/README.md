@@ -45,11 +45,10 @@ If it is convergence to optimum, w's gradient is zero.
 And approximated Q is unbiaed estimator of Q, expected value of approximated Q is equal to expected value of Q.
 <p align="center"> <img src="./img/unbiased.png" alt="MLE" width="80%" height="80%"/> </p>
 
-And if this condition is satisfy
-<p align="center"> <img src="./img/condition.png" alt="MLE" width="40%" height="40%"/> </p>
-
-We can get theorem 2's result: 
-<p align="center"> <img src="./img/result.png" alt="MLE" width="40%" height="40%"/> </p>
+And if 
+<p align="center"> <img src="./img/condition.png" alt="MLE" width="30%" height="30%"/> </p>
+this condition is satisfy We can get theorem 2's result: 
+<p align="center"> <img src="./img/result.png" alt="MLE" width="30%" height="30%"/> </p>
 
 
 ## Theorem 3.
