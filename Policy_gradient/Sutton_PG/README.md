@@ -62,7 +62,8 @@ For defining Theorem 2, f_w should satisfy condition. So we can get,
 If we use nonlinear f_w function, we can derive variety. Anyway above f's form is similar to "Q - V" formula
 <p align="center"> <img src="./img/advantage.png" alt="MLE" width="30%" height="30%"/> </p>
 
-
+Therefore, recall advantage function's property, we can get f_w's mean is zero.
+<p align="center"> <img src="./img/inference.png" alt="MLE" width="30%" height="30%"/> </p>
 
 ## Theorem 3.
 
