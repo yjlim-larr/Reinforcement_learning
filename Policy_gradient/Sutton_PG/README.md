@@ -12,4 +12,6 @@ So we need to define the function that evaluate poliy. And it is defined as
 Each term means
 <p align="center"> <img src="./img/terms2.png" alt="MLE" width="80%" height="80%"/> </p>
 
-# 
+
+
+# T
