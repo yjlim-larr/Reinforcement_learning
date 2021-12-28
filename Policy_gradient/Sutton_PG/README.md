@@ -19,7 +19,7 @@ optimal policy function.
 
 
 ## Theorem 1.
-R is defined as "expected" reward function, because next sate is not statinory but represented by transition probabilities. 
+R is defined as "expected" reward function, because next sate is not statinory but represented by transition probabilities.  
 **NOTE**: the key aspect of both expressions for the gradient is that their are no terms of the form **d^pi(s)'s derivative with respect theta**: the effect of policy changes on the distribution of states does not appear. 
 <p align="center"> <img src="./img/theorem1.png" alt="MLE" width="60%" height="60%"/> </p>
 
