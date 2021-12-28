@@ -34,7 +34,7 @@ Q function is approximated 'f' which is parameterized 'w'.  In this case, Q is r
 <p align="center"> <img src="./img/gradient.png" alt="MLE" width="80%" height="80%"/> </p>
 
 So, expected loss function on specific policy is defined as 
-<p align="center"> <img src="./img/loss.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/Loss.png" alt="MLE" width="60%" height="60%"/> </p>
 
 But we don't know exactly Q, so we should use "approximated Q", not Q. Therefore w's gradient is rewritten, 
 <p align="center"> <img src="./img/new_gradient.png" alt="MLE" width="80%" height="80%"/> </p>
@@ -46,10 +46,10 @@ And approximated Q is unbiaed estimator of Q, expected value of approximated Q i
 <p align="center"> <img src="./img/unbiased.png" alt="MLE" width="80%" height="80%"/> </p>
 
 And if this condition is satisfy
-<p align="center"> <img src="./img/condition.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/condition.png" alt="MLE" width="40%" height="40%"/> </p>
 
 We can get theorem 2's result: 
-<p align="center"> <img src="./img/result.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/result.png" alt="MLE" width="40%" height="40%"/> </p>
 
 
 ## Theorem 3.
