@@ -71,13 +71,13 @@ Therefore, recall advantage function's property, we can get f_w's mean is zero.
 ## Convergence of Policy iteration with function approximation
 In this chapter prove that As we use approximated function f, policy is convergent to specific policy.
 
-## Using Monte Carlo simulation for estimating gradient
+# Using Monte Carlo simulation for estimating gradient
 We can estimate gradient by using Monte Carlo simulation. 
 <p align="center"> <img src="./img/monte.png" alt="MLE" width="80%" height="80%"/> </p>
 
 From N times trajectories, we can estimate stationary state probabilties and policy probabilties.
 
-## Algorithm 
+# Algorithm 
 
 1. Calculate w. For sure, satisfy that condition.
 <p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>
@@ -87,3 +87,7 @@ From N times trajectories, we can estimate stationary state probabilties and pol
 <p align="center"> <img src="./img/updaterule.png" alt="MLE" width="50%" height="50%"/> </p>
 
 Repeat 1~3, when policy is convergent to some policy
+
+# Compare with Actor-critic
+Calculating w which makes condition true is similar to "critic" process. Its meaning is to get Q-funciton. And use that estimated Q function, calculate policy gradient
+for update policy. Policy can be though of actor. So the traning process is similar to actor-critic algorithm.
