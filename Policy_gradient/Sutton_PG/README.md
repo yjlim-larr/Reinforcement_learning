@@ -77,16 +77,19 @@ We can estimate gradient by using Monte Carlo simulation.
 
 From N times trajectories, we can estimate stationary state probabilties and policy probabilties.
 
-# Algorithm 
-
-1. Calculate w. For sure, satisfy that condition.
+# Algorithm  
+1) Calculate w. For sure, satisfy that condition.
 <p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>
-2. Use w for calculating policy gradient by using monte carlo simulation.
+
+2) Use w for calculating policy gradient by using monte carlo simulation.
 <p align="center"> <img src="./img/policygradient.png" alt="MLE" width="40%" height="40%"/> </p>
-3. Update policy
+
+3) Update policy
 <p align="center"> <img src="./img/updaterule.png" alt="MLE" width="50%" height="50%"/> </p>
 
-Repeat 1~3, when policy is convergent to some policy
+Repeat 1~3, when policy is convergent to some policy.
+
+## Problem
 
 # Compare with Actor-critic
 Calculating w which makes condition true is similar to "critic" process. Its meaning is to get Q-funciton. And use that estimated Q function, calculate policy gradient
