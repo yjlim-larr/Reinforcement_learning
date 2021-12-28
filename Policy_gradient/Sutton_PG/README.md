@@ -52,6 +52,18 @@ this condition is satisfy, we can get theorem 2's result:
 
 **NOTE**: if "f derivative with respect of w" is zero, policy is on local or global optimal. So this case is not considered
 
+## Application to Deriving Algorithms and Advantages
+Consider that policy function
+<p align="center"> <img src="./img/policy.png" alt="MLE" width="30%" height="30%"/> </p>
+
+For defining Theorem 2, f_w should satisfy condition. So we can get,
+<p align="center"> <img src="./img/Fgradient.png" alt="MLE" width="30%" height="30%"/> </p>
+
+If we use nonlinear f_w function, we can derive variety. Anyway above f's form is similar to "Q - V" formula
+<p align="center"> <img src="./img/advantage.png" alt="MLE" width="30%" height="30%"/> </p>
+
+
+
 ## Theorem 3.
 
 # 
