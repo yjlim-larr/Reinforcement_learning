@@ -17,7 +17,7 @@ Actor:
 Critic:  
 
 # Paper
-1. Sutton PG: https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
+1. Sutton PG: https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf  
   It suggests how to calculate policy gradient, so it is the basic of policy gradient method. 
   
 2. Actor critic: 
