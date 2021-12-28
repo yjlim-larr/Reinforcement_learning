@@ -57,13 +57,13 @@ Consider that policy function
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="30%" height="30%"/> </p>
 
 For defining Theorem 2, f_w should satisfy condition. So we can get,
-<p align="center"> <img src="./img/Fgradient.png" alt="MLE" width="30%" height="30%"/> </p>
+<p align="center"> <img src="./img/Fgradient.png" alt="MLE" width="50%" height="50%"/> </p>
 
 If we use nonlinear f_w function, we can derive variety. Anyway above f's form is similar to "Q - V" formula
-<p align="center"> <img src="./img/advantage.png" alt="MLE" width="30%" height="30%"/> </p>
+<p align="center"> <img src="./img/advantage.png" alt="MLE" width="80%" height="80%"/> </p>
 
 Therefore, recall advantage function's property, we can get f_w's mean is zero.
-<p align="center"> <img src="./img/inference.png" alt="MLE" width="30%" height="30%"/> </p>
+<p align="center"> <img src="./img/inference.png" alt="MLE" width="80%" height="80%"/> </p>
 
 ## Theorem 3.
 
