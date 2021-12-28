@@ -12,9 +12,13 @@ Using optimal policy function, and finding optimal trajectory is the ultimate go
 **NOTE: But it has a big problem that if there is no cost funtion(or reward function), its method is hard to use.**
 
 # Actor-critic-algorithm
+It is a kind of Policy gradient method.   
+Actor:  
+Critic:  
 
 # Paper
 1. Sutton PG: https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
+2. Actor critic: 
 3. DPG: 
 4. DDPG: 
 5. NPG
