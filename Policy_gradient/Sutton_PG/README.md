@@ -77,7 +77,7 @@ We can estimate gradient by using Monte Carlo simulation.
 From N times trajectories, we can estimate stationary state probabilties and policy probabilties.
 
 ## Algorithm 
-1. calculate w
+1. Calculate w. For sure, satisfy that condition.
 <p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>
 2. Use w for calculating policy gradient.
 <p align="center"> <img src="./img/poliygradient.png" alt="MLE" width="80%" height="80%"/> </p>
