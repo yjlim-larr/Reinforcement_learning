@@ -43,7 +43,7 @@ If it is convergence to optimum, w's gradient is zero.
 <p align="center"> <img src="./img/local.png" alt="MLE" width="80%" height="80%"/> </p>
 
 And approximated Q is unbiaed estimator of Q, expected value of approximated Q is equal to expected value of Q.
-<p align="center"> <img src="./img/unbiased.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/unbiased.png" alt="MLE" width="100%" height="100%"/> </p>
 
 And if 
 <p align="center"> <img src="./img/condition.png" alt="MLE" width="30%" height="30%"/> </p>
