@@ -80,8 +80,8 @@ From N times trajectories, we can estimate stationary state probabilties and pol
 1. Calculate w. For sure, satisfy that condition.
 <p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>
 2. Use w for calculating policy gradient.
-<p align="center"> <img src="./img/policygradient.png" alt="MLE" width="50%" height="50%"/> </p>
+<p align="center"> <img src="./img/policygradient.png" alt="MLE" width="40%" height="40%"/> </p>
 3. update policy
-<p align="center"> <img src="./img/updaterule.png" alt="MLE" width="60%" height="60%"/> </p>
+<p align="center"> <img src="./img/updaterule.png" alt="MLE" width="50%" height="50%"/> </p>
 
 Repeat 1~3, when policy is convergent to some policy
