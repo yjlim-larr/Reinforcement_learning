@@ -19,6 +19,7 @@ optimal policy function.
 
 
 ## Theorem 1.
+**Differential operation which is outside the expected value go inside the expected value calculation.**
 <p align="center"> <img src="./img/theorem1.png" alt="MLE" width="80%" height="80%"/> </p>
   
 **NOTE**: the key aspect of both expressions for the gradient is that their are no terms of the form **d^pi(s)'s derivative with respect theta** : the effect of policy changes on the distribution of states does not appear.   
