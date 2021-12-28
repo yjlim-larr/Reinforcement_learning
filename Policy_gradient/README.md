@@ -8,7 +8,8 @@ Finding optimal policy funtion's parameter theta by using policy gradient.
 Update rule is that
 <p align="center"> <img src="./img/update.png" alt="MLE" width="20%" height="20%"/> </p>
 
-Using optimal policy function, and finding optimal trajectory is the ultimate goal of policy gradient method. But it has a big problem that if there is no cost funtion(or reward function), its method is hard to use.
+Using optimal policy function, and finding optimal trajectory is the ultimate goal of policy gradient method.  
+**NOTE: But it has a big problem that if there is no cost funtion(or reward function), its method is hard to use.**
 
 # Paper
 1. Sutton PG: https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
