@@ -38,17 +38,18 @@ It is a kind of Policy gradient method. It uses two weight parameter for represe
 
 # Sampling method
 ## Temporal difference
-It is the method that "as the episode progresses, train the model by every step by action chosen from policy function".  
-If model is defined V_theta(s_t, a_t), and it means when it is on state 's' and choose action 'a' at time 't', its value is calculated from model V_theta. If agent take action 'a' on state 's' and next state is s_next, model return reward R. The target value is defined 
+It is the method for traning model. **As the episode progresses, train the model by using every step's state and action pair, where action is chosen from policy function**.  
+If model is defined V_theta(s_t, a_t), and it means when it is on state 's' and choose action 'a' at time 't', its value is calculated from model V_theta. If agent take action 'a' on state 's' and next state is s_next, model return reward R. The target value is defined as
 <p align="center"> <img src="./img/TD.png" alt="rewrite" width="30%" height="30%"/> </p>
 
-And model predicts value from state 's' and it is defined
+And model predicts value from state 's' and it is defined as
 <p align="center"> <img src="./img/predict.png" alt="rewrite" width="20%" height="20%"/> </p>
 
-Model trained from loss, and loss is defined
+Model trained from loss, and loss is defined as
 <p align="center"> <img src="./img/Loss.png" alt="rewrite" width="30%" height="30%"/> </p>
 
-## Monte carlo method
+## Monte carlo simulation
+It is the same as Temporal difference in that it trains the model, but Monte carlo simulation use trajectories data, not step data.
 
 
 # Paper
