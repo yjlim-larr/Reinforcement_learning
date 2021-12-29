@@ -17,6 +17,11 @@ These are two-time-scale algorithms in which the critic uses TD learning with a 
 ## Assumptions
 <p align="center"> <img src="./img/assumption.png" alt="MLE" width="80%" height="80%"/> </p>
 
+## Q fucntion
+<p align="center"> <img src="./img/qfunction.png" alt="MLE" width="80%" height="80%"/> </p>
+
+## Theorem 1
+<p align="center"> <img src="./img/theorem1.png" alt="MLE" width="80%" height="80%"/> </p>
 
 
 # Results
