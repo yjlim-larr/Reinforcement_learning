@@ -16,16 +16,16 @@ It uses trajectories data for estimating policy gradient. Trajectories data is o
 
 **NOTE** : In monte carlo simulation, variance means error. For example, let's consider situation where we got sampled trajectories data from policy function. We can estimate 
 E[H(X)] by using monte carlo simulation.
-<p align="center"> <img src="./img/monte.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/monte.png" alt="MLE" width="30%" height="30%"/> </p>
 
 If we define error by using mean square error,
-<p align="center"> <img src="./img/MSE.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/MSE.png" alt="MLE" width="30%" height="30%"/> </p>
 
 Estimated result from sampled trajectories data is equal to sample mean, we can rewrite that form like 
-<p align="center"> <img src="./img/MSE.png" alt="rewrite" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/rewrite.png" alt="rewrite" width="30%" height="30%"/> </p>
 
 and, sample mean's mean is unbiased estimate of expected value, so  
-<p align="center"> <img src="./img/result.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/results.png" alt="MLE" width="80%" height="80%"/> </p>
 
 We can get variance is equal to MSE.
 
