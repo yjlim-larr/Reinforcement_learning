@@ -11,9 +11,12 @@ These are two-time-scale algorithms in which the critic uses TD learning with a 
 **Actor-critic methods**:  Combining the strong points of actor-only and criticonly methods, it holds the promise of delivering faster convergence (due to variance reduction), when compared to actor-only methods and critic only methods. 
 
 ## Terms
-<p align="center"> <img src="./img/terms.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/term.png" alt="MLE" width="80%" height="80%"/> </p>
 
-##
+
+## Assumptions
+<p align="center"> <img src="./img/assumption.png" alt="MLE" width="80%" height="80%"/> </p>
+
 
 
 # Results
