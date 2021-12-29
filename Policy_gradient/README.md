@@ -52,10 +52,10 @@ Model trained from loss, and loss is defined as
 It is the same as Temporal difference in that it trains the model, but Monte carlo simulation use trajectories data, not step data.  
 In episodes, we can get rewards data. After finishing episodes, by using rewards data and discount function, update state's value function. The states visited in the episode are updated in reverse chronological order.
 
-For example, model is defined as
-<p align="center"> <img src="./img/model.png" alt="rewrite" width="30%" height="30%"/> </p>
+For example, model should be output target value which is defined as
+<p align="center"> <img src="./img/model.png" alt="rewrite" width="60%" height="60%"/> </p>
 
-We can get various S, G pair by doing episodes many times. 
+We can get various S, G pair by doing episodes many times. And use them for training
 
 # Paper
 1. Sutton PG: https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf  
