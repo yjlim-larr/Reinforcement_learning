@@ -43,7 +43,7 @@ If model is defined V_theta(s_t, a_t), and it means when it is on state 's' and 
 <p align="center"> <img src="./img/TD.png" alt="rewrite" width="30%" height="30%"/> </p>
 
 And model predicts value from state 's' and it is defined
-<p align="center"> <img src="./img/predict.png" alt="rewrite" width="10%" height="10%"/> </p>
+<p align="center"> <img src="./img/predict.png" alt="rewrite" width="20%" height="20%"/> </p>
 
 Model trained from loss, and loss is defined
 <p align="center"> <img src="./img/Loss.png" alt="rewrite" width="30%" height="30%"/> </p>
