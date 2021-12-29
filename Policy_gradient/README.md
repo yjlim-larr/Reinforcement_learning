@@ -9,7 +9,7 @@ Update rule is that
 <p align="center"> <img src="./img/update.png" alt="MLE" width="20%" height="20%"/> </p>
 
 Using optimal policy function, and finding optimal trajectory is the ultimate goal of policy gradient method.  
-**NOTE: But it has a big problem that if there is no cost funtion(or reward function), its method is hard to use.**
+**NOTE: But it is difficult to calculate policy gradient so, we should estimate it. But "Sutton PG" suggests how to estimate it**
 
 # Monte carlo policy gradient
 It uses trajectories data for estimating policy gradient. Trajectories data is obtained from policy function by simulation. But each trajectories has different length and, if some trajectories are long, it takes a long time to learn. And use various trajectories makes estimated policy gradient have high variace. 
@@ -30,9 +30,11 @@ and, sample mean's mean is unbiased estimate of expected value, so
 We can conclude that monte carlo simulation's result's variance is equal to MSE.
 
 # Actor-critic policy gradient
-It is a kind of Policy gradient method.   
-Actor:  
-Critic:  
+It is a kind of Policy gradient method. It uses two weight parameter for representing actor and critic. Critic's concept is to complement for not known action-value function.
+
+**Actor**: At actor step, it uses critic step's result's approximated Q-function for evaluating policy, and use that result for updating policy. For updating policy, it use policy gradient for deciding which direction to update.  
+
+**Critic**: At critic step, it uses actor step's result's policy function for approximating Q-function(action-value function) which makes present policy function optimal.    
 
 # Sampling method
 ## Temporal difference
