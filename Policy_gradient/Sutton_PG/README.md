@@ -73,9 +73,7 @@ In this chapter prove that As we use approximated function f, policy is converge
 
 # Using Monte Carlo simulation for estimating gradient
 We can estimate gradient by using Monte Carlo simulation. 
-<p align="center"> <img src="./img/monte.png" alt="MLE" width="80%" height="80%"/> </p>
-
-From N times trajectories, we can estimate stationary state probabilties and policy probabilties.
+<p align="center"> <img src="./img/monte2.png" alt="MLE" width="80%" height="80%"/> </p>
 
 # Algorithm  
 1) Calculate w. For sure, satisfy that condition.
