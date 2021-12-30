@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.distributions import Categorical
+import matplotlib.pyplot as plt
 
 import model
 import utils
@@ -51,7 +52,10 @@ critic_optim = optim.Adam(critic.parameters())
 
 actor_optim = optim.Adam(actor.parameters())
 critic_optim = optim.Adam(critic.parameters())
+X = []
+Y = []
 for _ in range(param.epochs):
+    X.append(_)
     state = env.reset()
     log_probs = []
     rewards = []
@@ -80,6 +84,7 @@ for _ in range(param.epochs):
         state = next_state
 
         if done:
+            Y.append(i)
             break
 
     print("epochs: ", _, "length: ", len(rewards));
@@ -124,3 +129,9 @@ for _ in range(param.epochs):
 
 torch.save(actor.state_dict(), 'actor.pt')
 torch.save(critic.state_dict(), 'critic.pt')
+env.close()
+
+plt.plot(X, Y)
+plt.xlabel("episodes")
+plt.ylabel("episodes' length")
+plt.show()
