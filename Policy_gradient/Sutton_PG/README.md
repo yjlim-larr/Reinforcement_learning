@@ -18,7 +18,7 @@ optimal policy function.
 <p align="center"> <img src="./img/eval.png" alt="MLE" width="60%" height="60%"/> </p>
 
 
-### Theorem 1
+### Theorem 1:
 **Differential operation which is outside the expected value go inside the expected value calculation.**
 <p align="center"> <img src="./img/theorem1.png" alt="MLE" width="80%" height="80%"/> </p>
   
@@ -30,7 +30,7 @@ Q is not noramally known and must be estimated. it can be estimated by
 It means we can estimate Q by sampling.
 
 
-### Theorem 2
+### Theorem 2:
 In this chapter, we can replace Q function to approximate function f with some condition. To get exact Q is difficult, so we use approximate function for getting gradient.
 
 Q function is approximated 'f' which is parameterized 'w'.  In this case, Q is replaced by f. 'w' is trained by loss defined as (Q_pi - f_w)^2, w's gradient is 
@@ -55,7 +55,7 @@ this condition is satisfy, we can get theorem 2's result:
 
 **NOTE**: if "f derivative with respect of w" is zero, policy is on local or global optimal. So this case is not considered
 
-### Application to Deriving Algorithms and Advantages
+### Application to Deriving Algorithms and Advantages:
 Consider that policy function
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="30%" height="30%"/> </p>
 
