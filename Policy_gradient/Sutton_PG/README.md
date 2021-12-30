@@ -77,8 +77,6 @@ We can estimate gradient by using Monte Carlo simulation.
 
 # Results
 I use actor critic policy gradient and temporal difference to train critic.
-Cartpole is the game i use for checking my reinforcement learning model working well.
+Cartpole is the game i use for checking my reinforcement learning model working well.  
 **NOTE** : Actor ouput is each action's probability. We should use sample() function for samping action from policy function. Not use max action probability's action.
 
-
-# Reference
