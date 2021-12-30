@@ -76,7 +76,7 @@ We can estimate gradient by using Monte Carlo simulation.
 <p align="center"> <img src="./img/monte2.png" alt="MLE" width="80%" height="80%"/> </p>
 
 # Results
-I use actor critic policy gradient and temporal difference to train critic.
-Cartpole is the game i use for checking my reinforcement learning model working well.  
+I use actor critic policy gradient and two critic train method 1) temporal difference 2) monte carlo simulation. Monte carlo simulation method shows better performance than Temporal difference, because Temporal difference has larger bias than Monte carlo i think. Cartpole is the game i use for checking my reinforcement learning model how to work.  
 **NOTE** : Actor ouput is each action's probability. We should use sample() function for samping action from policy function. Not use max action probability's action.
+
 
