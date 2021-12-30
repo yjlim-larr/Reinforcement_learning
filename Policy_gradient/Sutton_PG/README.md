@@ -94,3 +94,7 @@ Repeat 1~3, when policy is convergent to some policy.
 # Compare with Actor-Critic
 Calculating w which makes condition true is similar to "critic" process. Its meaning is to get Q-funciton. And use that estimated Q function, calculate policy gradient
 for update policy. Policy can be though of actor. So the traning process is similar to actor-critic algorithm.
+
+# Results
+
+# Reference
