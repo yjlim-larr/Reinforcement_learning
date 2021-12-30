@@ -75,17 +75,16 @@ In this chapter prove that As we use approximated function f, policy is converge
 We can estimate gradient by using Monte Carlo simulation. 
 <p align="center"> <img src="./img/monte2.png" alt="MLE" width="80%" height="80%"/> </p>
 
-# Algorithm  
-1) Calculate w. For sure, satisfy that condition.
-<p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>
+# Monte carlo policy gradient Algorithm  
+1) After finishing episode, we can get trajectories data.
+2) Calculate w. For sure, satisfy that condition.
+<p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>  
+I implement that part using neural network.
 
-2) Use w for calculating policy gradient by using monte carlo simulation.
-<p align="center"> <img src="./img/policygradient.png" alt="MLE" width="40%" height="40%"/> </p>
+3) Use w for calculating policy gradient by using monte carlo simulation.
+4) Update policy by using policy gradient
 
-3) Update policy
-<p align="center"> <img src="./img/updaterule.png" alt="MLE" width="50%" height="50%"/> </p>
-
-Repeat 1~3, when policy is convergent to some policy.
+Repeat 1~4, when policy is convergent to some policy.
 
 ## Problem
 
