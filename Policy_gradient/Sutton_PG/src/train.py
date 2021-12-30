@@ -54,24 +54,28 @@ critic_optim = optim.Adam(critic.parameters())
 for _ in range(param.epochs):
     state = env.reset()
     log_probs = []
-    values = []
     rewards = []
-    masks = []
+    states = []
+    next_states = []
+    dones = []
 
     for i in count():
         #env.render()
         state = torch.tensor(state, dtype=torch.float, requires_grad=True).view(1, -1)
-        act, value = actor(state), critic(state)
+        states.append(state)
+
+        act = actor(state)
 
         action = Categorical(act).sample()
         next_state, reward, done, info = env.step(action.item())
+        log_prob = act[0][action.item()].view(1, -1).log()
 
-        log_prob = Categorical(act).log_prob(action).unsqueeze(0)
+        next_state = torch.tensor(next_state, dtype=torch.float, requires_grad=True).view(1, -1)
 
+        next_states.append(next_state)
         log_probs.append(log_prob)
-        values.append(value)
         rewards.append(torch.tensor([reward], dtype=torch.float))
-        masks.append(torch.tensor([1-done], dtype=torch.float))
+        dones.append(torch.tensor([1-done], dtype=torch.float))
 
         state = next_state
 
@@ -80,31 +84,43 @@ for _ in range(param.epochs):
 
     print("epochs: ", _, "length: ", len(rewards));
 
+
+    # rewards temporal difference. learning does not go well than MC
+    """
+    returns = []
+    for i in reversed(range(len(rewards))):
+        R = rewards[i] + param.discount * critic(next_states[i]) * dones[i]
+        returns.insert(0, R)
+    """
+
+    # rewards Monte carlo simulation
     next_state = torch.FloatTensor(next_state)
     next_value = critic(next_state)
-
-    # rewards
     R = next_value
     returns = []
     for step in reversed(range(len(rewards))):
-        R = rewards[step] + param.discount * R * masks[step]
+        R = rewards[step] + param.discount * R * dones[step]
         returns.insert(0, R)
+
 
     log_probs = torch.cat(log_probs)
     returns = torch.cat(returns).detach()
-    values = torch.cat(values)
+    states = torch.cat(states, dim = 0)
+    pred = critic(states)
+    ad = returns - pred
 
-    advantage = returns - values
-
-    actor_loss = -(log_probs * advantage.detach()).mean()
-    critic_loss = advantage.pow(2).mean()
-
-    actor_optim.zero_grad()
+    # train critic
+    critic_loss = ad.pow(2).mean()
     critic_optim.zero_grad()
-    actor_loss.backward()
     critic_loss.backward()
-    actor_optim.step()
     critic_optim.step()
+
+    # train actor
+    actor_loss = -(log_probs * ad.detach()).mean()
+    actor_optim.zero_grad()
+    actor_loss.backward()
+    actor_optim.step()
+
 
 torch.save(actor.state_dict(), 'actor.pt')
 torch.save(critic.state_dict(), 'critic.pt')
