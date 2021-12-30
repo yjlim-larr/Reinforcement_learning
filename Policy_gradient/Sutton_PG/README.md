@@ -75,23 +75,10 @@ In this chapter prove that As we use approximated function f, policy is converge
 We can estimate gradient by using Monte Carlo simulation. 
 <p align="center"> <img src="./img/monte2.png" alt="MLE" width="80%" height="80%"/> </p>
 
-# Monte carlo policy gradient Algorithm  
-1) After finishing episode, we can get trajectories data.
-2) Calculate w. For sure, satisfy that condition.
-<p align="center"> <img src="./img/w.png" alt="MLE" width="80%" height="80%"/> </p>  
-I implement that part using neural network.
-
-3) Use w for calculating policy gradient by using monte carlo simulation.
-4) Update policy by using policy gradient
-
-Repeat 1~4, when policy is convergent to some policy.
-
-## Problem
-
-# Compare with Actor-Critic
-Calculating w which makes condition true is similar to "critic" process. Its meaning is to get Q-funciton. And use that estimated Q function, calculate policy gradient
-for update policy. Policy can be though of actor. So the traning process is similar to actor-critic algorithm.
-
 # Results
+I use actor critic policy gradient and temporal difference to train critic.
+Cartpole is the game i use for checking my reinforcement learning model working well.
+
+
 
 # Reference
