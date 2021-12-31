@@ -31,6 +31,19 @@ In **Stochastic actor-critic algorithm**, actor is updated by SPG. Instead of us
 <p align="center"> <img src="./img/CONDI.png" alt="MLE" width="100%" height="100%"/> </p>  
 It is also proven by Sutton.
 
+If 1), 2) conditions are satisfied, Qπ - Qw = e is zero, so bias is zero. If "1)" is satisfied, compatible function approximator is linear to log policy probability's gradient. "2)" means solving regression model approximaing Qπ. We can do 2) by using Temporal difference(TD) to estimate value function.
+
+**Off policy Actor-Critic** means behavior policy is not equal to target policy. if we define behavior policy 'beta(a|s)', SPG is defined as
+<p align="center"> <img src="./img/OFFSPG.png" alt="MLE" width="100%" height="100%"/> </p>
+* It does not depend on Q-function's gradient. It means at Actor updating Critic does not affect actor for actor's convergence to local optima. In other words, there is local optima at approximated policy function about fixed approximated Q function.   
+* Both Actor and Critic are trained by using off policy methods
+* For calculating off policy's policy gradient, not use Qπ, but TD errror which is defined as 
+<p align="center"> <img src="./img/OFFSPG.png" alt="MLE" width="30%" height="30%"/> </p>
+
+
+
+
+
 
 
 
