@@ -47,7 +47,7 @@ ____
 
 ### Gradients of Deterministic Policies
 **Action-Value Gradients**: 
-<p align="center"> <img src="./img/PROOF.png" alt="MLE" width="120%" height="120%"/> </p>
+<p align="center"> <img src="./img/PROOF.png" alt="MLE" width="140%" height="140%"/> </p>
 Don't need to calculate discounted stationary state distribution's gradient, but calculate Q-function's gradient.
 
 **Deterministic policy gradient Theorem**:
