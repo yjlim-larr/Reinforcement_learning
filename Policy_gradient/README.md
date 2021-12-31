@@ -63,12 +63,14 @@ We can get various S, G pair by doing episodes many times. And use them for trai
   
 2. Actor critic: https://proceedings.neurips.cc/paper/1999/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf
   
-4. DPG: 
-5. DDPG: 
-6. NPG
-7. TRPO
-8. GAE
-9. PPO
+3. DPG: http://proceedings.mlr.press/v32/silver14.pdf
+
+
+6. DDPG: 
+7. NPG
+8. TRPO
+9. GAE
+10. PPO
 
 # Reference  
 https://dnddnjs.gitbooks.io/rl/content/actor-critic_policy_gradient.html  
