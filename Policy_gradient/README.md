@@ -1,6 +1,6 @@
 # What is Policy gradient method?
 ## Terms
-<p align="center"> <img src="./img/terms.png" alt="MLE" width="80%" height="80%"/> </p>
+<img src="./img/terms.png" alt="MLE" width="80%" height="80%"/>
 
 ## Purpose
 Finding optimal policy funtion's parameter theta by using policy gradient.
