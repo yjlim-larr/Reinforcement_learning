@@ -4,7 +4,7 @@ In this paper,
 2) For exploration, use off policy actor critic algorithm.
 
 **off policy**: Use different policies for exploration and traning. On exploration step, it uses off policy, and on train step, it uses target policy.  
- 
+
 ### Introduction
 Standard policy function is defined as prbability distribution, but in this paper, policy function is defined as
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="10%" height="10%"/> </p>
@@ -22,23 +22,28 @@ Agent's goal is to maximize rewards gotten by taking action. The defined expecte
 <p align="center"> <img src="./img/ER.png" alt="MLE" width="70%" height="70%"/> </p>
 
 r(s,a) is replaced to appriximated Q function.  
-
+___
 So, **stochastic policy gradient(SPG)** from expected reward by stochastic policy function is defined as
 <p align="center"> <img src="./img/SPG.png" alt="MLE" width="50%" height="50%"/> </p>
-We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.  
+We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.   
 
+___
 In **Stochastic actor-critic algorithm**, actor is updated by SPG. Instead of using Qπ(s_t, a_t), Critic approximate Qπ(s_t, a_t) to Qw(s_t, a_t) by using Temporal difference or Monte carlo simulation. But for no bias Sutton's PG, critic's parameters should satisfy 2 conditions.
 <p align="center"> <img src="./img/CONDI.png" alt="MLE" width="100%" height="100%"/> </p>  
-It is also proven by Sutton.
+It is also proven by Sutton.  
 
 If 1), 2) conditions are satisfied, Qπ - Qw = e is zero, so bias is zero. If "1)" is satisfied, compatible function approximator is linear to log policy probability's gradient. "2)" means solving regression model approximaing Qπ. We can do 2) by using Temporal difference(TD) to estimate value function.
 
+____
 **Off policy Actor-Critic** means behavior policy is not equal to target policy. if we define behavior policy 'beta(a|s)', SPG is defined as
-<p align="center"> <img src="./img/OFFSPG.png" alt="MLE" width="100%" height="100%"/> </p>
+<p align="center"> <img src="./img/OFFSPG.png" alt="MLE" width="50%" height="50%"/> </p>
+
 * It does not depend on Q-function's gradient. It means at Actor updating Critic does not affect actor for actor's convergence to local optima. In other words, there is local optima at approximated policy function about fixed approximated Q function.   
-* Both Actor and Critic are trained by using off policy methods
-* For calculating off policy's policy gradient, not use Qπ, but TD errror which is defined as 
-<p align="center"> <img src="./img/OFFSPG.png" alt="MLE" width="30%" height="30%"/> </p>
+    
+* Both Actor and Critic are trained by using off policy methods.   
+
+* For calculating off policy's policy gradient, not use Qπ, but TD errror which is defined as   
+<p align="center"> <img src="./img/TDERROR.png" alt="MLE" width="30%" height="30%"/> </p>
 
 
 
