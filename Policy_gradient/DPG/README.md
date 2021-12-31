@@ -28,7 +28,10 @@ So, **stochastic policy gradient(SPG)** from expected reward by stochastic polic
 We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.  
 
 In **Stochastic actor-critic algorithm**, actor is updated by SPG. Instead of using Qπ(s_t, a_t), Critic approximate Qπ(s_t, a_t) to Qw(s_t, a_t) by using Temporal difference or Monte carlo simulation. But for no bias Sutton's PG, critic's parameters should satisfy 2 conditions.
-<p align="center"> <img src="./img/CON.png" alt="MLE" width="50%" height="50%"/> </p>
+<p align="center"> <img src="./img/CONDI.png" alt="MLE" width="50%" height="50%"/> </p>  
+It is also proven by Sutton.
+
+
 
 
 
