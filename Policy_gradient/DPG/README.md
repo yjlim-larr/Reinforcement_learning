@@ -21,11 +21,15 @@ In this paper, by using D.P.G it brings out actor-critic-algorithm form. Approxi
 Agent's goal is to maximize rewards gotten by taking action. The defined expected rewards from actor and critic approximated function is
 <p align="center"> <img src="./img/ER.png" alt="MLE" width="70%" height="70%"/> </p>
 
-r(s,a) is replaced to appriximated Q function.
+r(s,a) is replaced to appriximated Q function.  
 
-So, stochastic policy gradient from expected reward by stochastic policy function is defined as
+So, **stochastic policy gradient(SPG)** from expected reward by stochastic policy function is defined as
 <p align="center"> <img src="./img/SPG.png" alt="MLE" width="50%" height="50%"/> </p>
-We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.
+We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.  
+
+In **Stochastic actor-critic algorithm**, actor is updated by SPG. Instead of using Qπ(s_t, a_t), Critic approximate Qπ(s_t, a_t) to Qw(s_t, a_t) by using Temporal difference or Monte carlo simulation. But for using Sutton PG, critic's parameters should satisfy 2 conditions.
+<p align="center"> <img src="./img/CON.png" alt="MLE" width="50%" height="50%"/> </p>
+
 
 
 
