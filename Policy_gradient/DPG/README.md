@@ -48,8 +48,10 @@ ____
 ### Gradients of Deterministic Policies
 **Action-Value Gradients**: 
 <p align="center"> <img src="./img/PROOF.png" alt="MLE" width="30%" height="30%"/> </p>
+Don't need to calculate discounted stationary state distribution's gradient, but calculate Q-function's gradient.
 
 **Deterministic policy gradient Theorem**:
+"performance objective" is evaluation function of policy, and it is defined <img src="./img/OB.png" alt="MLE" width="30%" height="30%"/>
 
 
 
