@@ -47,8 +47,9 @@ ____
 
 ### Gradients of Deterministic Policies
 **Action-Value Gradients**: 
+<p align="center"> <img src="./img/PROOF.png" alt="MLE" width="30%" height="30%"/> </p>
 
-
+**Deterministic policy gradient Theorem**:
 
 
 
