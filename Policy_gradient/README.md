@@ -62,6 +62,7 @@ We can get various S, G pair by doing episodes many times. And use them for trai
   It suggests how to calculate policy gradient, so it is the basic of policy gradient method. 
   
 2. Actor critic: https://proceedings.neurips.cc/paper/1999/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf
+  It suggests combination of actor only method and critic only method for improving each methods' problem. Actor can be considered as policy function and Critic can be considered as value function of state. Actor is updated from evaluation of policy function by using Critic's value function, and Critic is updated from reward or cost from action chosen from policy function. One whole system's update includes actor, critic's update.   
   
 3. DPG: http://proceedings.mlr.press/v32/silver14.pdf
 
