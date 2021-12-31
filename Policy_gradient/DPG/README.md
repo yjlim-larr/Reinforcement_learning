@@ -5,6 +5,7 @@ In this paper,
 
 **off policy**: Use different policies for exploration and traning. On exploration step, it uses off policy, and on train step, it uses target policy.  
  
+### Introduction
 Standard policy function is defined as prbability distribution, but in this paper, policy function is defined as
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="20%" height="20%"/> </p>
 
@@ -16,7 +17,7 @@ But it does not mean not using stochastic policy, but use it for off policy at e
 
 In this paper, by using D.P.G it brings out actor-critic-algorithm form. Approximating action-value function and updating policy parameter from approximated action-value-gradient direction. And using compatible function approximating's concept, showing approximation does not cause P.G's bias.
 
-
+### Background
 
 # Results
 
