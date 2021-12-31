@@ -18,6 +18,24 @@ But it does not mean not using stochastic policy, but use it for off policy at e
 In this paper, by using D.P.G it brings out actor-critic-algorithm form. Approximating action-value function and updating policy parameter from approximated action-value-gradient direction. And using compatible function approximating's concept, showing approximation does not cause P.G's bias.
 
 ### Background
+Agent's goal is to maximize rewards gotten by taking action. The defined expected rewards from actor and critic approximated function is
+<p align="center"> <img src="./img/ER.png" alt="MLE" width="10%" height="10%"/> </p>
+
+r(s,a) is replaced to appriximated Q function.
+
+So, stochastic policy gradient from expected reward by stochastic policy function is defined as
+<p align="center"> <img src="./img/SPG.png" alt="MLE" width="10%" height="10%"/> </p>
+We can get this result from Sutton PG paper. This form shows that S.P.G is not realted with discounted state distribution's gradient. One issue that these algorithms must address is how to estimate the action-value function Qπ(s, a). Perhaps the simplest approach is to use a sample return(rewards) to estimate the value of Qπ(s_t, a_t), which leads to a variant of the REINFORCE algorithm.
+
+
+
+
+
+
+
+
+
+
 
 # Results
 
