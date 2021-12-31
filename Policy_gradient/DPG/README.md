@@ -7,7 +7,7 @@ In this paper,
  
 ### Introduction
 Standard policy function is defined as prbability distribution, but in this paper, policy function is defined as
-<p align="center"> <img src="./img/policy.png" alt="MLE" width="20%" height="20%"/> </p>
+<p align="center"> <img src="./img/policy.png" alt="MLE" width="10%" height="10%"/> </p>
 
 By this form, it can be rewritten policy gradient form, and shows that its policy gradient form is the special case of stochastic policy function's policy gradient where policy variance is zero.
 
