@@ -4,7 +4,10 @@ In this paper,
 2) For exploration, use off policy actor critic algorithm.
 
 ### off policy
-action을 취하는 policy와 improve하는 policy을 다르게 한다.
+ Use different policies for exploration and traning. On exploration step, it uses off policy, and on train step, it uses target policy.
+ 
+Standard policy function is defined as prbability distribution, but in this paper, policy function is defined as
+
 
 
 # Results
