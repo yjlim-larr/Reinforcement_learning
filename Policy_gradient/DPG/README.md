@@ -45,8 +45,8 @@ ____
 * For calculating off policy's policy gradient, not use Qπ, but TD errror which is defined as   
 <p align="center"> <img src="./img/TDERROR.png" alt="MLE" width="30%" height="30%"/> </p>
 
-
-
+### Gradients of Deterministic Policies
+**Action-Value Gradients**: 
 
 
 
