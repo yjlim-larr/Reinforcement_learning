@@ -1,4 +1,8 @@
 # Summary
+In this paper,
+1) Average reward's gradient is proportional to policy gradient. It is the core concept of Sutton P.G
+2) Approximate value function, for estimating policy gradient.
+
 Make evaluating policy function and use its gradient for update policy. Assume poliy function is parameterized by theta, using policy gradient, update poliy function for finding 
 optimal policy function.
 
