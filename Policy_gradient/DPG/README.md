@@ -51,7 +51,8 @@ ____
 Don't need to calculate discounted stationary state distribution's gradient, but calculate Q-function's gradient.
 
 **Deterministic policy gradient Theorem**:
-"performance objective" is evaluation function of policy, and it is defined <img src="./img/OB.png" alt="MLE" width="12%" height="12%"/> 
+"performance objective" is evaluation function of policy, and it is defined <img src="./img/OB.png" alt="MLE" width="12%" height="12%"/> and it is rewritten as 
+<img src="./img/RE.png" alt="MLE" width="40%" height="40%"/> and its gradient is <img src="./img/REG.png" alt="MLE" width="40%" height="40%"/>
 
 
 
