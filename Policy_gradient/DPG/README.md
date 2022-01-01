@@ -98,7 +98,7 @@ It means a linear function approximator is sufficient to select the direction in
 ____
 **COPDAC-Q algorithm**
 (s,a) pair data is sampled from behavior policy, 
-<p align="center"> <img src="./img/ALGO.png" alt="MLE" width="30%" height="30%"/> </p> 
+<p align="center"> <img src="./img/ALGO.png" alt="MLE" width="80%" height="80%"/> </p> 
 
 # Results
 
