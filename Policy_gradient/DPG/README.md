@@ -95,7 +95,10 @@ It satisfies 1) condition. From that form, we know if action is large, Advantage
 It means a linear function approximator is sufficient to select the direction in which the actor should adjust its policy parameters.
 
 **NOTE**: To satisfy condition 2, we should have to find the parameters w that minimizes MSE. But it is difficult acquiring unbiased samples of the true gradient, so we use policy evaluation method but it does not satisfy 2) condition.
-
+____
+**COPDAC-Q algorithm**
+(s,a) pair data is sampled from behavior policy, 
+<p align="center"> <img src="./img/ALGO.png" alt="MLE" width="30%" height="30%"/> </p> 
 
 # Results
 
