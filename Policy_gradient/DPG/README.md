@@ -74,7 +74,7 @@ In that form, beta is the behavior policy function, and mu is the target policy 
 Using state,action pair data from behavior policy function for training, upadate order is, 
 <p align="center"> <img src="./img/OFF_UPDATE.png" alt="MLE" width="40%" height="40%"/> </p>
 
-**Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor.
+**Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor. It is the reason in that form, it only uses behavior policy function's discounted stationary probability, not included behavior policy function. 
 
 
 
