@@ -57,6 +57,9 @@ Don't need to calculate discounted stationary state distribution's gradient, but
 and its gradient is
 <p align="center"> <img src="./img/REG.png" alt="MLE" width="40%" height="40%"/> </p>
 
+**Limit of the stochastic Policy gradient**: Deterministic policy is the special case of stochastic policy. For example, if policy function's shape is Gaussian distribution, when its variance is zero, its probability is 1 at X = mean. So it can be written as
+<p align="center"> <img src="./img/SPECIAL.png" alt="MLE" width="40%" height="40%"/> </p>
+
 
 
 
