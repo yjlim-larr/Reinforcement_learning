@@ -64,7 +64,7 @@ and its gradient is
 ### Deterministic Actor-Critic Algorithm
 **on-policy Deterministic Actor-Critic**: If it uses deterministic policy function, it does not gurantee exploration. So it should uses noise for exploration. 
 Update order is 
-<p align="center"> <img src="./img/UPDATE.png" alt="MLE" width="30%" height="30%"/> </p>
+<p align="center"> <img src="./img/UPDATE.png" alt="MLE" width="50%" height="50%"/> </p>
 11) is TD, 12) is critic update, 13) is actor update.  
 
 **off-policy Deterministic Actor-Critic**: off policy deterministic gradient is defined as
@@ -72,7 +72,7 @@ Update order is
 In that form, beta is the behavior policy function, and mu is the target policy functoin. Sampling from behavior function is enough to estimate policy gradient.  
 
 Using state,action pair data from behavior policy function for training, upadate order is, 
-<p align="center"> <img src="./img/OFF_UPDATE.png" alt="MLE" width="40%" height="40%"/> </p>
+<p align="center"> <img src="./img/OFF_UPDATE.png" alt="MLE" width="50%" height="50%"/> </p>
 
 **Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor. It is the reason in that form, it only uses behavior policy function's discounted stationary probability, not included behavior policy function. 
 
