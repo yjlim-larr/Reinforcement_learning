@@ -76,7 +76,10 @@ Using state,action pair data from behavior policy function for training, upadate
 
 **Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor. It is the reason in that form, it only uses behavior policy function's discounted stationary probability, not included behavior policy function. 
 
-**Compatible function approximation**: In this chapter, it show that critic's gradient can be replaced. ![image](https://user-images.githubusercontent.com/62493307/147846686-42f6bb09-5a2e-460a-8695-db4bcc44a9e7.png) without affecting deterministic policy gradient.  
+**Compatible function approximation**: In this chapter, it show that critic's gradient can be replaced. ![image](https://user-images.githubusercontent.com/62493307/147846686-42f6bb09-5a2e-460a-8695-db4bcc44a9e7.png) without affecting deterministic policy gradient. In Sutton PG, also Q_pi is replaced bt Q_w.  
+
+In Sutton PG's paper, for replacing Q_pi to Q_w, it should satisfy ![image](https://user-images.githubusercontent.com/62493307/147846768-e6e0087a-ec6a-4c2d-9338-ed8fd69a7509.png). 
+
 
 
 
