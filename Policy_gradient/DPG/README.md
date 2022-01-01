@@ -3,6 +3,7 @@ In this paper,
 1) Transforming stochastic policy to deterministic policy
 2) For exploration, use off policy actor critic algorithm.
 
+Because of using "Deterministic policy", it uses off policy for exploration.  
 **off policy**: Use different policies for exploration and traning. On exploration step, it uses off policy, and on train step, it uses target policy.  
 
 ### Introduction
