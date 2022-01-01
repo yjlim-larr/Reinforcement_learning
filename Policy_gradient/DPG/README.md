@@ -88,6 +88,13 @@ In Sutton PG's paper, for replacing Q_pi to Q_w, it should satisfy ![image](http
 By this condition Q_pi is replaced by Q_w and deterministic policy gradient can be defined by using Q_w. Proof is that,
 <p align="center"> <img src="./img/PROOF_THEOREM3.png" alt="MLE" width="80%" height="80%"/> </p>  
 
+For any deterministic policy µθ(s), there always exists a compatible function approximator of the form 
+<p align="center"> <img src="./img/APP.png" alt="MLE" width="80%" height="80%"/> </p> 
+It satisfies 1) condition. From that form, we know if action is large, Advantage is large so Q is large. But action is determined from deterministic policy, and deterministic policy determine action with small deviation, Advantage value is defined as
+<p align="center"> <img src="./img/SMALL.png" alt="MLE" width="80%" height="80%"/> </p> 
+It means a linear function approximator is sufficient to select the direction in which the actor should adjust its policy parameters.
+
+**NOTE**: To satisfy condition 2, we should have to find the parameters w that minimizes MSE. But it is difficult acquiring unbiased samples of the true gradient, so we use policy evaluation method but it does not satisfy 2) condition.
 
 
 # Results
