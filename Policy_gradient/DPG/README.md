@@ -6,7 +6,7 @@ In this paper,
 Because of using "Deterministic policy", it uses off policy for exploration.  
 **off policy**: Use different policies for exploration and traning. On exploration step, it uses off policy, and on train step, it uses target policy.  
 
-### Introduction
+## Introduction
 Standard policy function is defined as prbability distribution, but in this paper, policy function is defined as
 <p align="center"> <img src="./img/policy.png" alt="MLE" width="10%" height="10%"/> </p>
 
@@ -18,7 +18,7 @@ But it does not mean not using stochastic policy, but use it for off policy at e
 
 In this paper, by using D.P.G it brings out actor-critic-algorithm form. Approximating action-value function and updating policy parameter from approximated action-value-gradient direction. And using compatible function approximating's concept, showing approximation does not cause P.G's bias.
 
-### Background
+## Background
 Agent's goal is to maximize rewards gotten by taking action. The defined expected rewards from actor and critic approximated function is
 <p align="center"> <img src="./img/ER.png" alt="MLE" width="70%" height="70%"/> </p>
 
@@ -46,27 +46,30 @@ ____
 * For calculating off policy's policy gradient, not use Qπ, but TD errror which is defined as   
 <p align="center"> <img src="./img/TDERROR.png" alt="MLE" width="30%" height="30%"/> </p>
 
-### Gradients of Deterministic Policies
+## Gradients of Deterministic Policies
 **Action-Value Gradients**: 
 <p align="center"> <img src="./img/PROOF.png" alt="MLE" width="140%" height="140%"/> </p>
 Don't need to calculate discounted stationary state distribution's gradient, but calculate Q-function's gradient.
 
+____
 **Deterministic policy gradient Theorem**:
 "performance objective" is evaluation function of policy, and it is defined <img src="./img/OB.png" alt="MLE" width="12%" height="12%"/> and it is rewritten as
 <p align="center"> <img src="./img/RE.png" alt="MLE" width="30%" height="30%"/> </p>
 and its gradient is
 <p align="center"> <img src="./img/REG.png" alt="MLE" width="40%" height="40%"/> </p>
 
+____
 **Limit of the stochastic Policy gradient**: Deterministic policy is the special case of stochastic policy. For example, if policy function's shape is Gaussian distribution, when its variance is zero, its probability is 1 at X = mean. So it can be written as
 <p align="center"> <img src="./img/SPECIAL.png" alt="MLE" width="30%" height="30%"/> </p>
 
 
-### Deterministic Actor-Critic Algorithm
+## Deterministic Actor-Critic Algorithm
 **on-policy Deterministic Actor-Critic**: If it uses deterministic policy function, it does not gurantee exploration. So it should uses noise for exploration. 
 Update order is 
 <p align="center"> <img src="./img/UPDATE.png" alt="MLE" width="50%" height="50%"/> </p>
-11) is TD, 12) is critic update, 13) is actor update.  
+11) is TD, 12) is critic update, 13) is actor update.   
 
+____
 **off-policy Deterministic Actor-Critic**: off policy deterministic gradient is defined as
 <p align="center"> <img src="./img/OFF_REG.png" alt="MLE" width="40%" height="40%"/> </p>
 In that form, beta is the behavior policy function, and mu is the target policy functoin. Sampling from behavior function is enough to estimate policy gradient.  
@@ -74,8 +77,9 @@ In that form, beta is the behavior policy function, and mu is the target policy 
 Using state,action pair data from behavior policy function for training, upadate order is, 
 <p align="center"> <img src="./img/OFF_UPDATE.png" alt="MLE" width="50%" height="50%"/> </p>
 
-**Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor. It is the reason in that form, it only uses behavior policy function's discounted stationary probability, not included behavior policy function. 
+**Note**: As i prove that deterministic policy gradient, integral over action is removed so we don't need to importance sampling on actor. It is the reason in that form, it only uses behavior policy function's discounted stationary probability, not included behavior policy function.  
 
+____
 **Compatible function approximation**: In this chapter, it show that critic's gradient can be replaced. ![image](https://user-images.githubusercontent.com/62493307/147846686-42f6bb09-5a2e-460a-8695-db4bcc44a9e7.png) without affecting deterministic policy gradient. In Sutton PG, also Q_pi is replaced bt Q_w.  
 
 In Sutton PG's paper, for replacing Q_pi to Q_w, it should satisfy ![image](https://user-images.githubusercontent.com/62493307/147846768-e6e0087a-ec6a-4c2d-9338-ed8fd69a7509.png). (f is the approximated Q function). And w is determined, Mean square loss of Q_pi and Q_w(=f) is minimum. So it can written as
