@@ -39,6 +39,7 @@ Critic is trained by bellman function, Actor is trained by J, chanin rule. (J = 
 By DQN paper, for training Q network, it uses  
 1) replay buffer: reduce dependecy between data.
 2) Q net has a tendency to diverge, so make target network and use soft update for updating parameter of actor and critic's paramters.  
+3) Use batch normalization for making same range, because low dimensional feature vector's each element's physical Units are different.
 
 **NOTE**: There are not y_t which is true value of state and action pair's q-value. So it is impossible to train Q model by simply using loss function. In other words, y_t is expressed as **r_t(s_t, a_t) + gamma * garbage value** when train step, there is no limit on garbage value, so it makes Q-function prone to divergence. We need reference for training Q, so make pseudo reference as known as target network of Q. Its effects are  
 1) limit divergence ( = put limits on garbage. )  
