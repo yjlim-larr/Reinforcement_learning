@@ -64,7 +64,7 @@ We can get various S, G pair by doing episodes many times. And use them for trai
 2. Actor critic: https://proceedings.neurips.cc/paper/1999/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf  
   It suggests combination of actor only method and critic only method for improving each methods' problem. Actor can be considered as approximated policy function and Critic can be considered as approximated value function of state. Actor is updated from evaluation of Actor by using Critic, and Critic is updated from reward or cost from action chosen from Actor. One whole system's update includes actor, critic's update.   
   
-3. DPG: http://proceedings.mlr.press/v32/silver14.pdf
+3. DPG: http://proceedings.mlr.press/v32/silver14.pdf  
   It suggests deterministic policy function's policy gradient and use it for dealing with continuous action space. For exploration which is not done by deterministic policy, it uses off policy. And proove that determinisitic is the special case of stochastic when variance is zero.
 
 4. DDPG: https://arxiv.org/pdf/1509.02971.pdf
