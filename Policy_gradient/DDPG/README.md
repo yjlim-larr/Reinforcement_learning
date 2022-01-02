@@ -46,13 +46,12 @@ By DQN paper, for training Q network, it uses
 2) Same effect as supervised learning  
 
 ___
-A major challenge of learning in continuous action spaces is exploration. An advantage of off policies algorithms such as DDPG is that we can treat the problem of exploration independently
-from the learning algorithm. We constructed an exploration policy µ
-0 by adding noise sampled from
-a noise process N to our actor policy
+A major challenge of learning in continuous action spaces is exploration. An advantage of off policies algorithms such as DDPG is that we can treat the problem of exploration independently from the learning algorithm. It means off-policy collects data from behavior policy, so learning step's target policy is independent of collecting data. In that paper, it constructed an exploration policy(=behavior policy) µ0 by adding noise sampled from a noise process N to its actor policy, so it is defined 
+<p align="center"> <img src="./img/noise.png" alt="rewrite" width="60%" height="60%"/> </p>
+N can be chosen to suit the environment.
 
-
-
+The result's algorithm is 
+<p align="center"> <img src="./img/algorithm.png" alt="rewrite" width="60%" height="60%"/> </p>
 
 # Results
 # Reference
