@@ -57,3 +57,4 @@ The result's algorithm is
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/62493307/147885095-a383e77c-8abf-4af1-98a7-eaa75c808984.gif)
 
 # Reference
+DDPG paper: https://arxiv.org/pdf/1509.02971.pdf
