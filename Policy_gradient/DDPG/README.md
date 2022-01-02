@@ -17,6 +17,19 @@ Using policy function **π**, visitation distribution for a policy **π** is exp
 Action-value function is **Qπ(s_t, a_t)** = E[R_t | s_t, a_t]
 ___
 **Bellman equation**: 
+<img src="./img/bellman.png" alt="MLE" width="80%" height="80%"/>
+It describe the relation between at time 't' Q value and, at time 't+1' Q value.
+
+If policy function is deterministic, 
+<img src="./img/deter.png" alt="MLE" width="80%" height="80%"/>
+Action is determined from state, so it only depends on environment. Behavior policy for exploration is used to Q training that is off-policy. It means Q function can learn various action on state. 
+
+If we use neural network for approximating Q fuction, Q is parameterized theta. And the loss function is 
+<img src="./img/Loss.png" alt="MLE" width="80%" height="80%"/>
+From this form, we know that for training model it uses temporal difference(TD)
+
+
+
 
 
 # Results
