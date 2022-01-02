@@ -45,7 +45,8 @@ By DQN paper, for training Q network, it uses
 1) limit divergence ( = put limits on garbage. )  
 2) Same effect as supervised learning  
 
-A major challenge of learning in continuous action spaces is exploration. An advantage of offpolicies algorithms such as DDPG is that we can treat the problem of exploration independently
+___
+A major challenge of learning in continuous action spaces is exploration. An advantage of off policies algorithms such as DDPG is that we can treat the problem of exploration independently
 from the learning algorithm. We constructed an exploration policy µ
 0 by adding noise sampled from
 a noise process N to our actor policy
