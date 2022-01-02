@@ -67,8 +67,8 @@ We can get various S, G pair by doing episodes many times. And use them for trai
 3. DPG: http://proceedings.mlr.press/v32/silver14.pdf  
   It suggests deterministic policy function's policy gradient and use it for dealing with continuous action space. For exploration which is not done by deterministic policy, it uses off policy. And proove that determinisitic is the special case of stochastic when variance is zero.
 
-4. DDPG: https://arxiv.org/pdf/1509.02971.pdf
-  
+4. DDPG: https://arxiv.org/pdf/1509.02971.pdf  
+  It combines DQN and actor critic agorithm for treating continuous action space. It implements DPG paper's results by using deep neural network.
 
 8. NPG
 9. TRPO
