@@ -8,7 +8,7 @@ Environment is partially observed so, we need observation and action pair's hist
 
 But, in this paper, assuming environment is fully observed. so **s_t** is equal to **x_t**.
 
-Agent's action is expressed as policy, pi: S -> P(A)
+Agent's action is expressed as policy, π: S -> P(A)
 
 
 
