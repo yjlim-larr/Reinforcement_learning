@@ -31,10 +31,15 @@ From this form, we know that for training model it uses temporal difference(TD).
 ___
 ### Algorithm
 It is impossible to directly apply continuous action space to Q-learning. So we use DPG and actor critic approach.  
-Critic: approximated Q-function.  
-Actor: target policy function.  
+**Critic**: approximated Q-function.  
+**Actor**: target policy function.  
 Critic is trained by bellman function, Actor is trained by J, chanin rule. (J = expected future discounted reward). In other words, Actor is trained by deterministic policy gradient, we can check that form and proof on DPG, and it is defined as,
 <p align="center"> <img src="./img/policygradient.png" alt="rewrite" width="60%" height="60%"/> </p>
+
+By DQN paper, for training Q network, it uses  
+1) replay buffer: reduce dependecy between data.
+2) Q net has a tendency to diverge, so make target network and use soft update for updating parameter of actor and critic's paramters.  
+
 
 
 
