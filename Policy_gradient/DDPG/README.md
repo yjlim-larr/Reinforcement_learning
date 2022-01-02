@@ -18,5 +18,6 @@ Action-value function is **Qπ(s_t, a_t)** = E[R_t | s_t, a_t]
 ___
 **Bellman equation**: 
 
+
 # Results
 # Reference
