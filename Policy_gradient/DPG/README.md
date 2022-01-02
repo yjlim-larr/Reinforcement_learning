@@ -100,11 +100,5 @@ ____
 (s,a) pair data is sampled from behavior policy, 
 <p align="center"> <img src="./img/ALGO.png" alt="MLE" width="80%" height="80%"/> </p> 
 
-# Results
-Use Pendulum-v0 for checking model.
-Pendulum-v0's reward is less than zero, and action is on continuous space, range is [-2, 2]. It means, for maximizing action * Q value, action is always -2.  But policy evaluation value J is not proportional to action value.
-
-
-
 # Reference
 Importance sampling: https://untitledtblog.tistory.com/135
