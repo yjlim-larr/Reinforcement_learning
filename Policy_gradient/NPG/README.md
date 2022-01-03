@@ -1,8 +1,20 @@
 # Summary
 When a parameter space has a certain underlying structure, the ordinary gradient of a function does not represent its steepest direction, but the natural gradient does. Natural gradient is that it considers parameter space's base vector for steepest direction. For example, let's consider that manifold 
-<p align="center"> <img src="./img/manifold.png" alt="MLE" width="20%" height="20%"/> </p>
+<p align="center"> <img src="./img/manifold.png" alt="MLE" width="50%" height="50%"/> </p>
 
-In that data manifold, 'x1' and 'x2' is close, when its distance is calculated by Euclidean space's metric function. But considering data structure, its distance can be calculated from "red line". So we should consider data structure and, redefine its metric function.
+In that data manifold, 'x1' and 'x2' is close, when its distance is calculated by Euclidean space's metric function. But considering data structure, its distance can be calculated from "red line". So we should consider data structure and, re-define its metric function.
+
+### Natural gradient
+Let S = {w ∈ Rn} be a parameter space on which a function L(w)is defined.  
+1) If S is a Euclidean space with an orthonormal coordinate system w, the distance between 'w' and 'w + dw' is
+<p align="center"> <img src="./img/dis1.png" alt="MLE" width="50%" height="50%"/> </p>  
+
+2) However, when the coordinate system is nonorthonormal, the squared length is given by the quadratic form 
+<p align="center"> <img src="./img/dis2.png" alt="MLE" width="50%" height="50%"/> </p> 
+For example, 
+<p align="center"> <img src="./img/pf.png" alt="MLE" width="50%" height="50%"/> </p>  
+
+if S is curved manifold, there is no orthonormal linear coordinate. 
 
 
 # Results
