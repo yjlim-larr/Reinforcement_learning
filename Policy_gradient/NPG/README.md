@@ -52,8 +52,12 @@ The steepest descent direction is defined as the vector d_theta that minimizes e
 Fisher information matrix is positive definite. But why we use fisher information matrix? Because we can calculate kl-divergence gradient by using it.
 <p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="90%" height="90%"/>  </p>   
 
-Fisher information matrix is second derivative of kl-divergence. And its proof is written on wiki. 
+Fisher information matrix is second derivative of kl-divergence. And its proof is that
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/>  </p>   
+
+So our natural policy gradient is calculated by, 
+<p align="center"> <img src="./img/natural_gradient.png" alt="MLE" width="90%" height="90%"/>  </p>  
+
 
 # Results
 
