@@ -38,11 +38,15 @@ Let's assume that 'z' is sampled from Q(z). And input this 'z' to neural network
 The optimal parameter w* optimizes L(w). We can get optimal w* by using natural gradient and update rule.   
 <p align="center"> <img src="./img/update.png" alt="MLE" width="30%" height="30%"/>  </p>  
 
-___
+
 # A Natural policy gradient
 A Natural Policy gradient paper suggests "covariant gradient" by defining a metric based on the underlying structure of the policy. They apply natural gradient to policy gradient method and it makes model update toward choosing a greedy optimal action.  
 
-###
+### Natural Gradient  
+In Policy gradient method, Policy gradient(PG) is calculated 
+<p align="center"> <img src="./img/PG.png" alt="MLE" width="30%" height="30%"/>  </p>   
+
+The steepest descent direction is defined as the vector d_theta that minimizes expected future discounted rewards under the constraint that the squared length |d_theta|^2 is held to a small constant.
 
 # Results
 
