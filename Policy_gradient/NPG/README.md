@@ -23,7 +23,8 @@ ___
 It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed length, that is, under the constraint |dw|^2 = ε^2 for a sufficiently small constant ε.
 
 **Theorem 1**: the gradient of Riemannian space is given that,
-<p align="center"> <img src="./img/Theorem1.png" alt="MLE" width="60%" height="60%"/> </p>    
+<p align="center"> <img src="./img/Theorem1.png" alt="MLE" width="60%" height="60%"/> </p>  
+
 **pf)**   
 <p align="center"> <img src="./img/pf.png" alt="MLE" width="80%" height="80%"/> </p>  
 
@@ -33,7 +34,8 @@ Let's assume that 'z' is sampled from Q(z). And input this 'z' to neural network
 **L(w) = E[I(z,w)]** : risk function, average loss.  Neural network goal is to minimize L(w).  
 
 The optimal parameter w* optimizes L(w). We can get optimal w* by using natural gradient and update rule.   
-<p align="center"> <img src="./img/update.png" alt="MLE" width="30%" height="30%"/>  </p>    
+<p align="center"> <img src="./img/update.png" alt="MLE" width="30%" height="30%"/>  </p>  
+
 ___
 
 
