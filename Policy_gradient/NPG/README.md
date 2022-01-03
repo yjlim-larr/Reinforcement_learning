@@ -58,6 +58,10 @@ Fisher information matrix is second derivative of kl-divergence. And its proof i
 So our natural policy gradient is calculated by, 
 <p align="center"> <img src="./img/natural_gradient.png" alt="MLE" width="90%" height="90%"/>  </p>  
 
+### The Natural gradient and Policy iteration
+It also approximate Q^pi(s, a) to f^pi(s, a; w)
+
+### 
 
 # Results
 
