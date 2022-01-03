@@ -14,8 +14,11 @@ Let S = {w ∈ Rn} be a parameter space on which a function L(w)is defined.
 For example, 
 <p align="center"> <img src="./img/pf.png" alt="MLE" width="50%" height="50%"/> </p>  
 
-if S is curved manifold, there is no orthonormal linear coordinate. 
+if S is curved manifold, there is no orthonormal linear coordinate. G = g_ij(w) is called Riemmanian metric tensor. 
+<p align="center"> <img src="./img/G.png" alt="MLE" width="50%" height="50%"/> </p> 
 
+### Steepest descent direction of a funciton L(w)
+It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed length, that is, under the constraint |dw|^2 = ε^2 for a sufficiently small constant ε
 
 # Results
 
