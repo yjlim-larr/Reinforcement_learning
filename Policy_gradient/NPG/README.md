@@ -44,16 +44,16 @@ A Natural Policy gradient paper suggests "covariant gradient" by defining a metr
 
 ### Natural Gradient  
 In Policy gradient method, Policy gradient(PG) is calculated 
-<p align="center"> <img src="./img/PG.png" alt="MLE" width="30%" height="30%"/>  </p>   
+<p align="center"> <img src="./img/PG.png" alt="MLE" width="40%" height="40%"/>  </p>   
 
 The steepest descent direction is defined as the vector d_theta that minimizes expected future discounted rewards under the constraint that the squared length |d_theta|^2 is held to a small constant. We can check its proof on "Natural Gradient Works Efficiently in Learning". Anyway, pi is probabilistic manifold, and its fisher information matrix is defined as  
-<p align="center"> <img src="./img/fisher.png" alt="MLE" width="30%" height="30%"/>  </p>   
+<p align="center"> <img src="./img/fisher.png" alt="MLE" width="40%" height="40%"/>  </p>   
 
 Fisher information matrix is positive definite. But why we use fisher information matrix? Because we can calculate kl-divergence gradient by using it.
-<p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="30%" height="30%"/>  </p>   
+<p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="90%" height="90%"/>  </p>   
 
 Fisher information matrix is second derivative of kl-divergence. And its proof is written on wiki. 
-<p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="30%" height="30%"/>  </p>   
+<p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/>  </p>   
 
 # Results
 
