@@ -46,7 +46,13 @@ A Natural Policy gradient paper suggests "covariant gradient" by defining a metr
 In Policy gradient method, Policy gradient(PG) is calculated 
 <p align="center"> <img src="./img/PG.png" alt="MLE" width="30%" height="30%"/>  </p>   
 
-The steepest descent direction is defined as the vector d_theta that minimizes expected future discounted rewards under the constraint that the squared length |d_theta|^2 is held to a small constant.
+The steepest descent direction is defined as the vector d_theta that minimizes expected future discounted rewards under the constraint that the squared length |d_theta|^2 is held to a small constant. We can check its proof on "Natural Gradient Works Efficiently in Learning". Anyway, pi is probabilistic manifold, and its fisher information matrix is defined as  
+<p align="center"> <img src="./img/fisher.png" alt="MLE" width="30%" height="30%"/>  </p>   
+
+Fisher information matrix is positive definite. But why we use fisher information matrix? Because
+<p align="center"> <img src="./img/use.png" alt="MLE" width="30%" height="30%"/>  </p>   
+
+
 
 # Results
 
