@@ -62,6 +62,7 @@ So our natural policy gradient is calculated by,
 It also approximates Q^pi(s, a) to f^pi(s, a; w). For approximation, it uses compatible function approximation which is equal to Sutton PG.  
 
 Theorem 1: It uses Mean square loss for evaluating approximated Q fuction's performance. W* which is optimal parameter makes approximated Q function is equal to Q function. So MSELoss is zero, and satisfies MSELoss's derivative with respect to w is zero.
+<p align="center"> <img src="./img/CFA.png" alt="MLE" width="90%" height="90%"/>  </p>
 <p align="center"> <img src="./img/T1.png" alt="MLE" width="90%" height="90%"/>  </p>
 
 ### Greedy Policy Improvement
