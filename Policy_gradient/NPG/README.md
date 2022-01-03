@@ -17,8 +17,13 @@ For example,
 if S is curved manifold, there is no orthonormal linear coordinate. G = g_ij(w) is called Riemmanian metric tensor. 
 <p align="center"> <img src="./img/G.png" alt="MLE" width="50%" height="50%"/> </p> 
 
-### Steepest descent direction of a funciton L(w)
-It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed length, that is, under the constraint |dw|^2 = ε^2 for a sufficiently small constant ε
+### Steepest descent direction of a funciton L(w) at w
+It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed length, that is, under the constraint |dw|^2 = ε^2 for a sufficiently small constant ε.
+
+**Theorem1**: the gradient of Riemannian space is given that,
+<p align="center"> <img src="./img/Theorem1.png" alt="MLE" width="50%" height="50%"/> </p> 
+
+
 
 # Results
 
