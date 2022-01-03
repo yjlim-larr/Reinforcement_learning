@@ -1,8 +1,10 @@
-# Summary
+I read two papers 1) A Natural policy gradient, 2) Natural Gradient Works Efficiently in Learning. "Natural Gradient Works Efficiently in Learning" paper explains why use natural gradient and how to calculate it, and "A Natural policy gradient" paper apply natural gradient to policy gradient method.  
+
+# Natural Gradient Works Efficiently in Learning
 When a parameter space has a certain underlying structure, the ordinary gradient of a function does not represent its steepest direction, but the natural gradient does. Natural gradient is that it considers parameter space's base vector for steepest direction. For example, let's consider that manifold 
 <p align="center"> <img src="./img/manifold.png" alt="MLE" width="50%" height="50%"/> </p>
 
-In that data manifold, 'x1' and 'x2' is close, when its distance is calculated by Euclidean space's metric function. But considering data structure, its distance can be calculated from "red line". So we should consider data structure and, re-define its metric function.  
+In that data manifold, 'x1' and 'x2' are judged "close", when its distance is calculated by Euclidean space's metric function. But considering data structure, its distance should be calculated by using "red line". So we should consider data structure and, re-define its metric function.  
 
 ___  
 ### Natural gradient
@@ -37,7 +39,10 @@ The optimal parameter w* optimizes L(w). We can get optimal w* by using natural 
 <p align="center"> <img src="./img/update.png" alt="MLE" width="30%" height="30%"/>  </p>  
 
 ___
+# A Natural policy gradient
+A Natural Policy gradient paper suggests "covariant gradient" by defining a metric based on the underlying structure of the policy. They apply natural gradient to policy gradient method and it makes model update toward choosing a greedy optimal action.  
 
+###
 
 # Results
 
