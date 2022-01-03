@@ -7,21 +7,21 @@ In that data manifold, 'x1' and 'x2' is close, when its distance is calculated b
 ### Natural gradient
 Let S = {w ∈ Rn} be a parameter space on which a function L(w)is defined.  
 1) If S is a Euclidean space with an orthonormal coordinate system w, the distance between 'w' and 'w + dw' is
-<p align="center"> <img src="./img/dis1.png" alt="MLE" width="50%" height="50%"/> </p>  
+<p align="center"> <img src="./img/dis1.png" alt="MLE" width="20%" height="20%"/> </p>  
 
 2) However, when the coordinate system is nonorthonormal, the squared length is given by the quadratic form 
-<p align="center"> <img src="./img/dis2.png" alt="MLE" width="50%" height="50%"/> </p> 
+<p align="center"> <img src="./img/dis2.png" alt="MLE" width="30%" height="30%"/> </p> 
 For example, 
-<p align="center"> <img src="./img/pf.png" alt="MLE" width="50%" height="50%"/> </p>  
+<p align="center"> <img src="./img/pf.png" alt="MLE" width="80%" height="80%"/> </p>  
 
 if S is curved manifold, there is no orthonormal linear coordinate. G = g_ij(w) is called Riemmanian metric tensor. 
-<p align="center"> <img src="./img/G.png" alt="MLE" width="50%" height="50%"/> </p> 
+<p align="center"> <img src="./img/G.png" alt="MLE" width="80%" height="80%"/> </p> 
 
 ### Steepest descent direction of a funciton L(w) at w
 It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed length, that is, under the constraint |dw|^2 = ε^2 for a sufficiently small constant ε.
 
 **Theorem1**: the gradient of Riemannian space is given that,
-<p align="center"> <img src="./img/Theorem1.png" alt="MLE" width="50%" height="50%"/> </p> 
+<img src="./img/Theorem1.png" alt="MLE" width="60%" height="60%"/> 
 
 
 
