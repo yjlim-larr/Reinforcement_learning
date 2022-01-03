@@ -22,7 +22,7 @@ It is defined d by the vector dw that minimizes L(w + dw) where |dw| has a fixed
 
 **Theorem 1**: the gradient of Riemannian space is given that,
 <img src="./img/Theorem1.png" alt="MLE" width="60%" height="60%"/>    
-**pf)** 
+**pf)**   
 <img src="./img/pf.png" alt="MLE" width="60%" height="60%"/>
 
 ### Natural gradient learning  
