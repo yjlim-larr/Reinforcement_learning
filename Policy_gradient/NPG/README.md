@@ -59,7 +59,13 @@ So our natural policy gradient is calculated by,
 <p align="center"> <img src="./img/natural_gradient.png" alt="MLE" width="90%" height="90%"/>  </p>  
 
 ### The Natural gradient and Policy iteration
-It also approximate Q^pi(s, a) to f^pi(s, a; w)
+It also approximates Q^pi(s, a) to f^pi(s, a; w). For approximation, it uses compatible function approximation which is equal to Sutton PG.  
+
+Theorem 1:
+
+Theorem 2:
+
+Theorem 3:
 
 ### 
 
