@@ -65,18 +65,17 @@ Theorem 1: It uses Mean square loss for evaluating approximated Q fuction's perf
 <p align="center"> <img src="./img/CFA.png" alt="MLE" width="90%" height="90%"/>  </p>
 <p align="center"> <img src="./img/T1.png" alt="MLE" width="90%" height="90%"/>  </p>
 
-### Greedy Policy Improvement  
-In this section, we show that the natural gradient tends to move toward this best action, rather than just a good action. the probability manifold of $\pi(a; s, 0) could be curved, so a translation of
-a point by a tangent vector would not necessarily keep the point on the manifold
-(such as on a sphere)
+### Greedy Policy Improvement   
+In this section, it shows that the natural gradient tends to move toward this best action, rather than just a good action.  
 
-Theorem 2:
+**Theorem 2** shows that, if tangent vector(gradient) is on manifold, even if the large step, it makes policy function choose best action. But it is in the special case like policy is in the expotential family, because it has affine geometry (ie the flat geometry of a plane), so a translation of a point by a tangent vector will keep the point on the manifold.
+<p align="center"> <img src="./img/exp.png" alt="MLE" width="90%" height="90%"/>  </p>  
+Theorem 2 results is that even if the infinite step size, policy function has nonzero probability with the best action which is determined from approximated Q fuction's value when it has the biggest value on state s. It shows natural gradient updates policy function to right direction.  
 
-Theorem 3:
-
-### 
-
-# Results
+---
+In general the probability manifold of π(a; s, 0) could be curved, so a translation of a point by a tangent vector would not necessarily keep the point on the manifold(such as on a sphere). Therefore it should consider general case. **Theorem 3** shows that even if manifold's geometry is not affine but curved, natural gradient makes policy choose best action.  
+<p align="center"> <img src="./img/general.png" alt="MLE" width="90%" height="90%"/>  </p>
+Theorem 3 results mean poliy is updated by locally linear approximated Q funtion which is fw. In other words, because of fw, local best action's probabilty increases and other actions decreases. It shows fw intervenes in policy.  
 
 
 # Reference
