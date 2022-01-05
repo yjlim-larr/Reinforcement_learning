@@ -1,4 +1,6 @@
 # What is Policy gradient method?
+Policy gradient method is a kind of Reinforcement learning. It uses expected future rewards for evaluating policy, and use it for updating policy.    
+
 ## Terms
 <img src="./img/terms.png" alt="MLE" width="80%" height="80%"/>
 
