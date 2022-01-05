@@ -70,8 +70,8 @@ We can get various S, G pair by doing episodes many times. And use them for trai
 4. DDPG: https://arxiv.org/pdf/1509.02971.pdf  
   It combines DQN and actor critic agorithm for treating continuous action space. It implements DPG paper's results by using deep neural network.
 
-5. NPG: https://repository.upenn.edu/cgi/viewcontent.cgi?article=1128&context=statistics_papers
-  It suggets
+5. NPG: https://repository.upenn.edu/cgi/viewcontent.cgi?article=1128&context=statistics_papers  
+  It suggets natural gradient which considers parameter's space shape for updating. It shows that updating by using tangent vector does not gurantee policy's improvement to right direction, but natural gradient does.  
 
 10. TRPO
 11. GAE
