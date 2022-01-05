@@ -65,7 +65,11 @@ Theorem 1: It uses Mean square loss for evaluating approximated Q fuction's perf
 <p align="center"> <img src="./img/CFA.png" alt="MLE" width="90%" height="90%"/>  </p>
 <p align="center"> <img src="./img/T1.png" alt="MLE" width="90%" height="90%"/>  </p>
 
-### Greedy Policy Improvement
+### Greedy Policy Improvement  
+In this section, we show that the natural gradient tends to move toward this best action, rather than just a good action. the probability manifold of $\pi(a; s, 0) could be curved, so a translation of
+a point by a tangent vector would not necessarily keep the point on the manifold
+(such as on a sphere)
+
 Theorem 2:
 
 Theorem 3:
