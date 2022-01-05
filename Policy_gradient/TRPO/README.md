@@ -9,10 +9,11 @@ The new policy is defined as
 <p align="center"> <img src="./img/update.png" alt="MLE" width="80%" height="80%"/> </p>   
 
 By that form, when α = 0, new policy is equal to π and, when α = 1 new policy is equal to π'. And the poliy gradient of new policy when α = 0 is given by  
-<p align="center"> <img src="./img/gradient.png" alt="MLE" width="100%" height="100%"/> </p>  
+<p align="center"> <img src="./img/gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
 By same insight, 
 <p align="center"> <img src="./img/sight.png" alt="MLE" width="100%" height="100%"/> </p>  
 
+___
 **Lemma 2:** It shows that two differenct policy's expected reward difference is given by  
 <p align="center"> <img src="./img/lemma2.png" alt="MLE" width="100%" height="100%"/> </p>  
 
