@@ -70,10 +70,12 @@ We can get various S, G pair by doing episodes many times. And use them for trai
 4. DDPG: https://arxiv.org/pdf/1509.02971.pdf  
   It combines DQN and actor critic agorithm for treating continuous action space. It implements DPG paper's results by using deep neural network.
 
-8. NPG: https://repository.upenn.edu/cgi/viewcontent.cgi?article=1128&context=statistics_papers
-9. TRPO
-10. GAE
-11. PPO
+5. NPG: https://repository.upenn.edu/cgi/viewcontent.cgi?article=1128&context=statistics_papers
+  It suggets
+
+10. TRPO
+11. GAE
+12. PPO
 
 # Reference  
 https://dnddnjs.gitbooks.io/rl/content/actor-critic_policy_gradient.html  
