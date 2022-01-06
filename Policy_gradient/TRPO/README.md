@@ -34,13 +34,37 @@ The main idea is kakade's expected return of another policy in terms of the adva
 
 By that form, <img src="./img/increase.png" alt="MLE" width="20%" height="20%"/> makes the policy performance increase, but advantage function is approximated, so due
 to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>. So it uses local approximation to expected discounted rewards:  
-<p align="center"> <img src="./img/app.png" alt="MLE" width="50%" height="50%"/> </p>   
+<p align="center"> <img src="./img/app.png" alt="MLE" width="50%" height="50%"/> </p>    
 
+___
+### Monotonic Improvement Guarantee for General Stochastic Policies  
 By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!**  
 
-TRPO suggests new update policy rule, not use mixture, but use kl-divergence for expressign updated policy and previous policy's distance. And use it for deriving new form of lower bound and reason of step size. **Theorem 1** shows TRPO deriving new form of lower bound by using kl divergence of updated policy and previous policy.  
+TRPO suggests new update policy rule, not use mixture, but use kl-divergence between updated policy and previous policy's distance. It extend kakade's lower bound to general stochastic policies by replacing alpha with a distance measure.  
+1. **Theorem 1** shows TRPO deriving new form of lower bound by using "total variation divergence" of updated policy and previous policy.  
+2. Use relationship between total variation divergence and kl-divergence for modifying TV's lower bound form to KL's lower bound form.  
 
-![image](https://user-images.githubusercontent.com/62493307/148325631-200facbe-ce3a-407b-a73f-78f0fca152db.png) is satisfied, 
+The result is  
+<p align="center"> <img src="./img/result.png" alt="MLE" width="50%" height="50%"/> </p> 
+
+**Algorithm 1** in paper, is guaranteed to generate a monotonically improving sequence of policies.  
+
+___
+### Optimization of Parameterized Policies  
+From theorem 1's result, for improving the true objective "expected discounted rewards", we maximize lower bound, so it is that, 
+<p align="center"> <img src="./img/max.png" alt="MLE" width="50%" height="50%"/> </p>  
+In practice, if we used the penalty coefficient C recommended by the theory above, the step sizes would be very small. One way to take larger steps in a robust way is to use
+a constraint on the KL divergence between the new policy and the old policy, i.e., a **trust region constraint:** 
+<p align="center"> <img src="./img/Lagran.png" alt="MLE" width="50%" height="50%"/> </p>  
+
+This problem imposes a constraint that the KL divergence is bounded at every point in the state space.  we can use a heuristic approximation which considers the average KL divergence because this problem is impractical to solve due to the large number of constraints. So the form is rewritten that
+<p align="center"> <img src="./img/final.png" alt="MLE" width="50%" height="50%"/> </p>  
+
+
+
+
+
+
 
 
 
