@@ -80,6 +80,8 @@ KL-divergence's gradient is presented as
 So, kl-divregence's gradient is 
 <p align="center"> <img src="./img/kl-gradient2.png" alt="MLE" width="70%" height="70%"/> </p> 
 
+For calculaing x = theta - theta_old, we should calculate (A^-1)g, but it takes long time. So **we use conjugate gradient algorithm for estimating x**.  
+
 ### Fisher information matrix and kl-divergence
 Fisher information matrix is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
