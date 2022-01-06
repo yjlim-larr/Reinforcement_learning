@@ -23,7 +23,7 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 
 
 ## 2. Trust Region Policy Optimization:  
-TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. 
+TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. In this paper, it uses kakade's paper's core results, and modifies its form to use neural network. Policy update form and step size is determined in TRPO, and they are main idea in that paper.   
 
 ### Background  
 * Terms
@@ -33,7 +33,11 @@ The main idea is kakade's expected return of another policy in terms of the adva
 <p align="center"> <img src="./img/re.png" alt="MLE" width="50%" height="50%"/> </p>  
 
 By that form, <img src="./img/increase.png" alt="MLE" width="20%" height="20%"/> makes the policy performance increase, but advantage function is approximated, so due
-to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>
+to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>. So it uses local approximation to expected discounted rewards:  
+<p align="center"> <img src="./img/app.png" alt="MLE" width="50%" height="50%"/> </p>   
+
+By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade** suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!
+
 
 
 # Results
