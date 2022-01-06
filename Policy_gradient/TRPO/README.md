@@ -25,7 +25,7 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 ## 2. Trust Region Policy Optimization:  
 TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. In this paper, it uses kakade's paper's core results, and modifies its form to use neural network. Because mixture policy is not practical so, it presents stochastic methods. Policy update form and step size is determined in TRPO, and they are main idea in that paper.  
 
-### Background  
+### 2-2) Background  
 * Terms
 <p align="center"> <img src="./img/terms.png" alt="MLE" width="100%" height="100%"/> </p>  
 
@@ -37,7 +37,7 @@ to estimation and approximation error, that there will be some states 's' for wh
 <p align="center"> <img src="./img/app.png" alt="MLE" width="70%" height="70%"/> </p>    
 
 ___
-### Monotonic Improvement Guarantee for General Stochastic Policies  
+### 2-3) Monotonic Improvement Guarantee for General Stochastic Policies  
 By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!**  
 
 TRPO suggests new update policy rule, not use mixture, but use kl-divergence between updated policy and previous policy's distance. It extend kakade's lower bound to general stochastic policies by replacing alpha with a distance measure.  
@@ -50,7 +50,7 @@ The result is
 **Algorithm 1** in paper, is guaranteed to generate a monotonically improving sequence of policies.  
 
 ___
-### Optimization of Parameterized Policies  
+### 2-4) Optimization of Parameterized Policies  
 From theorem 1's result, for improving the true objective "expected discounted rewards", we maximize lower bound, so it is that, 
 <p align="center"> <img src="./img/max.png" alt="MLE" width="40%" height="40%"/> </p>  
 In practice, if we used the penalty coefficient C recommended by the theory above, the step sizes would be very small. One way to take larger steps in a robust way is to use
@@ -61,14 +61,14 @@ This problem imposes a constraint that the KL divergence is bounded at every poi
 <p align="center"> <img src="./img/final.png" alt="MLE" width="70%" height="70%"/> </p>  
 
 ____
-### Sample-Based Estimation of the Objective and Constraint  
+### 2-5) Sample-Based Estimation of the Objective and Constraint  
 For caculating expected discounted rewards, it uses sampling method for estimating. For exploration, it uses behavior policy to use importance sampling. It replaces advantage function with approximated Q function, and presents expectation form. So the practical form is   
 <p align="center"> <img src="./img/practical.png" alt="MLE" width="40%" height="40%"/> </p>
 
 5.1 Single path, 5.2 Vine are estimation procedure for estimation Q function.  
 
 ____
-### Practical algorithm  
+### 2-6) Practical algorithm  
 Step 1 and step 2 is used for estimating objective and constraint. **Step 3** explains conjugate gradient algorithm followed by line search for udpating policy.  
 **NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients.** Appendix C describes how to implement trpo. 
 
@@ -108,9 +108,10 @@ And using caculated x by conjugated gradient algorithm, 'Ax' is practically esti
 <p align="center"> <img src="./img/fishervectorproduct.png" alt="MLE" width="90%" height="90%"/> </p>
 
 ____
-### Connection with Prior work  
-
-
+### 2-7) Connection with Prior work  
+In this section, it explains natural policy gradient is the special case of trpo policy update. TRPO objective function's linear approximation and a quadratic approximation to the kl-divergence constraint is equal to natural policy gradient.  
+<p align="center"> <img src="./img/natural.png" alt="MLE" width="90%" height="90%"/> </p>  
+**The difference between natural policy gradient method and TRPO is step size. In case of TRPO, it enforces the constraint at each update. But natural policy gradient use fixed step size.**
 
 # Results
 
