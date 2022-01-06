@@ -25,6 +25,16 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 ## 2. Trust Region Policy Optimization:  
 TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. 
 
+### Background  
+* Terms
+<p align="center"> <img src="./img/terms.png" alt="MLE" width="100%" height="100%"/> </p>  
+
+The main idea is kakade's expected return of another policy in terms of the advantage of preveious policy, and it is rewritten as
+<p align="center"> <img src="./img/re.png" alt="MLE" width="100%" height="100%"/> </p>  
+
+By that form, ![image](https://user-images.githubusercontent.com/62493307/148323649-13e61611-d028-4cd5-91fd-6d7cca56af2b.png)
+
+
 # Results
 
 # Reference
