@@ -80,6 +80,8 @@ KL-divergence's gradient is presented as
 And fisher information is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
 
+### Conjugate gradient algorithm: 
+It takes a long time to solve Fx = b's 'x'. Therefore, instead of directly calculating F^-1, it approximates Fx = b's x and estimate (F^-1)b.   
 
 ____
 ### Connection with Prior work  
@@ -92,4 +94,5 @@ ____
 TRPO paper: https://arxiv.org/pdf/1502.05477.pdf  
 Approximately Optimal Approximate Reinfor ement Learning:  
 https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/KakadeLangford-icml2002.pdf   
-https://ieor8100.github.io/rl/docs/Lecture%207%20-Approximate%20RL.pdf
+https://ieor8100.github.io/rl/docs/Lecture%207%20-Approximate%20RL.pdf  
+Conjugate gradient algorithm: https://joonleesky.github.io/Conjugate_Gradient/  
