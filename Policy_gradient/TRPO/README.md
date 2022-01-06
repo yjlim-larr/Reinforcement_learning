@@ -34,7 +34,7 @@ The main idea is kakade's expected return of another policy in terms of the adva
 
 By that form, <img src="./img/increase.png" alt="MLE" width="20%" height="20%"/> makes the policy performance increase, but advantage function is approximated, so due
 to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>. So it uses local approximation to expected discounted rewards:  
-<p align="center"> <img src="./img/app.png" alt="MLE" width="50%" height="50%"/> </p>    
+<p align="center"> <img src="./img/app.png" alt="MLE" width="70%" height="70%"/> </p>    
 
 ___
 ### Monotonic Improvement Guarantee for General Stochastic Policies  
@@ -45,20 +45,20 @@ TRPO suggests new update policy rule, not use mixture, but use kl-divergence bet
 2. Use relationship between total variation divergence and kl-divergence for modifying TV's lower bound form to KL's lower bound form.  
 
 The result is  
-<p align="center"> <img src="./img/result.png" alt="MLE" width="50%" height="50%"/> </p> 
+<p align="center"> <img src="./img/result.png" alt="MLE" width="70%" height="70%"/> </p> 
 
 **Algorithm 1** in paper, is guaranteed to generate a monotonically improving sequence of policies.  
 
 ___
 ### Optimization of Parameterized Policies  
 From theorem 1's result, for improving the true objective "expected discounted rewards", we maximize lower bound, so it is that, 
-<p align="center"> <img src="./img/max.png" alt="MLE" width="50%" height="50%"/> </p>  
+<p align="center"> <img src="./img/max.png" alt="MLE" width="40%" height="40%"/> </p>  
 In practice, if we used the penalty coefficient C recommended by the theory above, the step sizes would be very small. One way to take larger steps in a robust way is to use
 a constraint on the KL divergence between the new policy and the old policy, i.e., a **trust region constraint:** 
-<p align="center"> <img src="./img/Lagran.png" alt="MLE" width="50%" height="50%"/> </p>  
+<p align="center"> <img src="./img/Lagran.png" alt="MLE" width="30%" height="30%"/> </p>  
 
 This problem imposes a constraint that the KL divergence is bounded at every point in the state space.  we can use a heuristic approximation which considers the average KL divergence because this problem is impractical to solve due to the large number of constraints. So the form is rewritten that
-<p align="center"> <img src="./img/final.png" alt="MLE" width="50%" height="50%"/> </p>  
+<p align="center"> <img src="./img/final.png" alt="MLE" width="70%" height="70%"/> </p>  
 
 
 
