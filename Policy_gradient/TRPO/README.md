@@ -63,7 +63,7 @@ This problem imposes a constraint that the KL divergence is bounded at every poi
 ____
 ### Sample-Based Estimation of the Objective and Constraint  
 For caculating expected discounted rewards, it uses sampling method for estimating. For exploration, it uses behavior policy to use importance sampling. It replaces advantage function with approximated Q function, and presents expectation form. So the practical form is   
-<p align="center"> <img src="./img/practical.png" alt="MLE" width="70%" height="70%"/> </p>
+<p align="center"> <img src="./img/practical.png" alt="MLE" width="40%" height="40%"/> </p>
 
 5.1 Single path, 5.2 Vine are estimation procedure for estimation Q function.  
 
