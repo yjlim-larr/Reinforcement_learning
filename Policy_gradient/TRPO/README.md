@@ -70,7 +70,7 @@ For caculating expected discounted rewards, it uses sampling method for estimati
 ____
 ### Practical algorithm  
 Step 1 and step 2 is used for estimating objective and constraint. **Step 3** explains conjugate gradient algorithm followed by line search for udpating policy.  
-**NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients** 
+**NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients.** Appendix C describes how to implement trpo. 
 
 ____
 ### Appendix C: 
@@ -101,8 +101,11 @@ In this section, it describes how to calculate 'Ax' in Ax = g. 'A' is fisher inf
 <p align="center"> <img src="./img/form.png" alt="MLE" width="90%" height="90%"/> </p>   
 parameterized policy maps from the input x to “distribution parameter” vector µθ(x) which parameterizes the distribution π(u|x).  
 
+In other words, In this paper, they estimate Fisher information matrix, 
+<p align="center"> <img src="./img/fishervector.png" alt="MLE" width="90%" height="90%"/> </p>
 
-
+And using caculated x by conjugated gradient algorithm, 'Ax' is practically estimated by 
+<p align="center"> <img src="./img/fishervectorproduct.png" alt="MLE" width="90%" height="90%"/> </p>
 
 ____
 ### Connection with Prior work  
