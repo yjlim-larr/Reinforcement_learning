@@ -60,7 +60,10 @@ a constraint on the KL divergence between the new policy and the old policy, i.e
 This problem imposes a constraint that the KL divergence is bounded at every point in the state space.  we can use a heuristic approximation which considers the average KL divergence because this problem is impractical to solve due to the large number of constraints. So the form is rewritten that
 <p align="center"> <img src="./img/final.png" alt="MLE" width="70%" height="70%"/> </p>  
 
-
+____
+### Sample-Based Estimation of the Objective and Constraint  
+For caculating expected discounted rewards, it uses sampling method for estimating. For exploration, it uses behavior policy to use importance sampling. It replaces advantage function with approximated Q function, and presents expectation form. So the practical form is   
+<p align="center"> <img src="./img/practical.png" alt="MLE" width="70%" height="70%"/> </p>
 
 
 
