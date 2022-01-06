@@ -78,7 +78,7 @@ KL-divergence's gradient is presented as
 <p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
 
 And its proof is 
-<p align="center"> <img src="./img/fisher-proof.png" alt="MLE" width="70%" height="70%"/> </p>  
+<p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 ____
 ### Connection with Prior work  
