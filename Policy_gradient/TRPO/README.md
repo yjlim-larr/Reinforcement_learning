@@ -80,8 +80,11 @@ KL-divergence's gradient is presented as
 And fisher information is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
 
+
+
 ### Conjugate gradient algorithm: 
-It takes a long time to solve Fx = b's 'x'. Therefore, instead of directly calculating F^-1, it approximates Fx = b's x and estimate (F^-1)b.   
+<p align="center"> <img src="./img/conjugate.png" alt="MLE" width="90%" height="90%"/> </p>  
+<p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
 
 ____
 ### Connection with Prior work  
