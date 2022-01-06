@@ -65,7 +65,7 @@ ____
 For caculating expected discounted rewards, it uses sampling method for estimating. For exploration, it uses behavior policy to use importance sampling. It replaces advantage function with approximated Q function, and presents expectation form. So the practical form is   
 <p align="center"> <img src="./img/practical.png" alt="MLE" width="70%" height="70%"/> </p>
 
-
+5.1 Single path, 5.2 Vine are estimation procedure for estimation Q function.  
 
 
 
