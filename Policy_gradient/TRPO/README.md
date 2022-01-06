@@ -72,6 +72,7 @@ ____
 Step 1 and step 2 is used for estimating objective and constraint. **Step 3** explains conjugate gradient algorithm followed by line search for udpating policy.  
 **NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients** 
 
+____
 ### Appendix C: 
 It explains how to effectively solve the Trust-Region Constrained Optimization Problem. It uses fisher information matrix for easily calculating kl-divergence's gradient. 
 KL-divergence's gradient is presented as  
@@ -86,16 +87,16 @@ By using conjugate gradient algorithm, we can get the search direction s which i
 <p align="center"> <img src="./img/stepsize.png" alt="MLE" width="70%" height="70%"/> </p>    
 The term s^T A s can be computed through a single Hessian vector product, and it is also an intermediate result produced by the conjugate gradient algorithm.  
 
-### Fisher information matrix and kl-divergence
+#### Fisher information matrix and kl-divergence
 Fisher information matrix is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-### Conjugate gradient algorithm: 
+#### Conjugate gradient algorithm: 
 It is used to solve Ax = b's solution x for using approximate method.  
 <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="90%" height="90%"/> </p>  
 <p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-### Computing the fisher vector product
+#### Computing the fisher vector product
 In this section, it describes how to calculate 'Ax' in Ax = g. 'A' is fisher information matrix. 'A' is presented as
 <p align="center"> <img src="./img/form.png" alt="MLE" width="90%" height="90%"/> </p>   
 parameterized policy maps from the input x to “distribution parameter” vector µθ(x) which parameterizes the distribution π(u|x).  
