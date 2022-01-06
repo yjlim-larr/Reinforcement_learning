@@ -67,7 +67,16 @@ For caculating expected discounted rewards, it uses sampling method for estimati
 
 5.1 Single path, 5.2 Vine are estimation procedure for estimation Q function.  
 
+____
+### Practical algorithm  
+Step 1 and step 2 is used for estimating objective and constraint. **Step 3** explains conjugate gradient algorithm followed by line search for udpating policy.  
+**NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients** 
 
+### Appendix C: 
+It explains how to effectively solve the Trust-Region Constrained Optimization Problem. It uses fisher information matrix for easily calculating kl-divergence's gradient. 
+
+____
+### Connection with Prior work  
 
 
 
