@@ -96,6 +96,12 @@ It is used to solve Ax = b's solution x for using approximate method.
 <p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
 
 ### Computing the fisher vector product
+In this section, it describes how to calculate 'Ax' in Ax = g. 'A' is fisher information matrix. 'A' is presented as
+<p align="center"> <img src="./img/form.png" alt="MLE" width="90%" height="90%"/> </p>   
+parameterized policy maps from the input x to “distribution parameter” vector µθ(x) which parameterizes the distribution π(u|x).  
+
+
+
 
 ____
 ### Connection with Prior work  
