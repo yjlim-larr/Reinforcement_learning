@@ -74,6 +74,11 @@ Step 1 and step 2 is used for estimating objective and constraint. **Step 3** ex
 
 ### Appendix C: 
 It explains how to effectively solve the Trust-Region Constrained Optimization Problem. It uses fisher information matrix for easily calculating kl-divergence's gradient. 
+KL-divergence's gradient is presented as  
+<p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
+
+And its proof is 
+<p align="center"> <img src="./img/fisher-proof.png" alt="MLE" width="70%" height="70%"/> </p>  
 
 ____
 ### Connection with Prior work  
