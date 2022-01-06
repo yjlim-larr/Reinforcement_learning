@@ -23,7 +23,7 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 
 
 ## 2. Trust Region Policy Optimization:  
-
+TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. 
 
 # Results
 
