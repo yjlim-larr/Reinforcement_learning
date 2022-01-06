@@ -40,6 +40,7 @@ By using that form to update policy, we can use its gradient. But there is no gu
 
 TRPO suggests new update policy rule, not use mixture, but use kl-divergence for expressign updated policy and previous policy's distance. And use it for deriving new form of lower bound and reason of step size. **Theorem 1** shows TRPO deriving new form of lower bound by using kl divergence of updated policy and previous policy.  
 
+![image](https://user-images.githubusercontent.com/62493307/148325631-200facbe-ce3a-407b-a73f-78f0fca152db.png) is satisfied, 
 
 
 
