@@ -111,6 +111,7 @@ ____
 ### 2-7) Connection with Prior work  
 In this section, it explains natural policy gradient is the special case of trpo policy update. TRPO objective function's linear approximation and a quadratic approximation to the kl-divergence constraint is equal to natural policy gradient.  
 <p align="center"> <img src="./img/natural.png" alt="MLE" width="90%" height="90%"/> </p>  
+
 **The difference between natural policy gradient method and TRPO is step size. In case of TRPO, it enforces the constraint at each update. But natural policy gradient use fixed step size.**
 
 # Results
