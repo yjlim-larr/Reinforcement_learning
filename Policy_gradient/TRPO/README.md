@@ -78,9 +78,13 @@ KL-divergence's gradient is presented as
 <p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
 
 So, kl-divregence's gradient is 
-<p align="center"> <img src="./img/kl-gradient2.png" alt="MLE" width="70%" height="70%"/> </p> 
+<p align="center"> <img src="./img/kl_gradient2.png" alt="MLE" width="70%" height="70%"/> </p> 
 
 For calculaing x = theta - theta_old, we should calculate (A^-1)g, but it takes long time. So **we use conjugate gradient algorithm for estimating x**.  
+
+By using conjugate gradient algorithm, we can get the search direction s which is approximated x (= (A^-1)g). By the constraints which limits on kl-divergence, 
+<p align="center"> <img src="./img/stepsize.png" alt="MLE" width="70%" height="70%"/> </p>    
+The term s^T A s can be computed through a single Hessian vector product, and it is also an intermediate result produced by the conjugate gradient algorithm.  
 
 ### Fisher information matrix and kl-divergence
 Fisher information matrix is presented as 
@@ -90,6 +94,8 @@ Fisher information matrix is presented as
 It is used to solve Ax = b's solution x for using approximate method.  
 <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="90%" height="90%"/> </p>  
 <p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
+
+### Computing the fisher vector product
 
 ____
 ### Connection with Prior work  
