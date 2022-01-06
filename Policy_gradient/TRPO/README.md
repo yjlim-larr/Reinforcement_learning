@@ -32,7 +32,7 @@ TRPO is similar to natural policy gradient methods and is effective for optimizi
 The main idea is kakade's expected return of another policy in terms of the advantage of preveious policy, and it is rewritten as
 <p align="center"> <img src="./img/re.png" alt="MLE" width="100%" height="100%"/> </p>  
 
-By that form, ![image](https://user-images.githubusercontent.com/62493307/148323649-13e61611-d028-4cd5-91fd-6d7cca56af2b.png)
+By that form, <img src="./img/increase.png" alt="MLE" width="100%" height="100%"/>
 
 
 # Results
