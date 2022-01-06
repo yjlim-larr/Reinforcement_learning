@@ -30,9 +30,10 @@ TRPO is similar to natural policy gradient methods and is effective for optimizi
 <p align="center"> <img src="./img/terms.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 The main idea is kakade's expected return of another policy in terms of the advantage of preveious policy, and it is rewritten as
-<p align="center"> <img src="./img/re.png" alt="MLE" width="100%" height="100%"/> </p>  
+<p align="center"> <img src="./img/re.png" alt="MLE" width="50%" height="50%"/> </p>  
 
-By that form, <img src="./img/increase.png" alt="MLE" width="100%" height="100%"/>
+By that form, <img src="./img/increase.png" alt="MLE" width="20%" height="20%"/> makes the policy performance increase, but advantage function is approximated, so due
+to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>
 
 
 # Results
