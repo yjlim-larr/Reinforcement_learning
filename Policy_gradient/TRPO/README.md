@@ -77,8 +77,9 @@ It explains how to effectively solve the Trust-Region Constrained Optimization P
 KL-divergence's gradient is presented as  
 <p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
 
-And its proof is 
-<p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="100%" height="100%"/> </p>  
+And fisher information is presented as 
+<p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="70%" height="70%"/> </p>  
+
 
 ____
 ### Connection with Prior work  
