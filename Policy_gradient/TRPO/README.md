@@ -36,8 +36,10 @@ By that form, <img src="./img/increase.png" alt="MLE" width="20%" height="20%"/>
 to estimation and approximation error, that there will be some states 's' for which the expected advantage is negative. <img src="./img/decrease.png" alt="MLE" width="20%" height="20%"/>. So it uses local approximation to expected discounted rewards:  
 <p align="center"> <img src="./img/app.png" alt="MLE" width="50%" height="50%"/> </p>   
 
-By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade** suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!
+By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!**  
 
+TRPO suggests new update policy rule, not use mixture, but use kl-divergence for expressign updated policy and previous policy's distance. And use it for deriving new form of lower bound and reason of step size.  
+**Theorem 1** shows TRPO deriving new form of lower bound by using kl divergence of updated policy and previous policy.  
 
 
 # Results
