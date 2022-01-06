@@ -21,7 +21,7 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 <p align="center"> <img src="./img/lowerbound.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 
-
+___
 ## 2. Trust Region Policy Optimization:  
 TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. In this paper, it uses kakade's paper's core results, and modifies its form to use neural network. Because mixture policy is not practical so, it presents stochastic methods. Policy update form and step size is determined in TRPO, and they are main idea in that paper.  
 
@@ -72,7 +72,6 @@ ____
 Step 1 and step 2 is used for estimating objective and constraint. **Step 3** explains conjugate gradient algorithm followed by line search for udpating policy.  
 **NOTE: With regard to (3), we construct the Fisher information matrix (FIM) by analytically computing the Hessian of the KL divergence, rather than using the covariance  matrix of the gradients.** Appendix C describes how to implement trpo. 
 
-____
 ### Appendix C: 
 It explains how to effectively solve the Trust-Region Constrained Optimization Problem. It uses fisher information matrix for easily calculating kl-divergence's gradient. 
 KL-divergence's gradient is presented as  
@@ -87,16 +86,16 @@ By using conjugate gradient algorithm, we can get the search direction s which i
 <p align="center"> <img src="./img/stepsize.png" alt="MLE" width="70%" height="70%"/> </p>    
 The term s^T A s can be computed through a single Hessian vector product, and it is also an intermediate result produced by the conjugate gradient algorithm.  
 
-#### Fisher information matrix and kl-divergence
+### C-1) Fisher information matrix and kl-divergence
 Fisher information matrix is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-#### Conjugate gradient algorithm: 
+### C-2) Conjugate gradient algorithm: 
 It is used to solve Ax = b's solution x for using approximate method.  
 <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="90%" height="90%"/> </p>  
 <p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-#### Computing the fisher vector product
+### C-3) Computing the fisher vector product
 In this section, it describes how to calculate 'Ax' in Ax = g. 'A' is fisher information matrix. 'A' is presented as
 <p align="center"> <img src="./img/form.png" alt="MLE" width="90%" height="90%"/> </p>   
 parameterized policy maps from the input x to “distribution parameter” vector µθ(x) which parameterizes the distribution π(u|x).  
@@ -112,10 +111,12 @@ ____
 In this section, it explains natural policy gradient is the special case of trpo policy update. TRPO objective function's linear approximation and a quadratic approximation to the kl-divergence constraint is equal to natural policy gradient.  
 <p align="center"> <img src="./img/natural.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-**The difference between natural policy gradient method and TRPO is step size. In case of TRPO, it enforces the constraint at each update. But natural policy gradient use fixed step size.**
+**The difference between natural policy gradient method and TRPO is step size. In case of TRPO, it enforces the constraint at each update. But natural policy gradient use fixed step size.**  
 
+____
 # Results
 
+____
 # Reference
 * TRPO paper: https://arxiv.org/pdf/1502.05477.pdf  
  
