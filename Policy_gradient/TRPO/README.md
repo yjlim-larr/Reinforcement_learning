@@ -23,7 +23,7 @@ Using **lemma 2** for defining lower bound of difference in reward between polic
 
 
 ## 2. Trust Region Policy Optimization:  
-TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. In this paper, it uses kakade's paper's core results, and modifies its form to use neural network. Policy update form and step size is determined in TRPO, and they are main idea in that paper.   
+TRPO is similar to natural policy gradient methods and is effective for optimizing large nonlinear policies such as neural networks. In this paper, it uses kakade's paper's core results, and modifies its form to use neural network. Because mixture policy is not practical so, it presents stochastic methods. Policy update form and step size is determined in TRPO, and they are main idea in that paper.  
 
 ### Background  
 * Terms
@@ -38,8 +38,9 @@ to estimation and approximation error, that there will be some states 's' for wh
 
 By using that form to update policy, we can use its gradient. But there is no guidance on how big of a step to take. **KaKade suggests conservative policy iteration by updating policy with mixture form, and derives lower bound. But that lower bound is only applied to mixture poliy update form!**  
 
-TRPO suggests new update policy rule, not use mixture, but use kl-divergence for expressign updated policy and previous policy's distance. And use it for deriving new form of lower bound and reason of step size.  
-**Theorem 1** shows TRPO deriving new form of lower bound by using kl divergence of updated policy and previous policy.  
+TRPO suggests new update policy rule, not use mixture, but use kl-divergence for expressign updated policy and previous policy's distance. And use it for deriving new form of lower bound and reason of step size. **Theorem 1** shows TRPO deriving new form of lower bound by using kl divergence of updated policy and previous policy.  
+
+
 
 
 # Results
