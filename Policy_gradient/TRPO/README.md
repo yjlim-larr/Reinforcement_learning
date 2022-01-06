@@ -77,12 +77,15 @@ It explains how to effectively solve the Trust-Region Constrained Optimization P
 KL-divergence's gradient is presented as  
 <p align="center"> <img src="./img/kl-gradient.png" alt="MLE" width="70%" height="70%"/> </p>  
 
-And fisher information is presented as 
+So, kl-divregence's gradient is 
+<p align="center"> <img src="./img/kl-gradient2.png" alt="MLE" width="70%" height="70%"/> </p> 
+
+### Fisher information matrix and kl-divergence
+Fisher information matrix is presented as 
 <p align="center"> <img src="./img/fisher_proof.png" alt="MLE" width="90%" height="90%"/> </p>  
 
-
-
 ### Conjugate gradient algorithm: 
+It is used to solve Ax = b's solution x for using approximate method.  
 <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="90%" height="90%"/> </p>  
 <p align="center"> <img src="./img/conjugate2.png" alt="MLE" width="90%" height="90%"/> </p>  
 
