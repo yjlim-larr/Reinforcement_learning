@@ -106,6 +106,9 @@ In other words, In this paper, they estimate Fisher information matrix,
 And using caculated x by conjugated gradient algorithm, 'Ax' is practically estimated by 
 <p align="center"> <img src="./img/fishervectorproduct.png" alt="MLE" width="90%" height="90%"/> </p>
 
+### C-4) Line searching  
+Last, we use a line search to ensure improvement of the surrogate objective and satisfaction of the KL divergence constraint. Starting with the maximal value of the step length β computed in the previous paragraph, we shrink β exponentially until the objective improves. Without this line search, the algorithm occasionally computes large steps that cause a catastrophic degradation of performance.
+
 ____
 ### 2-7) Connection with Prior work  
 In this section, it explains natural policy gradient is the special case of trpo policy update. TRPO objective function's linear approximation and a quadratic approximation to the kl-divergence constraint is equal to natural policy gradient.  
