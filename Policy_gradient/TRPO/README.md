@@ -115,10 +115,10 @@ In this section, it explains natural policy gradient is the special case of trpo
 
 ____
 # Results
-1. Line search backtracking  
+### 1. Line search backtracking:  
  Comparing new_policy with old_policy for judging new_policy is improved. It's comparing method is from "Approximately Optimal Approximate Reinfor ement Learning". New_policy's expected discounted reward can be calculated by that paper. By using that equation, and line search backtracking, we can determine whether step_direction and step size are valid.
 
-2. conjugate gradient algorithm:  
+### 2. conjugate gradient algorithm:  
  For fast convergence, loss_gradient which is x, should be small. So use normalize to returns(or advants) for decreasing value.  
 
 **Pendulum-v1**  
