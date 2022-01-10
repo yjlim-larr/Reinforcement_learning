@@ -76,7 +76,8 @@ We can get various S, G pair by doing episodes many times. And use them for trai
   It suggets natural gradient which considers parameter's space shape for updating. It shows that updating by using tangent vector does not gurantee policy's improvement to right direction, but natural gradient does.  
 
 6. TRPO: https://arxiv.org/pdf/1502.05477.pdf  
-
+  It uses new policy's gain with respect to old_policy for updating policy. It suggests lower bound for estimating new policy's gain, and Trust region which is the region where update direction is valid. The main contribution of this paper is that 1) evaluating new policy with repect to old policy and use it for updating, 2) Use trust region and line searching for judging whether update direction is valid or not.   
+  
 12. GAE
 13. PPO
 
