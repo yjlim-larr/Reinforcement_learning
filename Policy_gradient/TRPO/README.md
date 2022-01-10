@@ -139,4 +139,5 @@ ____
 * Conjugate gradient algorithm: https://joonleesky.github.io/Conjugate_Gradient/  
  
 * Fisher vector product: https://www.telesens.co/2018/06/09/efficiently-computing-the-fisher-vector-product-in-trpo/  
- 
+
+* source code: https://github.com/dongminlee94/Reinforcement-Learning-Code/blob/master/pendulum/trpo/train.py  
