@@ -123,6 +123,9 @@ ____
 
 ### 2. conjugate gradient algorithm:  
  For fast convergence, loss_gradient which is x, should be small. So use normalize to returns(or advants) for decreasing value.  
+ 
+### 3. Standard Deviation:  
+ Neural network output mean, and std. But std is fixed to 1. Because its value effect to line search and, conjugate gradient algorithm's convergence. So changing std makes Neural network's traning unstable.  
 
 **Pendulum-v1**  
 
