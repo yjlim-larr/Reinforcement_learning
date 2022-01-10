@@ -14,7 +14,7 @@ By same insight,
 <p align="center"> <img src="./img/sight.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 ___
-**Lemma 2:** It shows that two differenct policy's expected reward difference is given by  
+**Lemma 2:** It shows that two different policy's expected reward difference is given by  
 <p align="center"> <img src="./img/lemma_2.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 Using **lemma 2** for defining lower bound of difference in reward between policy functions, is that  
