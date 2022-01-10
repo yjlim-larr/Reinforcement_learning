@@ -41,21 +41,19 @@ if os.path.isfile(CRITIC_PATH):
 else:
     critic.apply(utils.init_weight)
 
-
-
-# train
+    
+    
 with torch.no_grad():
     prev_state = env.reset()
 
     while True:
         env.render()
-        # get action
+        
         mu, std = actor(torch.tensor(prev_state).view(1,-1))
         print(mu, std)
         m = torch.distributions.normal.Normal(loc=mu, scale=std)
 
         action = m.sample().view(1, -1).detach().numpy()
-        #action = mu.numpy()
 
         next_state, reward, done, _ = env.step(action)
 
