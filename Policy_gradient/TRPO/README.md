@@ -1,5 +1,5 @@
 # Summary
-## 1. Approximately Optimal Approximate Reinforement Learning:  
+## 1. Approximately Optimal Approximate Reinforcement Learning:  
 It presents lower bound of the difference in reward between policy functions. This form is used in TRPO paper.   
 
 That form is given by quantifying policy improvement.  
