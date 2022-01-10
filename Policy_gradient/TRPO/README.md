@@ -127,8 +127,8 @@ ____
 ### 3. Standard Deviation:  
  Neural network output mean, and std. But std is fixed to 1. Because its value effect to line search and, conjugate gradient algorithm's convergence. So changing std makes Neural network's traning unstable.  
 
-**Pendulum-v1**  
-
+### Pendulum-v1  
+![1](https://user-images.githubusercontent.com/62493307/148789633-af95b21e-3ae8-44da-8de5-014a71e65a71.gif)  
 ____
 # Reference
 * TRPO paper: https://arxiv.org/pdf/1502.05477.pdf  
