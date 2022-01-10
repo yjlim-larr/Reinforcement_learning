@@ -115,6 +115,11 @@ In this section, it explains natural policy gradient is the special case of trpo
 
 ____
 # Results
+1. line search backtracking  
+2. conjugate gradient algorithm  
+3. new_policy's improved expected discounted reward  
+
+**Pendulum-v1**  
 
 ____
 # Reference
