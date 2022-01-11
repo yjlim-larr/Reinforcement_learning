@@ -1,4 +1,4 @@
-episodes = 1500
+episodes = 600
 N = 64
 batch_size = 32
 
