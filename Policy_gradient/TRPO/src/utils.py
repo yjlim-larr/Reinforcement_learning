@@ -110,10 +110,10 @@ def compare_policy(actor, values, returns, states, old_policy, actions):
 
     advantages = returns - values # Q(s,a) - Critic(s) = Q(s,a) - V(s) = A(s, a)
 
-    surrogate_loss = torch.exp(new_policy - old_policy) * advantages
-    surrogate_loss = surrogate_loss.mean()
+    gain = torch.exp(new_policy - old_policy) * advantages
+    gain = gain.mean()
 
-    return surrogate_loss
+    return gain
 
 
 
@@ -174,7 +174,7 @@ def train_actor(actor, critic, states, actions, action_probs, returns, STEP_SIZE
         kl = kl_divergence(new_actor=actor, old_actor=old_actor, states=states)
         kl = kl.mean()
     
-        if kl < param.max_kl and updated_actor_gain / average_reward > 1:
+        if kl < param.max_kl and updated_actor_gain > 0:
             check = 1
             print("updated")
             break
