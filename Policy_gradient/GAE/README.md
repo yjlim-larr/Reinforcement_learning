@@ -23,6 +23,13 @@
  **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.**   
  
  ## Advantage function estimation  
+ **If value function is correct, TD residual is no bias.** It means approximated advantage function by TD residual is no bias. But this is correct when V is γ-just.(=correct value function). 
+ <p align="center"> <img src="./img/TD.png" alt="MLE" width="100%" height="100%"/> </p>  
+ 
+ Using no bias step 1 TD residual(=1 step advantage when Value function is correct), let's define no bias k steps' advantage.
+ <p align="center"> <img src="./img/final.png" alt="MLE" width="100%" height="100%"/> </p>  
+ 
+ 
  
    
    
