@@ -9,19 +9,20 @@
  It uses disctouned advantage, value, q functions and use it for defining discounted approximation to the policy gradient. For obtaining biased(but not too biased) estimator of Advantage function, they introduce the notion of a γ-just estimator of the advantage function, which is an estimator that does not introduce bias when we use it in place of Aπ,γ (which is not known and must be estimated) in Equation if policy gradient to estimate g^γ. **(No bias means E[Y - predicted(Y)] = 0)**  
  
  The definition is as follows  
- <p align="center"> <img src="./img/def.png" alt="MLE" width="20%" height="20%"/> </p>   
+ <p align="center"> <img src="./img/def.png" alt="MLE" width="80%" height="80%"/> </p>   
  We know that advantage function is Q(s,a) - V(s). So In definition, Q(s,a) - b(s) form is equal to Q(s,a) - V(s) form. And it satisfy no bias form.  
- <p align="center"> <img src="./img/nobias.png" alt="MLE" width="20%" height="20%"/> </p> 
+ <p align="center"> <img src="./img/nobias.png" alt="MLE" width="80%" height="80%"/> </p> 
  
  And one of the shape for approximated advantage function being γ-just is  
-  <p align="center"> <img src="./img/prop1.png" alt="MLE" width="20%" height="20%"/> </p>  
+  <p align="center"> <img src="./img/prop1.png" alt="MLE" width="80%" height="80%"/> </p>  
  
  Proposition 1's meaning is that, 
-  <p align="center"> <img src="./img/ex.png" alt="MLE" width="20%" height="20%"/> </p>   
+  <p align="center"> <img src="./img/ex.png" alt="MLE" width="100%" height="100%"/> </p>   
   It shows that, not discounted Q-function can be equal to discounted Q function, as advantage estimator is γ-just.  
  
- **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.** 
-
+ **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.**   
+ 
+ ## Advantage function estimation  
  
    
    
