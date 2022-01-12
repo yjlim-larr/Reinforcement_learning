@@ -20,7 +20,7 @@
   <p align="center"> <img src="./img/ex.png" alt="MLE" width="20%" height="20%"/> </p>   
   It shows that, not discounted Q-function can be equal to discounted Q function, as advantage estimator is γ-just.  
  
- **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias. 
+ **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.** 
 
  
    
