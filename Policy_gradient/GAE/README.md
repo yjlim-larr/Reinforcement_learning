@@ -42,8 +42,10 @@
 bias and variance, controlled by parameter λ.**    
 **NOTE: reward function is known and, has a range. So it has high variance but no bias.**  
 
- Using that  generalized advantage estimator, we can redefine policy gradient estimator g, as follows. 
+ Using that generalized advantage estimator, we can redefine policy gradient estimator g, as follows. 
  <p align="center"> <img src="./img/redefine.png" alt="MLE" width="80%" height="80%"/> </p> 
+  
+  ## Interpretation as reward shaping  
   
   
   
