@@ -21,6 +21,7 @@
   It shows that, not discounted Q-function can be equal to discounted Q function, as advantage estimator is γ-just.  
  
  **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.**   
+ ____
  
  ## Advantage function estimation  
  **If value function is correct, TD residual is no bias.** It means approximated advantage function by TD residual is no bias. But this is correct when V is γ-just.(=correct value function). 
@@ -44,8 +45,16 @@ bias and variance, controlled by parameter λ.**
 
  Using that generalized advantage estimator, we can redefine policy gradient estimator g, as follows. 
  <p align="center"> <img src="./img/redefine.png" alt="MLE" width="80%" height="80%"/> </p> 
+  ____  
   
   ## Interpretation as reward shaping  
+  
+  ____
+  
+  ## Value function estimation   
+  
+  ____
+  
   
   
   
