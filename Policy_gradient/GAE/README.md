@@ -29,6 +29,8 @@
  Using no bias step 1 TD residual(=1 step advantage when Value function is correct), let's define no bias k steps' advantage.
  <p align="center"> <img src="./img/final.png" alt="MLE" width="70%" height="70%"/> </p>  
  
+ Because it uses correct discounted reward and correct value function, it is no bias advantage function form. It means it defines unbiased advantage function form when k is infinite.  
+ 
  
  
    
