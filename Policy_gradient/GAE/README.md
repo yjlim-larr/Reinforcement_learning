@@ -59,7 +59,7 @@ bias and variance, controlled by parameter λ.**
  And use it as constraint( = trust region)
   <p align="center"> <img src="./img/trust.png" alt="MLE" width="80%" height="80%"/> </p>   
   
-  Because, This constraint is equivalent to constraining the average KL divergence between the previous value function and the new value function to be smaller than ε, where the value function is taken to parameterize a conditional Gaussian distribution with mean Vφ(s) and variance σ^2.  
+  **Because, This constraint is equivalent to constraining the average KL divergence between the previous value function and the new value function to be smaller than ε, where the value function is taken to parameterize a conditional Gaussian distribution with mean Vφ(s) and variance σ^2.**  
   
   We compute an approximate solution to the trust region problem using the conjugate gradient algorithm (Wright & Nocedal, 1999). Specifically, we are solving the quadratic program.  
    <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="80%" height="80%"/> </p>   
