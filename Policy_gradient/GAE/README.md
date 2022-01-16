@@ -33,7 +33,7 @@
  Because it uses correct discounted reward and correct value function, it is no bias advantage function form. It means it defines unbiased advantage function form when k is infinite.  
   <p align="center"> <img src="./img/INF.png" alt="MLE" width="70%" height="70%"/> </p> 
  
- By infinite step form, we can derive generalized exponentially weighted form by lambda, 
+ By using infinite step form, we can derive generalized exponentially weighted form by lambda, 
  <p align="center"> <img src="./img/exp.png" alt="MLE" width="70%" height="70%"/> </p>   
  In that form, GAE() means "discounted factor".
  
