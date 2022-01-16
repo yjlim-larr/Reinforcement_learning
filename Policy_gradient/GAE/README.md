@@ -35,8 +35,15 @@
  
  By using infinite step form, we can derive generalized exponentially weighted form by lambda, 
  <p align="center"> <img src="./img/exp.png" alt="MLE" width="70%" height="70%"/> </p>   
- In that form, GAE() means "discounted factor".
+ In that form, GAE() means "discounted factor". Its special cases are 1) lambda = 0, 2) lambda = 1
+ <p align="center"> <img src="./img/special.png" alt="MLE" width="70%" height="70%"/> </p>    
+  
+  First form, lambda = 0, advantage function's **bias** depends on the accuracy of value funtion. But it has **lower variance** by assembled rewards than lambda = 1. Second form, lambda = 1, advantage function's bias does not depend on the accuracy of value funtion, but reward. It has **high variance** due to the sum of terms. In other words, lambda = 0 makes low variance but biased, lambda = 1 makes high variance but no biased. **The generalized advantage estimator for 0 < λ < 1 makes a compromise between
+bias and variance, controlled by parameter λ.**  
+
  
+  
+  
  
    
 # Result  
