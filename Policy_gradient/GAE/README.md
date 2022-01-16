@@ -1,6 +1,7 @@
 # Summary  
   Policy gradient methods requires large number of samples, and it is the main cause of bias and high variance. In this paper, it suggests policy gradient estimator which reduces variance while it maintains acceptable bias. And we call this estimation schema as GAE. This paper's contributions are 1) justification and intuition about effective variance-reduction scheme. 2) Using trust region optimization method to value function.  
  
+ 
  ## Preliminaries  
  Terms and standart policy gradient estimate method is given on previous papers. In sutton PG's for getting non biased approximated q function, it should satisfy compatible condition. But in this paper, it does not assume compatible condition, and discuss how to obtain biased(but not too biased) estimator of Advantage function.   
 
@@ -21,7 +22,7 @@
   It shows that, not discounted Q-function can be equal to discounted Q function, as advantage estimator is γ-just.  
  
  **So when Approximated advantage function is γ-just, by using definition 1, proposition 1 and "discounted advantage function is no bias", policy gradient estimator is no bias.**   
- ____
+
  
  ## Advantage function estimation  
  **If value function is correct, TD residual is no bias.** It means approximated advantage function by TD residual is no bias. But this is correct when V is γ-just.(=correct value function). 
@@ -45,12 +46,10 @@ bias and variance, controlled by parameter λ.**
 
  Using that generalized advantage estimator, we can redefine policy gradient estimator g, as follows. 
  <p align="center"> <img src="./img/redefine.png" alt="MLE" width="80%" height="80%"/> </p>   
- 
-  ____  
+
   
   ## Interpretation as reward shaping  
   
-  ____
   
   ## Value function estimation   
   In this paper, for the experiments, it used a trust region methods to optimize the value function. It helps avoiding overfitting to the most recent batch of data. To formulate the trust region problem, it defines variance as
@@ -63,21 +62,18 @@ bias and variance, controlled by parameter λ.**
   
  1. Vφ(s) is mean in Gaussian distribution, by minimizing MSELoss between Vφ(s) and γ-just approximated value function, Vφ(s) is closer to γ-just approximated value function. Therefore Vφ(s) becomes no biased.  
  2. We can see that Constraint form is similar to normal distribution's exponential's Indices. It means updated value function is guranteed in the specific range. For helping your understanding, this figure well illustrates its meaning.  
-  <p align="center"> <img src="./img/meaning.png" alt="MLE" width="50%" height="50%"/> </p>   
+  <p align="center"> <img src="./img/meaning.png" alt="MLE" width="70%" height="70%"/> </p>   
   
- **Constraint term makes Value function update to γ-just approximated value function**
+ **Constraint term makes Value function update to γ-just approximated value function by limiting range.**
   
   We compute an approximate solution to the trust region problem using the conjugate gradient algorithm (Wright & Nocedal, 1999). Specifically, we are solving the quadratic program.  
    <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="80%" height="80%"/> </p>   
    
   Trust region problem is approximated by that principle, (29) -> (30) by linear approximation and using approximated KL-divergence. Conjugate gradient algorithm is used because, Lagrange multiplier method's result equation's form is equal to Ax = b.
-  <p align="center"> <img src="./img/explain.png" alt="MLE" width="80%" height="80%"/> </p>    
+  <p align="center"> <img src="./img/explain.png" alt="MLE" width="100%" height="100%"/> </p>    
   
-  
-  
-   
-  ____
-  
+ 
+ ## Experiments  
   
   
   
