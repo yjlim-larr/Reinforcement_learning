@@ -54,16 +54,23 @@ bias and variance, controlled by parameter λ.**
   
   ## Value function estimation   
   In this paper, for the experiments, it used a trust region methods to optimize the value function. It helps avoiding overfitting to the most recent batch of data. To formulate the trust region problem, it defines variance as
-  <p align="center"> <img src="./img/variance.png" alt="MLE" width="80%" height="80%"/> </p>   
+  <p align="center"> <img src="./img/variance.png" alt="MLE" width="60%" height="60%"/> </p>   
 
  And use it as constraint( = trust region)
-  <p align="center"> <img src="./img/trust.png" alt="MLE" width="80%" height="80%"/> </p>   
+  <p align="center"> <img src="./img/trust.png" alt="MLE" width="50%" height="50%"/> </p>   
   
   **Because, This constraint is equivalent to constraining the average KL divergence between the previous value function and the new value function to be smaller than ε, where the value function is taken to parameterize a conditional Gaussian distribution with mean Vφ(s) and variance σ^2.**  
+  
+ 1. Vφ(s) is mean in Gaussian distribution, by minimizing MSELoss between Vφ(s) and γ-just approximated value function, Vφ(s) is closer to γ-just approximated value function. Therefore Vφ(s) becomes no biased.  
+ 2. We can see that Constraint form is similar to normal distribution's exponential's Indices. It means updated value function is guranteed in the specific range. For helping your understanding, this figure well illustrates its meaning.  
+  <p align="center"> <img src="./img/meaning.png" alt="MLE" width="50%" height="50%"/> </p>   
+  
+ **Constraint term makes Value function update to γ-just approximated value function**
   
   We compute an approximate solution to the trust region problem using the conjugate gradient algorithm (Wright & Nocedal, 1999). Specifically, we are solving the quadratic program.  
    <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="80%" height="80%"/> </p>   
    
+  
    
   ____
   
