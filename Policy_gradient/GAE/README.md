@@ -74,10 +74,22 @@ bias and variance, controlled by parameter λ.**
   
  
  ## Experiments  
-  
-  
-  
+  It designed a set of experiments to investigate the following questions:  
+1. What is the **empirical effect of varying λ ∈ [0, 1] and γ ∈ [0, 1]** when optimizing episodic total reward using generalized advantage estimation?  
+2. Can generalized advantage estimation, along with trust region algorithms for policy and value function optimization, be **used to optimize large neural network policies** for challenging control problems?  
+
+ ### Policy Optimization algorithm  
+ Algorithm is similar to prior work(TRPO). Fixed algorithm, but varying the γ, λ for checking its effect. The difference with TRPO is value function's update's rule. It uses approximate trust region for updating value function.   
+  <p align="center"> <img src="./img/algo.png" alt="MLE" width="100%" height="100%"/> </p>  
+ **NOTE: policy update by using old value function, not updated value funtion.**  
  
+ ### Architecture  
+ We used the same neural network architecture for all of the 3D robot tasks, which was a feedforward network with three hidden layers, with 100, 50 and 25 tanh units respectively. The same architecture was used for the policy and value function. The final output layer had linear activation. The value function estimator used the same architecture, but with only one scalar output. For the simpler cartpole task, we used a linear policy, and a neural network with one 20-unit hidden layer as the value
+function. 
+ **I will implement Cartpole_GAE with neural network architecture for 3D robot tasks.** 
+ 
+ ### Cartpole  
+ The best results are obtained at intermediate values of the parameters: γ ∈ [0.96, 0.99] and λ ∈ [0.92, 0.99]. At γ = .99, the fastest policy improvement is obtain by intermediate values of λ in the range [0.92, 0.98].  
    
 # Result  
 
