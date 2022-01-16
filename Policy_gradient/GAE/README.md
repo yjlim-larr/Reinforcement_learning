@@ -41,10 +41,11 @@
   
   First form, lambda = 0, advantage function's **bias** depends on the accuracy of value funtion. But it has **lower variance** by assembled rewards than lambda = 1. Second form, lambda = 1, advantage function's bias does not depend on the accuracy of value funtion, but reward. It has **high variance** due to the sum of terms. In other words, lambda = 0 makes low variance but biased, lambda = 1 makes high variance but no biased. **The generalized advantage estimator for 0 < λ < 1 makes a compromise between
 bias and variance, controlled by parameter λ.**    
-**NOTE: reward function is known and, has a range. So it has high variance but no bias.**  
+**NOTE: reward function is known and, has a range. So it has high variance but no bias.**   
 
  Using that generalized advantage estimator, we can redefine policy gradient estimator g, as follows. 
- <p align="center"> <img src="./img/redefine.png" alt="MLE" width="80%" height="80%"/> </p> 
+ <p align="center"> <img src="./img/redefine.png" alt="MLE" width="80%" height="80%"/> </p>   
+ 
   ____  
   
   ## Interpretation as reward shaping  
