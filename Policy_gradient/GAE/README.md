@@ -70,6 +70,10 @@ bias and variance, controlled by parameter λ.**
   We compute an approximate solution to the trust region problem using the conjugate gradient algorithm (Wright & Nocedal, 1999). Specifically, we are solving the quadratic program.  
    <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="80%" height="80%"/> </p>   
    
+  Trust region problem is approximated by that principle, (29) -> (30) by linear approximation and using approximated KL-divergence. Conjugate gradient algorithm is used because, Lagrange multiplier method's result equation's form is equal to Ax = b.
+  <p align="center"> <img src="./img/explain.png" alt="MLE" width="80%" height="80%"/> </p>    
+  
+  
   
    
   ____
