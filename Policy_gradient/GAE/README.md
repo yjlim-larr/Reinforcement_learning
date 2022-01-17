@@ -97,8 +97,8 @@ function.
  1) Just use value funtion, not see it as mean.  
  2) see value funtion as mean and use it normal distribution's mean.  
  
- I implement 2) method which is used in this paper. Result, pendulum-v1 is that,
- ![ezgif com-gif-maker](https://user-images.githubusercontent.com/62493307/149767548-50bbe4fc-a302-4761-8ac1-9d7d36e80f8c.gif)
+ I implement GAE by using method 2) which is used in this paper. Pendulum-v1 result is that,
+ ![ezgif com-gif-maker](https://user-images.githubusercontent.com/62493307/149767548-50bbe4fc-a302-4761-8ac1-9d7d36e80f8c.gif)  
  
 
 # Reference  
