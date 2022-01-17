@@ -80,7 +80,8 @@ bias and variance, controlled by parameter λ.**
 
  ### Policy Optimization algorithm  
  Algorithm is similar to prior work(TRPO). Fixed algorithm, but varying the γ, λ for checking its effect. The difference with TRPO is value function's update's rule. It uses approximate trust region for updating value function.   
-  <p align="center"> <img src="./img/algo.png" alt="MLE" width="100%" height="100%"/> </p>  
+  <p align="center"> <img src="./img/algo.png" alt="MLE" width="100%" height="100%"/> </p>   
+  
  **NOTE: policy update by using old value function, not updated value funtion.**  
  
  ### Architecture  
@@ -92,6 +93,11 @@ function.
  The best results are obtained at intermediate values of the parameters: γ ∈ [0.96, 0.99] and λ ∈ [0.92, 0.99]. At γ = .99, the fastest policy improvement is obtain by intermediate values of λ in the range [0.92, 0.98].  
    
 # Result  
+ For calculating equation 30) value function should be presented as probability. For this, paper regard value function as mean and objective value(=MES) as variance. 
+ 1) Just use value funtion, not see it as mean.  
+ 2) see value funtion as mean and use it normal distribution's mean.  
+ 
+ 
 
 # Reference  
 HIGH-DIMENSIONAL CONTINUOUS CONTROL USING GENERALIZED ADVANTAGE ESTIMATION: https://arxiv.org/pdf/1506.02438.pdf  
