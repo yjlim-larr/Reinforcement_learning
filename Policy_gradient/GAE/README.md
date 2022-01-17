@@ -97,6 +97,9 @@ function.
  1) Just use value funtion, not see it as mean.  
  2) see value funtion as mean and use it normal distribution's mean.  
  
+ I implement 2) method which is used in this paper.
+ 
+ 
  
 
 # Reference  
