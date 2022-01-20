@@ -26,8 +26,7 @@ The main objective we propose is the following:
 
 ___  
 **Q. Why is this form suggested?**  
-If r_t(θ) is out of range [1-ε, 1+ε], it removes incentive. Finally, (7) is L_CPI's lower bounds. If θ is equal to θ_old, L_CLIP = L_CPI. But θ becomes far away from θ_old, L_CLIP becomes far away from L_CPI.  
-**Original TRPO's surrogate function's "constraint role(=function)" is equal to clipped objective fuction's "clip".** So we does not need to use quadratic form of constraint in L_CLIP!  
+If r_t(θ) is out of range [1-ε, 1+ε], it removes incentive. Finally, (7) is L_CPI's lower bounds. If θ is equal to θ_old, L_CLIP = L_CPI. But θ becomes far away from θ_old, L_CLIP becomes far away from L_CPI. **Original TRPO's surrogate function's "constraint role(=function)" is equal to clipped objective fuction's "clip".** So we does not need to use quadratic form of constraint in L_CLIP!  
 ___   
 
 Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(=lower bound of L_CPI is L_CLIP)** It means that it gives penalty on large policy step!) This prevents L_CPI from getting too big.  
