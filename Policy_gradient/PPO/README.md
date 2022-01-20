@@ -36,8 +36,10 @@ Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(
 ## Adaptive KL Penalty Coefficient  
 **NOTE: It is different with L_CLIP. It is another method that use KL diverge.** Another approach, which can be used as an alternative to the clipped surrogate objective, or in addition to it, is to use a penalty on KL divergence, and to adapt the penalty coefficient so that we achieve some target value of the KL divergence d_targ each policy update. In our experiments, we found that 1) the KL penalty performed worse than 2) the clipped surrogate objective, however, we’ve included it here because it’s an important baseline.  
 <p align="center"> <img src="./img/KL.png" alt="rewrite" width="70%" height="70%"/> </p>   
-"d" means distance between old policy and updated policy. The Large d means that it is updated large step.  
-d < d_targ / 1.5( = small d = step is small = we should extend update size. So reduce penalty) d_targ is hyperparameter and initial beta(penalty coefficient is hyperparameter.)   
+"d" means distance between old policy and updated policy. The Large d means that it is updated large step.   
+
+**d < d_targ / 1.5 (=small d =step is small =we should extend update size. So reduce penalty)** d_targ is hyperparameter and initial beta(penalty coefficient) is hyperparameter too. initial beta and d_targ is given.    
+
 ## Algorithm  
 
 
