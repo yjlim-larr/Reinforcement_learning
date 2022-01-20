@@ -7,12 +7,13 @@ Although many reinforcement learnign methods are considered so far, still there 
 2.  To optimize policies, we alternate between sampling data from the policy and performing several epochs of optimization on the sampled data  
 
 ## Background  
-1. Policy gradient Methods
-2. Trust region methods  
+1. **Policy gradient Methods:**  
+2. **Trust region methods:**  
   In TRPO, objective function is approximated linear, and constraint is approximated quadratic form. So we can use conjugate gradient algorithm for calculating step update direction. And by using Largrange Multiplier Methods, constraint term becomes penalty terms, in objective function. It becomes easier to solve. **But, it is difficult to determine step size.(It does not use fixed penalty coefficient 'beta'). Beta is determined by line searching on constraint, so it is impossible to use it fix.** For achieving our goal of a first-order algorithm that emulates the monotonic improvement of TRPO, experiments show that it is not sufficient to simply choose a fixed penalty coefficient β and optimize the penalized objective Equation (5) with SGD; additional modifications are required.
 
 
 ## Clipped Surrogate Objective  
+Let's set a notation. 
 
 
 # Results  
