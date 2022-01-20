@@ -5,7 +5,8 @@ ___
 1. Sample Complexity: 학습에 사용된 sample들의 다양성 정도
 2. Robustness: 모수의 변화에 민감하게 반응하는 정도
 3. Data efficiency: 얻어진 data sample에서 얻어내는 정보의 양의 정도
-4. scalable: 모델을 키울수록 다른것들이 더 추가되어야 하는 정도
+4. scalable: 모델을 키울수록 다른것들이 더 추가되어야 하는 정도  
+___
 
 ## Introduction
 Although many reinforcement learning methods are considered so far, still there is room for improvement in developing a method that is scalable (to large models and parallel implementations), data efficient, and robust (i.e., successful on a variety of problems without hyperparameter tuning). Q-learning (with function approximation) fails on
