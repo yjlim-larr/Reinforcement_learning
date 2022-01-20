@@ -49,10 +49,26 @@ Entropy has a maximum value when p(x)'s probability distribution is uniform. So 
 <p align="center"> <img src="./img/loss.png" alt="rewrite" width="70%" height="70%"/> </p>   
 
 A proximal policy optimization (PPO) algorithm that uses fixed-length trajectory segments is shown below. Each iteration, each of N (parallel) actors collect T timesteps of data. Then we construct the surrogate loss on these NT timesteps of data, and optimize it with minibatch SGD (or usually for better performance, Adam [KB14]), for K epochs. **(Its method is appeared in DQN in the first time for reducing Dependency between data.)** 
+<p align="center"> <img src="./img/Algorithm.png" alt="rewrite" width="70%" height="70%"/> </p>   
 
-
+## Experiments  
+<p align="center"> <img src="./img/Compare.png" alt="rewrite" width="70%" height="70%"/> </p>
+It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive KL d_targ = 0.01 is best when β was initialized at 1 and compared in themselves. And PPO shows best score when comapre with other methods such as A2C, TRPO and so on.  
 
 # Results  
+## Architecture:  
+ To represent the policy, we used a fully-connected MLP with two hidden layers of 64 units, and tanh nonlinearities, outputting the mean of a Gaussian distribution, with variable standard deviations, following [Sch+15b; Dua+16]. We don’t share parameters between the policy and value function (so coefficient c1 is irrelevant), and we don’t use an entropy bonus.
+ 
+## Objective function: 
+ 1) L_CLIP
+ 2) L_KLPEN  
+ 
+## Hyperparameter: 
+  1) ε = 0.2 for L_CLIP 2) Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN  
+
+### L_CLIP  
+
+### L_KLPEN  
 
 
 # Reference  
