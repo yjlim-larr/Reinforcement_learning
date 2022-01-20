@@ -16,7 +16,19 @@ Although many reinforcement learnign methods are considered so far, still there 
 Let's set a notation. 
 <p align="center"> <img src="./img/notation.png" alt="rewrite" width="60%" height="60%"/> </p>   
 
+TRPO's surrogate objective function is as follows and, its goal is to maximize it.  
+<p align="center"> <img src="./img/TRPO.png" alt="rewrite" width="60%" height="60%"/> </p>   
 
+Without a constraint, maximization of L_CPI would lead to an excessively large policy update; hence, we now consider how to modify the objective, to penalize changes to the policy that move r_t(θ) away from 1. Because updated policy gives high probabiltiy on specific state that old policy's probability is too small, trpo's surrogate objective function's value diverges to infinite regardless of advantage function.  
+
+The main objective we propose is the following:  
+<p align="center"> <img src="./img/main.png" alt="rewrite" width="60%" height="60%"/> </p>   
+___
+**Q. Why is this form suggested?**  
+If r_t(θ) is out of range [1-ε, 1+ε], it removes incentive. Finally, (7) is L_CPI's lower bounds. If θ is equal to θ_old, L_CLIP = L_CPI. But θ becomes far away from θ_old, L_CLIP becomes far away from L_CPI
+___
+
+Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(=lower bound of L_CPI is L_CLIP)** It means that it gives penalty on large policy step!) This prevents L_CPI from getting too big.  
 
 
 # Results  
