@@ -41,6 +41,14 @@ Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(
 **d < d_targ / 1.5 (=small d =step is small =we should extend update size. So reduce penalty)** d_targ is hyperparameter and initial beta(penalty coefficient) is hyperparameter too. initial beta and d_targ is given.    
 
 ## Algorithm  
+It uses GAE or the finite-horizon estimators for getting variance-reduced advantage-function estimators. And if using a neural network architecture that shares parameters
+between the policy and value function, it should do additional work. So I do not implement deep neural nets which parameters are not shared. But if you want net to share parameters, you should use a loss function that combines the policy surrogate and a value function error term, because of training shared parameters. Therefore loss function is that,  
+<p align="center"> <img src="./img/loss.png" alt="rewrite" width="70%" height="70%"/> </p>   
+Entropy has a maximum value when p(x)'s probability distribution is uniform. So it ensures sufficient exploration. As training becomes stable, L_CLIP's advantage is bigger than Entropy bonus, so policy becomes far away from uniform distribution.  
+ we can get advantage estimator which is well suited for our work(controll its bias and variance) by GAE. Generalizing this choice, we can use a truncated version of generalized advantage estimation, which reduces to Equation (10) when λ = 1:  
+<p align="center"> <img src="./img/loss.png" alt="rewrite" width="70%" height="70%"/> </p>   
+
+A proximal policy optimization (PPO) algorithm that uses fixed-length trajectory segments is shown below. Each iteration, each of N (parallel) actors collect T timesteps of data. Then we construct the surrogate loss on these NT timesteps of data, and optimize it with minibatch SGD (or usually for better performance, Adam [KB14]), for K epochs. **(Its method is appeared in DQN in the first time for reducing Dependency between data.)** 
 
 
 
