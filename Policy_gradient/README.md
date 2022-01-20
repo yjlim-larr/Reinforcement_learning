@@ -78,9 +78,13 @@ We can get various S, G pair by doing episodes many times. And use them for trai
 6. TRPO: https://arxiv.org/pdf/1502.05477.pdf  
   It uses new policy's gain with respect to old_policy for updating policy. It suggests lower bound for estimating new policy's gain, and Trust region which is the region where update direction is valid. The main contribution of this paper is that 1) evaluating new policy with repect to old policy and use it for updating, 2) Use trust region and line searching for judging whether update direction is valid or not.   
   
-12. GAE
-13. PPO
+12. GAE: 
+  It suggests new way for training value function. Value function has trade-off relationship between no bias but high variance and bias but low variance. It uses new hyperparameter "lambda" for controlling degree of bias and degree of variance for training value function. It shows its traing method improve policy gradient methods because of policy gradient methods use value function.  
 
+14. PPO: https://arxiv.org/pdf/1707.06347.pdf  
+  It suggests more simpler way but effective for implementation than TRPO. It linearly approximates TRPO, and integrates TRPO's constraint in objective function by CLIP form. Also it suggests another method that controls KL divergence between old policy and updated policy magnitude for easy implementing TRPO. Differences from TRPO, PPO does not need to calculate complex equation for getting step size.  
+  
+  
 # Reference  
 https://dnddnjs.gitbooks.io/rl/content/actor-critic_policy_gradient.html  
 https://dnddnjs.gitbooks.io/rl/content/mc_prediction.html  
