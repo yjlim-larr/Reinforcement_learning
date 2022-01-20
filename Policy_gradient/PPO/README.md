@@ -43,16 +43,16 @@ Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(
 ## Algorithm  
 It uses GAE or the finite-horizon estimators for getting variance-reduced advantage-function estimators. And if using a neural network architecture that shares parameters
 between the policy and value function, it should do additional work. So I do not implement deep neural nets which parameters are not shared. But if you want net to share parameters, you should use a loss function that combines the policy surrogate and a value function error term, because of training shared parameters. Therefore loss function is that,  
-<p align="center"> <img src="./img/loss.png" alt="rewrite" width="70%" height="70%"/> </p>   
+<p align="center"> <img src="./img/loss.png" alt="rewrite" width="80%" height="80%"/> </p>   
 Entropy has a maximum value when p(x)'s probability distribution is uniform. So it ensures sufficient exploration. As training becomes stable, L_CLIP's advantage is bigger than Entropy bonus, so policy becomes far away from uniform distribution.  
  we can get advantage estimator which is well suited for our work(controll its bias and variance) by GAE. Generalizing this choice, we can use a truncated version of generalized advantage estimation, which reduces to Equation (10) when λ = 1:  
-<p align="center"> <img src="./img/loss.png" alt="rewrite" width="70%" height="70%"/> </p>   
+<p align="center"> <img src="./img/GAE.png" alt="rewrite" width="50%" height="50%"/> </p>   
 
 A proximal policy optimization (PPO) algorithm that uses fixed-length trajectory segments is shown below. Each iteration, each of N (parallel) actors collect T timesteps of data. Then we construct the surrogate loss on these NT timesteps of data, and optimize it with minibatch SGD (or usually for better performance, Adam [KB14]), for K epochs. **(Its method is appeared in DQN in the first time for reducing Dependency between data.)** 
-<p align="center"> <img src="./img/Algorithm.png" alt="rewrite" width="70%" height="70%"/> </p>   
+<p align="center"> <img src="./img/Algorithm.png" alt="rewrite" width="80%" height="80%"/> </p>   
 
 ## Experiments  
-<p align="center"> <img src="./img/Compare.png" alt="rewrite" width="70%" height="70%"/> </p>
+<p align="center"> <img src="./img/compare.png" alt="rewrite" width="80%" height="80%"/> </p>
 It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive KL d_targ = 0.01 is best when β was initialized at 1 and compared in themselves. And PPO shows best score when comapre with other methods such as A2C, TRPO and so on.  
 
 # Results  
