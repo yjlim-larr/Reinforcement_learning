@@ -63,8 +63,11 @@ bias and variance, controlled by parameter λ.**
  1. Vφ(s) is mean in Gaussian distribution, by minimizing MSELoss between Vφ(s) and γ-just approximated value function, Vφ(s) is closer to γ-just approximated value function. Therefore Vφ(s) becomes no biased.  
  2. We can see that Constraint form is similar to normal distribution's exponential's Indices. It means updated value function is guranteed in the specific range. For helping your understanding, this figure well illustrates its meaning.  
   <p align="center"> <img src="./img/meaning.png" alt="MLE" width="70%" height="70%"/> </p>   
-  
- **Constraint term makes Value function converge to γ-just approximated value function by limiting updating range.**
+ 
+ ______
+ ### convergence
+ **Constraint term makes Value function converge to γ-just approximated value function by limiting updating range.**  
+ ______   
   
   We compute an approximate solution to the trust region problem using the conjugate gradient algorithm (Wright & Nocedal, 1999). Specifically, we are solving the quadratic program.  
    <p align="center"> <img src="./img/conjugate.png" alt="MLE" width="80%" height="80%"/> </p>   
