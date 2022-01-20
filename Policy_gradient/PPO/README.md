@@ -14,6 +14,9 @@ Although many reinforcement learnign methods are considered so far, still there 
 
 ## Clipped Surrogate Objective  
 Let's set a notation. 
+<p align="center"> <img src="./img/notation.png" alt="rewrite" width="60%" height="60%"/> </p>   
+
+
 
 
 # Results  
