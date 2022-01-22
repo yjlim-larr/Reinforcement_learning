@@ -67,6 +67,9 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
   1) **ε = 0.2 for L_CLIP**  
   2) **Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN**  
 
+## How to calculate r_t(θ)?  
+
+
 ### L_CLIP  
 
 ### L_KLPEN  
