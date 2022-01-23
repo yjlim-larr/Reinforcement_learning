@@ -96,7 +96,7 @@ def GAE(critic, rewards, states, next_states, gamma, lam):
     AD = torch.zeros_like(rewards)
     AD[-1] = TD[-1]
     for i in reversed(range(len(rewards) - 1)):
-        AD[i] = TD[i] + gamma * lam * AD[i]
+        AD[i] = TD[i] + gamma * lam * AD[i+1]
 
     # normalize
     AD = (AD - AD.mean()) / AD.std()
