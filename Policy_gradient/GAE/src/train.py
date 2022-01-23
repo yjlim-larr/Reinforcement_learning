@@ -50,9 +50,10 @@ for k in range(param.episodes):
     states = []
     next_states = []
     actions = []
-    dones = []
     action_probs = []
+    returns = []
     rewards = []
+    dones = []
 
     while True:
         prev_state = env.reset()
@@ -84,6 +85,8 @@ for k in range(param.episodes):
 
             prev_state = next_state
 
+
+        dones[-1] = torch.tensor(1).view(1, -1)
         if(len(states)) > param.capacity:
             break
 
@@ -94,20 +97,24 @@ for k in range(param.episodes):
     actions = torch.cat(actions, dim=0)
     action_probs = torch.cat(action_probs, dim=0)
 
-    rewards = torch.cat(rewards, dim = 0)
+    rewards = torch.cat(rewards, dim=0)
+
     dones = torch.cat(dones, dim = 0)
 
+
     # GAE
-    returns = utils.GAE(critic, rewards, states, next_states, param.gamma, param.lam)
+    returns = utils.GAE(critic, rewards, dones, states, next_states, param.gamma, param.lam)
+
 
     # train_actor
     utils.train_actor(actor, critic, states, actions, action_probs, returns, param.max_kl, param.tol)
 
+
     # train_critic
-    utils.train_critic(critic, states, next_states, rewards, param.gamma, param.epsilon)
+    utils.train_critic2(critic, states, next_states, rewards, dones, param.gamma, param.epsilon)
+
 
     print("___________________________________________________________________________________________")
-
     torch.save(actor.state_dict(), 'actor.pt')
     torch.save(critic.state_dict(), 'critic.pt')
 
