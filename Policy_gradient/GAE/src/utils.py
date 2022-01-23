@@ -86,7 +86,7 @@ def conjugate_gradient_algo(actor, states, g, tol = 1e-10):
 
 
 
-def GAE(critic, rewards, states, next_states, gamma, lam):
+def GAE(critic, rewards, dones, states, next_states, gamma, lam):
     # 1 step
     TD = torch.zeros_like(rewards)
     for i in range(len(rewards)):
@@ -96,7 +96,10 @@ def GAE(critic, rewards, states, next_states, gamma, lam):
     AD = torch.zeros_like(rewards)
     AD[-1] = TD[-1]
     for i in reversed(range(len(rewards) - 1)):
-        AD[i] = TD[i] + gamma * lam * AD[i+1]
+        if dones[i] != 1:
+            AD[i] = TD[i] + gamma * lam * AD[i + 1]
+        else:
+            AD[i] = TD[i]
 
     # normalize
     AD = (AD - AD.mean()) / AD.std()
@@ -177,15 +180,19 @@ def train_actor(actor, critic, states, actions, action_probs, returns, STEP_SIZE
 
 
 
-def train_critic2(critic, states, next_states, rewards, gamma, epsilon):
+def train_critic2(critic, states, next_states, rewards, dones, gamma, epsilon):
     # gamma just values
     values = torch.zeros_like(rewards)
-    values[-1] = critic(next_states[-1])
+    values[-1] = rewards[-1] + critic(next_states[-1])
     for i in reversed(range(len(rewards)-1)):
-        values[i] = rewards[i] + gamma * values[i + 1]
+        if dones[i] != 1:
+            values[i] = rewards[i] + gamma * values[i + 1]
+        else:
+            values[i] = rewards[i] + critic(next_states[i])
 
     # cal loss
     loss = (critic(states) - values).pow(2).mean()
+    print("critic loss: ", loss)
 
     # variance
     var = loss.detach() # paper reference
