@@ -102,7 +102,7 @@ def get_returns(rewards, dones, end_val):
 
 
 
-def compare_policy(actor, values, returns, states, old_policy, actions):
+def compare_policy(actor, values, returns, states, old_policy_probs, actions):
     # use "Approximately Optimal Approximate Reinforcement Learning's Lemma 2"
     mu, std = actor(torch.Tensor(states))
     m = torch.distributions.normal.Normal(loc=mu, scale=std)
@@ -110,7 +110,7 @@ def compare_policy(actor, values, returns, states, old_policy, actions):
 
     advantages = returns - values # Q(s,a) - Critic(s) = Q(s,a) - V(s) = A(s, a)
 
-    gain = torch.exp(new_policy - old_policy) * advantages
+    gain = torch.exp(new_policy) / old_policy_probs * advantages
     gain = gain.mean()
 
     return gain
