@@ -108,7 +108,7 @@ def GAE(critic, rewards, dones, states, next_states, gamma, lam):
 
 
 
-def compare_policy(actor, values, returns, states, old_policy, actions):
+def compare_policy(actor, values, returns, states, old_policy_probs, actions):
     # use "Approximately Optimal Approximate Reinforcement Learning's Lemma 2"
     mu, std = actor(torch.Tensor(states))
     m = torch.distributions.normal.Normal(loc=mu, scale=std)
@@ -116,7 +116,7 @@ def compare_policy(actor, values, returns, states, old_policy, actions):
 
     advantages = returns - values # Q(s,a) - Critic(s) = Q(s,a) - V(s) = A(s, a)
 
-    gain = torch.exp(new_policy - old_policy) * advantages
+    gain = torch.exp(new_policy) / old_policy_probs * advantages
     gain = gain.mean()
 
     return gain
@@ -179,8 +179,8 @@ def train_actor(actor, critic, states, actions, action_probs, returns, STEP_SIZE
         print("Not valid actor update")
 
 
-
-def train_critic2(critic, states, next_states, rewards, dones, gamma, epsilon):
+# GAE
+def train_critic(critic, states, next_states, rewards, dones, gamma, epsilon):
     # gamma just values
     values = torch.zeros_like(rewards)
     values[-1] = rewards[-1] + critic(next_states[-1])
