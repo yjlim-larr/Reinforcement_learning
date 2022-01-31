@@ -1,8 +1,4 @@
-episodes = 600
-N = 64
-batch_size = 32
-
-capacity = 2000
+episodes = 1000
 
 discount = 0.99
 max_kl = 0.001
