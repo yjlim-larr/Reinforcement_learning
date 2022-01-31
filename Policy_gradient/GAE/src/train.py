@@ -67,7 +67,7 @@ for k in range(param.episodes):
             m = torch.distributions.normal.Normal(loc=mu, scale=std)
             action = m.sample().view(1, -1)
 
-            prob = m.log_prob(action).view(1, -1)
+            prob = torch.exp(m.log_prob(action).view(1, -1))
 
             next_state, reward, done, _ = env.step(action.detach().numpy())
             next_state = torch.tensor(next_state, dtype=torch.float, requires_grad=True).view(1, -1)
@@ -111,7 +111,7 @@ for k in range(param.episodes):
 
 
     # train_critic
-    utils.train_critic2(critic, states, next_states, rewards, dones, param.gamma, param.epsilon)
+    utils.train_critic(critic, states, next_states, rewards, dones, param.gamma, param.epsilon)
 
 
     print("___________________________________________________________________________________________")
