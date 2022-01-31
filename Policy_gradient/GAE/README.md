@@ -96,7 +96,7 @@ function.
  The best results are obtained at intermediate values of the parameters: γ ∈ [0.96, 0.99] and λ ∈ [0.92, 0.99]. At γ = .99, the fastest policy improvement is obtain by intermediate values of λ in the range [0.92, 0.98].  
    
 # Result  
- For calculating equation 30) value function should be presented as probability. For this, paper regard value function as mean and objective value(=MES) as variance. 
+ For calculating equation 30) value function should be presented as probability. For this, paper regard value function as mean and objective value(=MES) as variance. There are two methods for implementing it,  
  1) Just use value funtion, not see it as mean.  
  2) see value funtion as mean and use it normal distribution's mean.  
  
