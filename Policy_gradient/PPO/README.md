@@ -64,8 +64,13 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
  2) **L_KLPEN**  
  
 ## Hyperparameter: 
-  1) **ε = 0.2 for L_CLIP**  
-  2) **Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN**  
+ 1) **ε = 0.2 for L_CLIP**  
+    ε = 0.2 is too large for Pendulum-v1 policy update. So i use ε = 0.05. 
+    Advantage normalization is not needed becasue in this code, i do not use conjugate gradient algorithm ( I think Advantage normalization is needed for conjugate gradient algorithm's convergence's speed)
+    
+    
+    
+ 2) **Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN**  
 
 ## How to calculate r_t(θ)?  
 
