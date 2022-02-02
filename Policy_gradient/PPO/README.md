@@ -60,7 +60,7 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
  To represent the policy, we used a fully-connected MLP with two hidden layers of 64 units, and tanh nonlinearities, outputting the mean of a Gaussian distribution, with variable standard deviations, following [Sch+15b; Dua+16]. We don’t share parameters between the policy and value function (so coefficient c1 is irrelevant), and we don’t use an entropy bonus.
  
 ## Objective function: 
- I initially use two objective function which are 1) **L_CLIP**, 2) **L_KLPEN** for training Pendulum-v1. But L_KLPEN is not vaild when KL is zero. I implement new policy's probability is same to old policy's probability for calculating kl because of getting KL's gradient at old_policy. Therefore KL is zero, and L_KLPEN's constraint is not valid.    
+ I initially use two objective function which are 1) **L_CLIP**, 2) **L_KLPEN** for training Pendulum-v1. But L_KLPEN is not vaild when KL is zero. In my code, new policy's probability is equal to old policy's probability for calculating kl because of using same states and actor. Therefore KL is zero, and L_KLPEN's constraint is not valid.    
  
 ## Hyperparameter: 
  **ε = 0.05 for L_CLIP**  
