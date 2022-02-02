@@ -34,11 +34,11 @@ ___
 Figure 1 shows how L_CLIP is drawn. **Figure 2 shows L_CLIP is less than L_CPI.(=lower bound of L_CPI is L_CLIP)** It means that it gives penalty on large policy step!) This prevents L_CPI from getting too big.  
 
 ## Adaptive KL Penalty Coefficient  
-**NOTE: It is different with L_CLIP. It is another method that use KL diverge.** Another approach, which can be used as an alternative to the clipped surrogate objective, or in addition to it, is to use a penalty on KL divergence, and to adapt the penalty coefficient so that we achieve some target value of the KL divergence d_targ each policy update. In our experiments, we found that 1) the KL penalty performed worse than 2) the clipped surrogate objective, however, we’ve included it here because it’s an important baseline.  
+**NOTE: It is different with L_CLIP. It is another method that use KL diverge.** Another approach, which can be used as an alternative to the clipped surrogate objective, or in addition to it, is to use a penalty on KL divergence, and to adapt the penalty coefficient so that we achieve some target value of the KL divergence d_targ each policy update. d_targ prevent large policy update which is equal to "clip". In their experiments, we found that 1) the KL penalty performed worse than 2) the clipped surrogate objective, however, we’ve included it here because it’s an important baseline.  
 <p align="center"> <img src="./img/KL.png" alt="rewrite" width="70%" height="70%"/> </p>   
 "d" means distance between old policy and updated policy. The Large d means that it is updated large step.   
 
-**d < d_targ / 1.5 (=small d =step is small =we should extend update size. So reduce penalty)** d_targ is hyperparameter and initial beta(penalty coefficient) is hyperparameter too. initial beta and d_targ is given.    
+**d < d_targ / 1.5 (= small d = step is small =we should extend update size. So reduce penalty)** d_targ is hyperparameter and initial beta(penalty coefficient) is hyperparameter too. initial beta and d_targ is given.    
 
 ## Algorithm  
 It uses GAE or the finite-horizon estimators for getting variance-reduced advantage-function estimators. And if using a neural network architecture that shares parameters
@@ -60,21 +60,14 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
  To represent the policy, we used a fully-connected MLP with two hidden layers of 64 units, and tanh nonlinearities, outputting the mean of a Gaussian distribution, with variable standard deviations, following [Sch+15b; Dua+16]. We don’t share parameters between the policy and value function (so coefficient c1 is irrelevant), and we don’t use an entropy bonus.
  
 ## Objective function: 
- I use two objective function which are 1) **L_CLIP**, 2) **L_KLPEN** for training Pendulum-v1   
+ I initially use two objective function which are 1) **L_CLIP**, 2) **L_KLPEN** for training Pendulum-v1. But L_KLPEN is not vaild when KL is zero. I implement new policy's probability is same to old policy's probability for calculating kl because of getting KL's gradient at old_policy. Therefore KL is zero, and L_KLPEN's constraint is not valid.    
  
 ## Hyperparameter: 
- 1) **ε = 0.05 for L_CLIP**  
+ **ε = 0.05 for L_CLIP**  
     ε = 0.2 is too large for Pendulum-v1 policy update. So i use ε = 0.05. Advantage normalization is not needed becasue in this code, i do not use conjugate gradient algorithm (I think Advantage normalization is needed for conjugate gradient algorithm's convergence's speed)   
-    
- 2) **Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN**  
-    asd  
-    
     
 ### L_CLIP  
    ![video_clip](https://user-images.githubusercontent.com/62493307/152148067-fa7e98db-f809-407e-9422-be00efe6bb1b.gif)  
-    
-   
-### L_KLPEN  
 
 
 # Reference  
