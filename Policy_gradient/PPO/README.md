@@ -60,8 +60,7 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
  To represent the policy, we used a fully-connected MLP with two hidden layers of 64 units, and tanh nonlinearities, outputting the mean of a Gaussian distribution, with variable standard deviations, following [Sch+15b; Dua+16]. We don’t share parameters between the policy and value function (so coefficient c1 is irrelevant), and we don’t use an entropy bonus.
  
 ## Objective function: 
- 1) **L_CLIP**
- 2) **L_KLPEN**  
+ I use two objective function which are 1) **L_CLIP**, 2) **L_KLPEN** for training Pendulum-v1   
  
 ## Hyperparameter: 
  1) **ε = 0.05 for L_CLIP**  
@@ -70,12 +69,13 @@ It shows Clipped TRPO (PPO(clip)) is best when hyperparameter ε = 0.2. Adaptive
     ![video_clip](https://user-images.githubusercontent.com/62493307/152148067-fa7e98db-f809-407e-9422-be00efe6bb1b.gif)
     
  2) **Adaptive KL d_targ = 0.01, β was initialized at 1 for L_KPLEN**  
-
-## How to calculate r_t(θ)?  
-
-
+    asd  
+    
+    
 ### L_CLIP  
-
+   ![video_clip](https://user-images.githubusercontent.com/62493307/152148067-fa7e98db-f809-407e-9422-be00efe6bb1b.gif)  
+    
+   
 ### L_KLPEN  
 
 
