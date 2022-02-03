@@ -10,6 +10,14 @@ These are two-time-scale algorithms in which the critic uses TD learning with a 
 
 **Actor-critic methods**:  Combining the strong points of actor-only and criticonly methods, it holds the promise of delivering faster convergence (due to variance reduction), when compared to actor-only methods and critic only methods. 
 
+That algorithm flow is like that
+1) Using Actor(policy function), get state action pair.
+2) by state, action pair we can get rewards. 
+3) Using that rewards, update Critic(value-function).
+4) Using critic, get state, action pair.
+5) Using state action pair and rewards, update Actor.
+6) repeat 1) ~ 5) until actor and critic are converged.
+
 ## Terms
 <p align="center"> <img src="./img/term.png" alt="MLE" width="80%" height="80%"/> </p>
 
