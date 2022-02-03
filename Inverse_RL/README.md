@@ -4,9 +4,11 @@
 # Train Flow of IRL: 
  In Expert trajectories data expert actions are the global optimum. Therefore actor is trained to output that actions and reward function which is inferred from expert traj data give high reward that actions. 
  
+# what is dIfference between Actor critic and IRL:   
+ Actor critic uses two functions, but IRL use only actor funtion. IRL does not need Critic, because it uses expert traj. Expert traj data is Critic by itself. To be more detail, IRL assumes expert traj datas' state action pairs' actions always have the highest value on that states. Therefore we just do tune actor function output expert's trajectory datas' action on that state. In that process, we can get many reward functions which make expert trajs optimal.
 
 # Maximum likelihood method for training actor  
-
+ 
  
 # Paper
 1. Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
