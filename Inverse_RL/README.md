@@ -7,9 +7,12 @@
 # what is dIfference between Actor critic and IRL:   
  Actor critic uses two functions, but IRL use only actor funtion. IRL does not need Critic, because it uses expert traj. Expert traj data is Critic by itself. To be more detail, IRL assumes expert traj datas' state action pairs' actions always have the highest value on that states. Therefore we just do tune actor function output expert's trajectory datas' action on that state. In that process, we can get many reward functions which make expert trajs optimal.
 
-# Maximum likelihood method for training actor  
+# Can we use Maximum likelihood method for training actor?  
+ By using MLE for traning actor, we can train actor for having high probability on specific state. Therefore we can surely get actions from states in expert traj. But there is a problem. Actor does not train states' feature or properties. Actor just remember (state-action) pair. So when it encounters strange states which does not appear in expert traj, It has high proabiltiy for choosing wrong action.  
  
- 
+# How to train it for implementing IRL paper's model? 
+ I use my PG repository's trained actor for getting expert traj. And use it for training IRL's actor model. Pendulum-v1 is the target game.  
+
 # Paper
 1. Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
 2. Apprenticeship Learning via Inverse Reinforcement Learning:  
