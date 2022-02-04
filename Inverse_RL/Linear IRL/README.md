@@ -46,7 +46,7 @@ The inverse reinforcement learning problem is to find a reward function that can
 Why need characterization of the solution set? Because it is the reason why expert chooses those action. If we know the states' characterization, actor can choose the plausible action when it encounters strange state. It is only needed when state are infinite. Because if state space is finite, actor shows good performance when it remember all states.  
 
 Their main result characterizing the set of solutions is the follwing:  
-<p align="center"> <img src="./img/Theorem3.png" alt="MLE" width="100%" height="100%"/> </p>  
+<p align="center"> <img src="./img/Theorem3.png" alt="MLE" width="80%" height="80%"/> </p>  
 
 * Key points of that theorem are 
 1) (I - γPa1) is always invertible (I don't understand why it has no zero eigenvalues.)
@@ -58,6 +58,8 @@ Their main result characterizing the set of solutions is the follwing:
 2) There are too many Reward functions that meet the criteria(Theorem 3 result). We should decide one of them. But how?  
 
 ### 3.2 LP Formulation and Penalty Terms.  
+ 
+
 
 
 # Reference
