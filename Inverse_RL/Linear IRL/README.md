@@ -26,13 +26,16 @@ It uses finite Markov decision processes(MDPs) for addressing IRL problem to com
 
 For discrete, finite spaces, all these functions can be represented as vectors indexed by state. 
 
-<p align="center"> <img src="./img/Terms2.png" alt="MLE" width="20%" height="20%"/> </p>
+<p align="center"> <img src="./img/Terms2.png" alt="MLE" width="20%" height="20%"/> </p>  
 
+## Basic Properties of MDPs  
+### Theorem 1(Bellman Equations)
+<p align="center"> <img src="./img/1.png" alt="MLE" width="20%" height="20%"/> </p>  
 
+### Theorem 2(Bellman Optimality)
+<p align="center"> <img src="./img/2.png" alt="MLE" width="20%" height="20%"/> </p>  
 
-
-
-## 
+## Inverse Reinforcement Learning
 
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
