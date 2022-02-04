@@ -10,7 +10,7 @@
 ## Can we use Maximum likelihood method for training actor?  
  By using MLE for traning actor, we can train actor for having high probability on specific state. Therefore we can surely get actions from states in expert traj. But there is a problem. Actor does not train states' feature or properties. Actor just remember (state-action) pair. So when it encounters strange states which does not appear in expert traj, It has high proabiltiy for choosing wrong action.  
  
-# How to train it for implementing IRL paper's model? 
+# How to train actor for implementing IRL paper's model? 
  I use my PG repository's trained actor for getting expert traj. And use it for training IRL's actor model. Pendulum-v1 is the target game.  
 
 # Paper
