@@ -26,7 +26,7 @@ It uses finite Markov decision processes(MDPs) for addressing IRL problem to com
 
 For discrete, finite spaces, all these functions can be represented as vectors indexed by state. 
 
-<p align="center"> <img src="./img/Terms2.png" alt="MLE" width="100%" height="100%"/> </p>  
+<p align="center"> <img src="./img/Terms3.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 ## Basic Properties of MDPs  
 ### Theorem 1(Bellman Equations)
