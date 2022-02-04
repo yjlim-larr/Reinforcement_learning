@@ -18,7 +18,10 @@ can be information of reward function, and use it for training, so it can be cal
 adn to use it to generate desirable behavior. So actor directly related with reward fuction, so it is the most robust definition of the task.   
 (**It sees expert function as reward fuction. Therefore expert function is based on its reward function(which they thinks it is optimal)**)  
 
+It uses finite Markov decision processes(MDPs) for addressing IRL problem to computational task and being more familiar to the machine learning community. (There were no past research, so it is the first try)   
 
+
+## Notation and Problem Formulation  
 
 
 
