@@ -44,13 +44,14 @@ The inverse reinforcement learning problem is to find a reward function that can
 
 ### 3.1 Characterization of the soultion set  
 Why need characterization of the solution set? Because it is the reason why expert chooses those action. If we know the states' characterization, actor can choose the plausible action when it encounters strange state. It is only needed when state are infinite. Because if state space is finite, actor shows good performance when it remember all states.  
-
 Their main result characterizing the set of solutions is the follwing:  
 <p align="center"> <img src="./img/Theorem3.png" alt="MLE" width="100%" height="100%"/> </p>  
 
 * Key points of that theorem are 
 1) (I - γPa1) is always invertible (I don't understand why it has no zero eigenvalues.)
-2) Remark: (Pa1−Pa)(I−γPa1)−1R≻0 is necessary and sufficient for π ≡ a1 to be unique optimal policy. 
+2) Remark: (Pa1−Pa)(I−γPa1)−1R≻0 is necessary and sufficient for π ≡ a1 to be unique optimal policy. Proof: Let's think about its original form: P_a1 V^π >= P_a V^π. From that form, if π is optimal, π(s) ≡ a1's 's' element in P_a1, V^π has the biggest value. So We can easily think that P_a1 V^π > P_a V^π is true when optimal π(s) ≡ a1.  
+
+
 
 
 # Reference
