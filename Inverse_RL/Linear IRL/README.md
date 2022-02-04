@@ -1,13 +1,13 @@
 # Summary
 ## Abstract  
- This paper addresses the problem of inverse reinforcement learning (IRL) in Markov decision processes, that is, the problem of extracting a reward function given 
-observed, optimal behavior.   
- It derives three algorithms for IRL. The first two deal with the case where the entire policy is known; it handles tabulated reward functions 
-on a finite state space and linear functional approximation of the reward function over a potentially infinite state space. The third algorithm deal with the more 
-realistic case in which the policy is known only through a finite set of observed trajectories. (**In reality, basically states are infinite. So it deals with infinite states
-set**)   
- In all cases, a key issue is degeneracy - the existence of a large set of reward functions for which the observed policy is optimal. (**It means that there are many 
-reward functions that make expert trajectories optimal. So it is important which we choose.**) It suggests how to choose plausible(such as optimal) reward function.  
+ This paper addresses the problem of inverse reinforcement learning (IRL) in Markov decision processes, that is, the problem of extracting a reward function given observed, optimal behavior.   
+ It derives three algorithms for IRL. The first two deal with the case where the entire policy is known; it handles tabulated reward functions on a finite state space and linear functional approximation of the reward function over a potentially infinite state space. The third algorithm deal with the more realistic case in which the policy is known only through a finite set of observed trajectories. (**In reality, basically states are infinite. So it deals with infinite states set**)   
+ In all cases, a key issue is degeneracy - the existence of a large set of reward functions for which the observed policy is optimal. (**It means that there are many reward functions that make expert trajectories optimal. So it is important which we choose.**) It suggests how to choose plausible(such as optimal) reward function. 
+ 
+ **Its contributions are that**  
+ 1) It addresses IRL problem to computational task by using finite Markov decision processes(MDPs), and it is more familiar to the machine learning community.  
+ 2) they give a simple characterization of the set of all reward functions for which a given policy is optimal.  
+ 3) The reward function set contains degenerate solutions, so they propose a simple heuristic for removing this degeneracy, resulting in a linear programming solutiuon to the IRL problem.
 
 ## Introduction  
 From charanterized IRL problem, they identify some sources of motivation.  
@@ -35,7 +35,23 @@ For discrete, finite spaces, all these functions can be represented as vectors i
 ### Theorem 2(Bellman Optimality)
 <p align="center"> <img src="./img/2.png" alt="MLE" width="100%" height="100%"/> </p>  
 
-## Inverse Reinforcement Learning
+## Inverse Reinforcement Learning  
+The inverse reinforcement learning problem is to find a reward function that can explain observed behavior. optimal policy π is given and, they wish to find the set of possible reward functions R that makes given π is optimal. **Be careful that reward functions that satisfy given π is optimal are not unique!** For simplicity, they assume policy is deterministic.  
+
+## IRL in Finite State Spaces  
+1) they give a simple characterization of the set of all reward functions for which a given policy is optimal
+2) The reward function set contains degenerate solutions, so they propose a simple heuristic for removing this degeneracy, resulting in a linear programming solutiuon to the IRL problem.
+
+### 3.1 Characterization of the soultion set  
+Why need characterization of the solution set? Because it is the reason why expert chooses those action. If we know the states' characterization, actor can choose the plausible action when it encounters strange state. It is only needed when state are infinite. Because if state space is finite, actor shows good performance when it remember all states.  
+
+Their main result characterizing the set of solutions is the follwing:  
+<p align="center"> <img src="./img/Theorem3.png" alt="MLE" width="100%" height="100%"/> </p>  
+
+* Key points of that theorem are 
+1) (I - γPa1) is always invertible (I don't understand why it has no zero eigenvalues.)
+2) Remark: (Pa1−Pa)(I−γPa1)−1R≻0 is necessary and sufficient for π ≡ a1 to be unique optimal policy. 
+
 
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
