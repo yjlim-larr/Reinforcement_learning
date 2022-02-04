@@ -45,7 +45,7 @@ Why need characterization of the solution set? Because it is the reason why expe
 Their main result characterizing the set of solutions is the follwing:  
 <p align="center"> <img src="./img/Theorem3.png" alt="MLE" width="80%" height="80%"/> </p>  
 
-* Key points of that theorem are 
+* Key points of that are 
 1) (I - γPa1) is always invertible (I don't understand why it has no zero eigenvalues.)
 2) Remark: (Pa1−Pa)(I−γPa1)−1R≻0 is necessary and sufficient for π ≡ a1 to be unique optimal policy. Proof: Let's think about its original form: P_a1 V^π >= P_a V^π. From that form, if π is optimal, π(s) ≡ a1's 's' element in P_a1, V^π has the biggest value. So We can easily think that P_a1 V^π > P_a V^π is true when optimal π(s) ≡ a1.  
 
@@ -55,7 +55,13 @@ Their main result characterizing the set of solutions is the follwing:
 2) There are too many Reward functions that meet the criteria(Theorem 3 result). We should decide one of them. But how?  
 
 ### 3.2 LP Formulation and Penalty Terms.  
- 
+Paper suggests Linear Programming for solving those problems. It suggests the method for choosing reward function.  
+1) Find R(reward function) that makes π optimal. And favor solution that make any single step deviation from π as costly as possible.  
+It means that choose R that costly penalize policy on devation from π. In other words, choose R which is the most strict one. 
+
+We can get R by that equation: 
+<p align="center"> <img src="./img/max.png" alt="MLE" width="80%" height="80%"/> </p>    
+
 
 
 
