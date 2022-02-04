@@ -9,7 +9,7 @@
  2) they give a simple characterization of the set of all reward functions for which a given policy is optimal.  
  3) The reward function set contains degenerate solutions, so they propose a simple heuristic for removing this degeneracy, resulting in a linear programming solutiuon to the IRL problem.
 
-## Introduction  
+## 1. Introduction  
 From charanterized IRL problem, they identify some sources of motivation.  
 1) Reward function is unknown, and it can be ascertained through empirical investigation, such as bee's 
 foraging behavior. We don't know how bee weights nectaringestion against various things, such as flight distance, time and risk from wind and so on.  
@@ -21,24 +21,21 @@ adn to use it to generate desirable behavior. So actor directly related with rew
 It uses finite Markov decision processes(MDPs) for addressing IRL problem to computational task and being more familiar to the machine learning community. (There were no past research, so it is the first try)   
 
 
-## Notation and Problem Formulation  
+## 2. Notation and Problem Formulation  
 <p align="center"> <img src="./img/Terms.png" alt="MLE" width="100%" height="100%"/> </p>
 
 For discrete, finite spaces, all these functions can be represented as vectors indexed by state. 
 
 <p align="center"> <img src="./img/Terms3.png" alt="MLE" width="100%" height="100%"/> </p>  
 
-## Basic Properties of MDPs  
-### Theorem 1(Bellman Equations)
+### 2.1 Basic Properties of MDPs  
 <p align="center"> <img src="./img/1.png" alt="MLE" width="100%" height="100%"/> </p>  
-
-### Theorem 2(Bellman Optimality)
 <p align="center"> <img src="./img/2.png" alt="MLE" width="100%" height="100%"/> </p>  
 
-## Inverse Reinforcement Learning  
+### 2.2 Inverse Reinforcement Learning  
 The inverse reinforcement learning problem is to find a reward function that can explain observed behavior. optimal policy π is given and, they wish to find the set of possible reward functions R that makes given π is optimal. **Be careful that reward functions that satisfy given π is optimal are not unique!** For simplicity, they assume policy is deterministic.  
 
-## IRL in Finite State Spaces  
+## 3. IRL in Finite State Spaces  
 1) they give a simple characterization of the set of all reward functions for which a given policy is optimal
 2) The reward function set contains degenerate solutions, so they propose a simple heuristic for removing this degeneracy, resulting in a linear programming solutiuon to the IRL problem.
 
