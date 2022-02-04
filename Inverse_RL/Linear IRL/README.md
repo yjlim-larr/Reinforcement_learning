@@ -22,8 +22,11 @@ It uses finite Markov decision processes(MDPs) for addressing IRL problem to com
 
 
 ## Notation and Problem Formulation  
+<p align="center"> <img src="./img/Terms.png" alt="MLE" width="20%" height="20%"/> </p>
 
+For discrete, finite spaces, all these functions can be represented as vectors indexed by state. 
 
+<p align="center"> <img src="./img/Terms2.png" alt="MLE" width="20%" height="20%"/> </p>
 
 
 
