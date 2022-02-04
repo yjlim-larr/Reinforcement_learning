@@ -15,9 +15,11 @@
 
 # Paper
 1. Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
-2. Apprenticeship Learning via Inverse Reinforcement Learning:  
-3. Maximum Margin Planning:  
-4. Maximum Entropy Inverse Reinforcement Learning:  
-5. Generative Adversarial Imitation Learning:   
-6. Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow:  
+ It tries to make IRL problem to computational tasks by using RL on imitation learning or appenticeship learning, and MDPs.  
+ 
+3. Apprenticeship Learning via Inverse Reinforcement Learning:  
+4. Maximum Margin Planning:  
+5. Maximum Entropy Inverse Reinforcement Learning:  
+6. Generative Adversarial Imitation Learning:   
+7. Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow:  
 
