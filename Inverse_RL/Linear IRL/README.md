@@ -38,5 +38,7 @@ For discrete, finite spaces, all these functions can be represented as vectors i
 ## Inverse Reinforcement Learning
 
 # Reference
-* Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
+* Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
+ It tries to make IRL problem to computational tasks by using RL on imitation learning or appenticeship learning, and MDPs.  
+
 * 
