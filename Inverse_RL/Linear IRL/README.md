@@ -64,10 +64,27 @@ We can choose specific R from that equation:
 
 2) All other things being equal, solutions with mainly small rewards are simpler and therefore preferable, so for implementing this, it adds to the objective function a weight decay like penalty term such as "-λ||R||". It is important to select appropriate λ. Because λ is too large, R will be nonzero in only a few states. λ is too small, R will be infinite. In this paper, it find the appropriate λ automatically by using binary search. 
 
+___
 **Q. How to use binary search for finding λ?**
+A. First start large λ and calculate R. If R almost has zero on most of state, update λ_t+1. If R has large values on most of state, update λ_t+1. Repeat it, until R is not zero everywhere and not has too large values.      
+___
 
 Reflect 1), 2) to Theorem 3 result, it redefines that
 <p align="center"> <img src="./img/constraint.png" alt="MLE" width="80%" height="80%"/> </p> 
+
+
+## 4. Linear Function Approximation in Large state spaces  
+In this section, they consider the case of infinite state spaces. they restrict themselves to the case of S = R^n (n-dimension). R is a function from S = R^n into the reals.   
+
+___
+**Calculus of variations:**  
+For using caculus of variations, the mathematical form is "RL(reward function(s)) = score".   
+<p align="center"> <img src="./img/variations.png" alt="MLE" width="80%" height="80%"/> </p> 
+___  
+
+It uses linear approximation for the reward function, R is expressed as
+<p align="center"> <img src="./img/rewards.png" alt="MLE" width="80%" height="80%"/> </p> 
+
 
 
 
