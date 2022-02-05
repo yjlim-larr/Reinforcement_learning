@@ -75,17 +75,29 @@ Reflect 1), 2) to Theorem 3 result, it redefines that
 
 ## 4. Linear Function Approximation in Large state spaces  
 In this section, they consider the case of infinite state spaces. they restrict themselves to the case of S = R^n (n-dimension). R is a function from S = R^n into the reals.   
-
+Because of infinite states, we can't use 3.2's result. We can't solve 3.2's result because of P_a is inifinite size so we can't define it.   
+ 
 ___
 **Calculus of variations:**  
 For using caculus of variations, the mathematical form is "RL(reward function(s)) = score".   
-<p align="center"> <img src="./img/variations.png" alt="MLE" width="80%" height="80%"/> </p> 
+<p align="center"> <img src="./img/variations.png" alt="MLE" width="80%" height="80%"/> </p>   
 ___  
 
 It uses linear approximation for the reward function, R is expressed as
 <p align="center"> <img src="./img/rewards.png" alt="MLE" width="80%" height="80%"/> </p> 
 
+Because of Value function V's form, it can be defined to linear as reward function is  
+<p align="center"> <img src="./img/value.png" alt="MLE" width="80%" height="80%"/> </p> 
 
+For making π(s) = a_1 is optimal, it should be satisfy that condition:  
+<p align="center"> <img src="./img/condition.png" alt="MLE" width="80%" height="80%"/> </p> 
+
+But there are two problems.  
+1) Because of inifinite states MDPs, there are infinitely many constraints of that form in upper condition. For checking upper condition at all states is impossible.   
+<< For solving that problem, they uses sampling. Therefore, only check sampled states whether they satisfies condition.  
+
+2) By defining R is linear function approximator, they may no longer be able to express any reward function for which π is optimal.   
+<< For making various reward functions, they are willing to relax some of the constraints (10), paying a penalty when they are violated.  
 
 
 # Reference
