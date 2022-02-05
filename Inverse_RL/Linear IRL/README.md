@@ -70,7 +70,7 @@ A. First start large λ and calculate R. If R almost has zero on most of state, 
 ___
 
 Reflect 1), 2) to Theorem 3 result, it redefines that
-<p align="center"> <img src="./img/constraint.png" alt="MLE" width="80%" height="80%"/> </p> 
+<p align="center"> <img src="./img/constraint.png" alt="MLE" width="50%" height="50%"/> </p> 
 
 
 ## 4. Linear Function Approximation in Large state spaces  
@@ -100,7 +100,7 @@ But there are two problems.
 << For limiting various reward functions, they are willing to relax some of the constraints (10), paying a penalty when they are violated.   
 
 Final linear programming formulation is then:  
-<p align="center"> <img src="./img/final.png" alt="MLE" width="80%" height="80%"/> </p>
+<p align="center"> <img src="./img/final.png" alt="MLE" width="100%" height="100%"/> </p>
 
 ## 5. IRL from Sampled Trajectories  
 
