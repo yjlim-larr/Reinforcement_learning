@@ -5,17 +5,19 @@ if B is zero, so f(x) = Ax, this form is called linear function.
 
 ## Linear Programming concept  
 Solve optimization problem of which target function and constraint function are affine function. The general form of LP is 
-<p align="center"> <img src="./img/general.png" alt="MLE" width="90%" height="90%"/> </p> 
-* d which is in objective fucntion can be ignored, because it does not affect result.  
-* Maximize objective function also represented general form like that: **"minimize(x): -cx - d"**  
+<p align="center"> <img src="./img/general.png" alt="MLE" width="40%" height="40%"/> </p>   
+
+* d which is in objective fucntion can be ignored, because it does not affect result.   
+* Maximize objective function also represented general form like that: **"minimize(x): -cx - d"**   
 
 The standard form of LP is 
-<p align="center"> <img src="./img/standard.png" alt="MLE" width="90%" height="90%"/> </p> 
+<p align="center"> <img src="./img/standard.png" alt="MLE" width="30%" height="30%"/> </p> 
+
 * all general form of LP can transform to standard form.  
 
 **Solve that general form or standard form is called LP**
 
-# Summary
+# Paper Summary
 ## Abstract  
  This paper addresses the problem of inverse reinforcement learning (IRL) in Markov decision processes, that is, the problem of extracting a reward function given observed, optimal behavior.   
  It derives three algorithms for IRL. The first two deal with the case where the entire policy is known; it handles tabulated reward functions on a finite state space and linear functional approximation of the reward function over a potentially infinite state space. The third algorithm deal with the more realistic case in which the policy is known only through a finite set of observed trajectories. (**In reality, basically states are infinite. So it deals with infinite states set**)   
@@ -153,6 +155,14 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
  **NOTE: This equation use estimated value function**
 
 4) That optimization uses estimated value function which is linear function, this problem is easily solved via linear programming. So we can get a new setting og the α. Hence we can get a new reward function.  
+
+**NOTE: Reward function is linear function and value function is estimated by using reward function. The objective function of final optimization is linear function form. So it is linear programming.**
+
+___  
+** Algorithm for solving Linear programming  
+
+___  
+   
  
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
