@@ -148,10 +148,10 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
 1) First find value estimates as described above for the policy π* which is given, and for the base policy π1 which is randomly chosen. (Compare π* and π1)
 2) The inductive step of the algorithm is as follows: 
  They have some set of policies {π1, ..., πk}, and resulting reward function should satisfy below equation by selecting α.  
- <p align="center"> <img src="./img/second.png" alt="MLE" width="50%" height="50%"/> </p>  
+ <p align="center"> <img src="./img/second.png" alt="MLE" width="40%" height="40%"/> </p>  
 
 3) Considering previous algorithm (section 4), they modify objective function slightly, so that the optimization becomes: 
- <p align="center"> <img src="./img/optimization.png" alt="MLE" width="50%" height="50%"/> </p>   
+ <p align="center"> <img src="./img/optimization.png" alt="MLE" width="100%" height="100%"/> </p>   
  **NOTE: This equation use estimated value function**
 
 4) That optimization uses estimated value function which is linear function, this problem is easily solved via linear programming. So we can get a new setting og the α. Hence we can get a new reward function.  
@@ -159,7 +159,7 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
 **NOTE: Reward function is linear function and value function is estimated by using reward function. The objective function of final optimization is linear function form. So it is linear programming.**
 
 ___  
-** Algorithm for solving Linear programming  
+**Algorithm for solving Linear programming**  
 
 ___  
    
