@@ -1,3 +1,7 @@
+# Linear Programming
+
+
+
 # Summary
 ## Abstract  
  This paper addresses the problem of inverse reinforcement learning (IRL) in Markov decision processes, that is, the problem of extracting a reward function given observed, optimal behavior.   
@@ -131,9 +135,12 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
  They have some set of policies {π1, ..., πk}, and resulting reward function should satisfy below equation by selecting α.  
  <p align="center"> <img src="./img/second.png" alt="MLE" width="50%" height="50%"/> </p>  
 
-3) Consider previous algorithm, 
+3) Considering previous algorithm (section 4), they modify objective function slightly, so that the optimization becomes: 
+ <p align="center"> <img src="./img/optimization.png" alt="MLE" width="50%" height="50%"/> </p>   
+ **NOTE: This equation use estimated value function**
 
+4) That optimization uses estimated value function which is linear function, this problem is easily solved via linear programming. So we can get a new setting og the α. Hence we can get a new reward function.  
+ 
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
-
-* 
+* Linear programming: 
