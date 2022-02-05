@@ -97,7 +97,13 @@ But there are two problems.
 << For solving that problem, they uses sampling. Therefore, only check sampled states whether they satisfies condition.  
 
 2) By defining R is linear function approximator, they may no longer be able to express any reward function for which π is optimal.   
-<< For making various reward functions, they are willing to relax some of the constraints (10), paying a penalty when they are violated.  
+<< For limiting various reward functions, they are willing to relax some of the constraints (10), paying a penalty when they are violated.   
+
+Final linear programming formulation is then:  
+<p align="center"> <img src="./img/final.png" alt="MLE" width="80%" height="80%"/> </p>
+
+## 5. IRL from Sampled Trajectories  
+
 
 
 # Reference
