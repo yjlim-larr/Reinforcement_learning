@@ -120,7 +120,10 @@ First they will need a way of estimating V(s0) for any setting of the αs(α is 
 1) Execute m Monte Carlo trajectories under π. They are actual expert trajectory data.   
 2) For each i = 1, ..., d, define V_i(s0) to be what the average empirical return would have been on these m trajectories if the reward had been R = Φ_i. For example, 
 <p align="center"> <img src="./img/example.png" alt="MLE" width="100%" height="100%"/> </p>  
-Using that estimation, V_i(s0) is estimated by m trajectories expectation.  
+
+Using that estimation, V_i(s0) is estimated by m trajectories expectation. And integrate i = 1, ..., d each expectation of value function for defining whole estimated form, using α it is estimated:  
+<p align="center"> <img src="./img/estimate.png" alt="MLE" width="50%" height="50%"/> </p>   
+
 
 
 
