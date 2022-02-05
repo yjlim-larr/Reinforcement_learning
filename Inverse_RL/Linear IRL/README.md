@@ -123,6 +123,7 @@ First they will need a way of estimating V(s0) for any setting of the αs(α is 
 
 Using that estimation, V_i(s0) is estimated by m trajectories expectation. And integrate i = 1, ..., d each expectation of value function for defining whole estimated form, using α it is estimated:  
 <p align="center"> <img src="./img/estimate.png" alt="MLE" width="50%" height="50%"/> </p>   
+(In this paper, it truncate traj data after a large but finite number H of steps. Because of discounting factor, truncation only introduce negliable samll error.)
 
 
 
