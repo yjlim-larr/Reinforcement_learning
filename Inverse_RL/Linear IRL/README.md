@@ -160,10 +160,17 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
 
 ___  
 **Algorithm for solving Linear programming**  
-
+* Simplex method 
+* Kantorovich's algorithm
+* Interior point method (based on strong duality)
 ___  
+   
+## 6. Experiments  
+
    
  
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
-* Linear programming: https://wikidocs.net/17850
+* Linear programming: https://wikidocs.net/17850  
+* Simplex algorithm: https://velog.io/@wjleekr927/Simplex-algorithm  
+* 
