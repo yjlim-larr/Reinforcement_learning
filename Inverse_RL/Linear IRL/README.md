@@ -125,6 +125,11 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
 <p align="center"> <img src="./img/estimate.png" alt="MLE" width="50%" height="50%"/> </p>   
 (In this paper, it truncate traj data after a large but finite number H of steps. Because of discounting factor, truncation only introduce negliable samll error.)
 
+**Algorithm** is that 
+1) First find value estimates as described above for the policy π* which is given, and for the base policy π1 which is randomly chosen. (Compare π* and π1)
+2) The inductive step of the algorithm is as follows: 
+ They have some set of policies {π1, ..., πk}, and resulting reward function should satisfy  
+ <p align="center"> <img src="./img/second.png" alt="MLE" width="50%" height="50%"/> </p>  
 
 
 
