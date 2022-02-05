@@ -1,6 +1,19 @@
 # Linear Programming
+## Linear function, affine function
+f(x) = Ax + B, and A, B is not zero, this form is called affine function.  
+if B is zero, so f(x) = Ax, this form is called linear function.  
 
+## Linear Programming concept  
+Solve optimization problem of which target function and constraint function are affine function. The general form of LP is 
+<p align="center"> <img src="./img/general.png" alt="MLE" width="90%" height="90%"/> </p> 
+* d which is in objective fucntion can be ignored, because it does not affect result.  
+* Maximize objective function also represented general form like that: **"minimize(x): -cx - d"**  
 
+The standard form of LP is 
+<p align="center"> <img src="./img/standard.png" alt="MLE" width="90%" height="90%"/> </p> 
+* all general form of LP can transform to standard form.  
+
+**Solve that general form or standard form is called LP**
 
 # Summary
 ## Abstract  
@@ -143,4 +156,4 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
  
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
-* Linear programming: 
+* Linear programming: https://wikidocs.net/17850
