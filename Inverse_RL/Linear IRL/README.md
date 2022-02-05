@@ -128,10 +128,10 @@ Using that estimation, V_i(s0) is estimated by m trajectories expectation. And i
 **Algorithm** is that 
 1) First find value estimates as described above for the policy π* which is given, and for the base policy π1 which is randomly chosen. (Compare π* and π1)
 2) The inductive step of the algorithm is as follows: 
- They have some set of policies {π1, ..., πk}, and resulting reward function should satisfy  
+ They have some set of policies {π1, ..., πk}, and resulting reward function should satisfy below equation by selecting α.  
  <p align="center"> <img src="./img/second.png" alt="MLE" width="50%" height="50%"/> </p>  
 
-
+3) Consider previous algorithm, 
 
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
