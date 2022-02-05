@@ -166,7 +166,7 @@ ___
 ___  
    
 ## 6. Experiments  
-Its first example, finite state space case, ture reward function is given like that 
+* Its first example, **finite state space** case, ture reward function is given like that 
 <p align="center"> <img src="./img/true.png" alt="MLE" width="100%" height="100%"/> </p> 
    
 It uses 3.2 section result for calculating approximated reward function by linear programming is like that   
@@ -176,6 +176,15 @@ It uses 3.2 section result for calculating approximated reward function by linea
 2) λ = 1.05  
 <p align="center"> <img src="./img/lambda1.png" alt="MLE" width="100%" height="100%"/> </p>  
 
+**By that result, we show that reward penalty term affect result.**
+
+* Second example; mountain-car, state is the car's x-position and velocity. It is the infinite state space case because experiment's state is continuous.  
+<p align="center"> <img src="./img/mountain.png" alt="MLE" width="100%" height="100%"/> </p> 
+
+For getting approximated reward function, it uses section 4 result. For reward function being function of car's x position, reward function's basis functions are linear combination of 26 evenly spaced Gaussian shaped basis functions. position datas contain velocity data, so they does not use velocity data.  
+
+The result of approximated reward function when they give it optimal policy, the approximated reward function is nearly perfectly captured the R = -c(which is true reward). 
+<p align="center"> <img src="./img/2true.png" alt="MLE" width="100%" height="100%"/> </p>  
 
  
 # Reference
