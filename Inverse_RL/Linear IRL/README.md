@@ -59,9 +59,15 @@ Paper suggests Linear Programming for solving those problems. It suggests the me
 1) Find R(reward function) that makes π optimal. And favor solution that make any single step deviation from π as costly as possible.  
 It means that choose R that costly penalize policy on devation from π. In other words, choose R which is the most strict one. 
 
-We can get R by that equation: 
+We can choose specific R from that equation: 
 <p align="center"> <img src="./img/max.png" alt="MLE" width="80%" height="80%"/> </p>    
 
+2) All other things being equal, solutions with mainly small rewards are simpler and therefore preferable, so for implementing this, it adds to the objective function a weight decay like penalty term such as "-λ||R||". It is important to select appropriate λ. Because λ is too large, R will be nonzero in only a few states. λ is too small, R will be infinite. In this paper, it find the appropriate λ automatically by using binary search. 
+
+**Q. How to use binary search for finding λ?**
+
+Reflect 1), 2) to Theorem 3 result, it redefines that
+<p align="center"> <img src="./img/constraint.png" alt="MLE" width="80%" height="80%"/> </p> 
 
 
 
