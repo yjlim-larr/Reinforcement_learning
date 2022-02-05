@@ -167,7 +167,7 @@ ___
    
 ## 6. Experiments  
 * Its first example, **finite state space** case, ture reward function is given like that 
-<p align="center"> <img src="./img/True.png" alt="MLE" width="60%" height="60%"/> </p> 
+<p align="center"> <img src="./img/true.png" alt="MLE" width="60%" height="60%"/> </p> 
    
 It uses 3.2 section result for calculating approximated reward function by linear programming is like that   
 1) λ = 0  
