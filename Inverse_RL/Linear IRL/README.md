@@ -93,6 +93,7 @@ ___
 
 It uses linear approximation for the reward function, R is expressed as
 <p align="center"> <img src="./img/rewards.png" alt="MLE" width="80%" height="80%"/> </p> 
+**Φ is fixed, known, bounded basis function**   
 
 Because of Value function V's form, it can be defined to linear as reward function is  
 <p align="center"> <img src="./img/value.png" alt="MLE" width="80%" height="80%"/> </p> 
@@ -113,6 +114,13 @@ Final linear programming formulation is then:
 
 
 ## 5. IRL from Sampled Trajectories  
+In this section, it uses actual trajectory datas, so it does not need explicit model of the MDP. By using reward function which they choose, they check thier model's ability to find optimal policy. Their goal is to find R such that π maximizes E[V]. To simplify, there is only one fixed start state s0(which can be a dummy state, whose next state distribution under any action is D. D is fixed initial state distribution.)  
+
+First they will need a way of estimating V(s0) for any setting of the αs(α is the weight of R's basis function). Estimating V is necessary for comparing E[V]. To do this, 
+1) Execute m Monte Carlo trajectories under π. They are actual expert trajectory data.   
+2) For each i = 1, ..., d, define V_i(s0) to be what the average empirical return would have been on these m trajectories if the reward had been R = Φ_i. For example, 
+<p align="center"> <img src="./img/example.png" alt="MLE" width="100%" height="100%"/> </p>  
+Using that estimation, V_i(s0) is estimated by m trajectories expectation.  
 
 
 
