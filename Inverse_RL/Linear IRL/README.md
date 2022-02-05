@@ -166,8 +166,17 @@ ___
 ___  
    
 ## 6. Experiments  
-
+Its first example, finite state space case, ture reward function is given like that 
+<p align="center"> <img src="./img/true.png" alt="MLE" width="100%" height="100%"/> </p> 
    
+It uses 3.2 section result for calculating approximated reward function by linear programming is like that   
+1) λ = 0  
+<p align="center"> <img src="./img/lambda0.png" alt="MLE" width="100%" height="100%"/> </p>   
+
+2) λ = 1.05  
+<p align="center"> <img src="./img/lambda1.png" alt="MLE" width="100%" height="100%"/> </p>  
+
+
  
 # Reference
 * Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf 
