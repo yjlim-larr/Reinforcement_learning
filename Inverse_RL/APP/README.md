@@ -14,7 +14,10 @@ We can get reward function set which is the result of solving IRL problem, but i
 
 
 ## Introduction  
-
+ We believe that even the reward function is frequently difficult to specify manually. To specify a reward function for the driving task, we would have to **assign a set of weights stating exactly** how we would like to trade off these different factors. Despite being able to drive competently, the authors do not believe **they can confidently specify a specific reward function for the task of “driving well.”**    
+ we believe that, for many problems, the difficulty of manually specifying a reward function represents a significant barrier to the broader applicability of reinforcement learning and optimal control algorithms.  
+ The task of learning from an expert is called apprenticeship learning (also learning by watching, imitation learning, or learning from demonstration).  
+ 
 
 
 # Reference
