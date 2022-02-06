@@ -34,9 +34,7 @@ The standard form of LP is
 From charanterized IRL problem, they identify some sources of motivation.  
 1) Reward function is unknown, and it can be ascertained through empirical investigation, such as bee's 
 foraging behavior. We don't know how bee weights nectaringestion against various things, such as flight distance, time and risk from wind and so on.  
-2) Agent designer may have only a very rough idea of optimal behaviors, so it is not useful to use straightforward reinforcement learning. We cam use epert traj data which
-can be information of reward function, and use it for training, so it can be called **imitation learning** and **apprenticeship learning**. From those data, actor recover expert's reward function 
-adn to use it to generate desirable behavior. So actor directly related with reward fuction, so it is the most robust definition of the task.   
+2) Agent designer may have only a very rough idea of optimal behaviors, so it is not useful to use straightforward reinforcement learning. We can use expert traj data(= given optimal policy) which can be information of reward function, and use it for training. From those data, actor recover expert's reward function and use it to generate desirable behavior. So actor directly related with reward fuction, so it is the most robust definition of the task.   
 (**It sees expert function as reward fuction. Therefore expert function is based on its reward function(which they thinks it is optimal)**)  
 
 It uses finite Markov decision processes(MDPs) for addressing IRL problem to computational task and being more familiar to the machine learning community. (There were no past research, so it is the first try)   
