@@ -15,7 +15,7 @@
 
 # Paper
 1. Algorithms for Inverse Reinforcement Learning: http://ai.stanford.edu/~ang/papers/icml00-irl.pdf  
- It tries to make IRL problem to computational tasks by using RL on imitation learning or appenticeship learning, and MDPs.  
+ It tries to make IRL problem to computational tasks by using MDPs with optimal policy. Optimal policy is given, and it is state-action pair sequential data. From that optimal policy, this paper suggests how to get reward function on 3 cases( 1) finite state space, 2) constraint condition with finite state space, 3) infinite state space.). But there are many reward function even constant or zero could be reward function. So it uses constraint condition for getting approximated reward function which is the closest to true. And it uses linear combiation form for approximating reward function where it is infinite state space case. For solving that case, it uses linear programming with constraint condition such as penalty and sampling.    
  
 3. Apprenticeship Learning via Inverse Reinforcement Learning:  
 4. Maximum Margin Planning:  
