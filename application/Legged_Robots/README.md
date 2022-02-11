@@ -1,5 +1,5 @@
 # Environment  
-NVIDIA’s Isaac Gym simulation environment; which runs both the simulation and training on the GPU and is capable of simulating thousands of robots in parallel.  
+NVIDIA’s Isaac Gym(or Sim) simulation environment; which runs both the simulation and training on the GPU and is capable of simulating thousands of robots in parallel.  
 
 # Isaac Gym guide  
  
