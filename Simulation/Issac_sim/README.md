@@ -2,7 +2,8 @@
 NVIDIA’s Isaac Gym(or Sim) simulation environment; which runs both the simulation and training on the GPU and is capable of simulating thousands of robots in parallel.  
 
 # Isaac Gym guide  
- 
+
+# Legged Robot simulation  
 
 # Reference
 * Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning: https://openreview.net/pdf?id=wK2fDDJ5VcF
